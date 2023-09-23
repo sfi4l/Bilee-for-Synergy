@@ -9,3 +9,5 @@ const Debug = () => {
     <p className="styles.text">Hello</p>
   </div>
 }
+
+export default Debug
