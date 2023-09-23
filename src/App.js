@@ -6,11 +6,12 @@ import CardEmployee from "./CardSotrudnika";
 import Header from "./Header/index";
 
 function App() {
-  const rawInitData = useInitData()
+  // const rawInitData = useInitData()
 
-  if (!rawInitData) return <MainMenu/>
+  // if (!rawInitData) return <MainMenu/>
 
-  return <Debug/>
+  // return <Debug/>
+  return <MainMenu />
 }
 
 export default App;
