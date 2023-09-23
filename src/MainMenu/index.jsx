@@ -1,13 +1,7 @@
 import styles from "./style.module.css"
 import menu from "../Img/Menu.svg"
-import {
-  useReadTextFromClipboard,
-  MainButton
-} from "@vkruglikov/react-telegram-web-app"
 
 const MainMenu = () => {
-  const readClipboard = useReadTextFromClipboard()
-
   return (
     <div className={styles.MainMenuContUp}>
       <div className={styles.MainMenuCont}>
@@ -72,13 +66,6 @@ const MainMenu = () => {
           </div>
 
           <button className={styles.MainMenuBtnBlue}>Подписка</button>
-
-          <MainButton
-            text="Тест"
-            onClick={async () => {
-              console.log(await readClipboard())
-            }}
-          />
         </div>
       </div>
     </div>

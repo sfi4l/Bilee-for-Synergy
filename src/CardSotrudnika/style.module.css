@@ -1,56 +1,45 @@
-
-
-
-
-
-
-
-
-
-.CardEmpCont{
-    height:100vh ;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 20px;
+.CardEmpCont {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
-.CardEmpContUp{
-    border:1px solid black;
-    width: 375px;
-    height: 736px;
+.CardEmpContUp {
+  border: 1px solid black;
+  width: 375px;
+  height: 736px;
 }
-.CardEmpTxt{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    text-align: center;
-    width: 375px;
-    height: 30px;
+.CardEmpTxt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 375px;
+  height: 30px;
+}
+.CardEmpLogoText {
+  color: #1d5cff;
+  font-family: sfpdn;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 
+  padding-top: 23px;
+  padding-left: 120px;
+  padding-right: 122px;
+  margin-bottom: 35px;
 }
-.CardEmpLogoText{
-    color: #1D5CFF;
-    font-family:sfpdn;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    
-    padding-top:23px;
-    padding-left: 120px;
-    padding-right:122px;
-    margin-bottom:35px;
-    
+.CardEmpMenuSvg {
+  width: 25px;
+  height: 25px;
+  padding-top: 13px;
+  padding-right: 23px;
 }
-.CardEmpMenuSvg{
-    width: 25px ;
-    height: 25px;
-    padding-top:13px;
-    padding-right:23px;
-}
-.CardEmpMenuSvgBck{
-    width: 25px ;
-    height: 25px;
-    padding-top:13px;
-    padding-right:23px;
+.CardEmpMenuSvgBck {
+  width: 25px;
+  height: 25px;
+  padding-top: 13px;
+  padding-right: 23px;
 }
