@@ -1,290 +1,270 @@
 @font-face {
-    font-family: sfpd; /* Гарнитура шрифта */
-    src: url(../Img/spdfnn.OTF); /* Путь к файлу со шрифтом */
-   }
-   @font-face {
-    font-family: sfpdn; /* Гарнитура шрифта */
-    src: url(../Img/MDSF.OTF); /* Путь к файлу со шрифтом */
-   }
-
-
-.MainMenuCont{
-    height:100vh ;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 20px;
-   
-    
-
-   
-    
+  font-family: sfpd; /* Гарнитура шрифта */
+  src: url(../Img/spdfnn.OTF); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: sfpdn; /* Гарнитура шрифта */
+  src: url(../Img/MDSF.OTF); /* Путь к файлу со шрифтом */
 }
 
-.MainMenuContUp{
-
-border:1px solid black;
-    width: 375px;
-    height: 736px;
-    
-
-   
+.MainMenuCont {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.MainMenuLogoText{
-    color: #1D5CFF;
-    font-family:sfpdn;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    
-    padding-top:23px;
-    padding-left: 161px;
-    padding-right:115px;
-    margin-bottom:35px;
-    
-}
-.MainMenuMenuSvg{
-    width: 25px ;
-    height: 25px;
-    padding-top:13px;
-    padding-right:23px;
-}
-.MainMenuMenuTxt{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    text-align: center;
-    width: 375px;
-    height: 30px;
-    
-    
+.MainMenuContUp {
+  border: 1px solid black;
+  width: 375px;
+  height: 736px;
 }
 
-.MainMenuMeetTxt{
-    color: #000;
+.MainMenuLogoText {
+  color: #1d5cff;
+  font-family: sfpdn;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-margin:0;
-margin-left: 16px;
-margin-top:35px ;
-font-family:sfpdn;
+  padding-top: 23px;
+  padding-left: 161px;
+  padding-right: 115px;
+  margin-bottom: 35px;
+}
+.MainMenuMenuSvg {
+  width: 25px;
+  height: 25px;
+  padding-top: 13px;
+  padding-right: 23px;
+}
+.MainMenuMenuTxt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 375px;
+  height: 30px;
 }
 
+.MainMenuMeetTxt {
+  color: #000;
 
-.MainMenuNewsTxt{
-text-align: left;
-margin:0;
-margin-top: 30px;
-margin-left: 16px;
-color: #6C6C6C;
-
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-bottom: 10px;
-font-family:sfpd;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  margin-left: 16px;
+  margin-top: 35px;
+  font-family: sfpdn;
 }
 
+.MainMenuNewsTxt {
+  text-align: left;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 16px;
+  color: #6c6c6c;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+  font-family: sfpd;
+}
 
 .MainMenuBlueNews {
-    display: inline-flex;
-    height: 60px;
-    padding: 26px 15px 27px 5px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right:19px;
-    margin-left:16px;
-    background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.00) 0deg, #06F 360deg);
-  }
-  
-  
-  
- 
+  display: inline-flex;
+  height: 60px;
+  padding: 26px 15px 27px 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 19px;
+  margin-left: 16px;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 255, 255, 0) 0deg,
+    #06f 360deg
+  );
+}
 
-.MainMenuAllNews{
-    display: flex;
-   flex-direction:row;
-    margin:0;
-    white-space: nowrap; 
+.MainMenuAllNews {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  white-space: nowrap;
   overflow-x: auto;
-    
 }
-.MainMenuBrownNews{
-    
-    display: inline-flex;
-    height: 60px;
-    padding: 26px 15px 27px 5px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right:19px;
-    
+.MainMenuBrownNews {
+  display: inline-flex;
+  height: 60px;
+  padding: 26px 15px 27px 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 19px;
 
-background: conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0.00) 0deg, #AD6868 249.37499284744263deg);
-
-
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(255, 255, 255, 0) 0deg,
+    #ad6868 249.37499284744263deg
+  );
 }
-.MainMenuGreenNews{
-    display: inline-flex;
-    height: 60px;
-    padding: 26px 15px 27px 5px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right:19px;
+.MainMenuGreenNews {
+  display: inline-flex;
+  height: 60px;
+  padding: 26px 15px 27px 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 19px;
 
+  overflow: hidden;
 
-
-overflow: hidden;
-
-background: conic-gradient(from 180deg at 50% 50%, #53D034 48.75000178813934deg, rgba(255, 255, 255, 0.00) 360deg);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #53d034 48.75000178813934deg,
+    rgba(255, 255, 255, 0) 360deg
+  );
 }
-.MainMenuPinkNews{
-    display: inline-flex;
-    height: 60px;
-    padding: 26px 15px 27px 5px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right:19px;
-background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.00) 0deg, #FF00F5 174.375deg);
-
-
-}
-
-.MainMenuTodayWork{
-    display: flex;
-    width: 375px;
-    overflow: hidden;
-    
-    background: linear-gradient(180deg, #ECECEC 0%, rgba(255, 255, 255, 0.00) 100%);
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    
-    margin-top:26px;
-}
-.MainMenuNewsFont{
-    
-    color: #000;
-    font-family:sfpd;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-align: left;
-    width: 64px;
-    height: 57px;
+.MainMenuPinkNews {
+  display: inline-flex;
+  height: 60px;
+  padding: 26px 15px 27px 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 19px;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 255, 255, 0) 0deg,
+    #ff00f5 174.375deg
+  );
 }
 
+.MainMenuTodayWork {
+  display: flex;
+  width: 375px;
+  overflow: hidden;
 
-.MainMenuTodotxt1{
-    color: #000;
-text-align: center;
-font-family: sfpd;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-margin-top: 46px;
-margin-bottom:0;
+  background: linear-gradient(180deg, #ececec 0%, rgba(255, 255, 255, 0) 100%);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 
+  margin-top: 26px;
 }
-.MainMenuTodotxt2{
-    color: #000;
-text-align: center;
-font-family: sfpd;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top:8px;
+.MainMenuNewsFont {
+  color: #000;
+  font-family: sfpd;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-align: left;
+  width: 64px;
+  height: 57px;
+}
 
-
+.MainMenuTodotxt1 {
+  color: #000;
+  text-align: center;
+  font-family: sfpd;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 46px;
+  margin-bottom: 0;
 }
-.MainMenuChangeClr{
-    color: #F00;
+.MainMenuTodotxt2 {
+  color: #000;
+  text-align: center;
+  font-family: sfpd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 8px;
 }
-.MainMenuBtnBlue{
-    display: inline-flex;
-    padding: 13px 85px 12px 84px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid #06F;
-    background: #06F;
-    color: #FFF;
-    overflow: hidden;
-    font-family:sfpd;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 330px;
-
-    
+.MainMenuChangeClr {
+  color: #f00;
 }
-.MainMenuBtnCont{
-    margin: 18px 23px 9px 22px ;
+.MainMenuBtnBlue {
+  display: inline-flex;
+  padding: 13px 85px 12px 84px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #06f;
+  background: #06f;
+  color: #fff;
+  overflow: hidden;
+  font-family: sfpd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 330px;
 }
-.MainMenuBtnDf{
-    display: flex;
-    width: 330px;
-    padding: 13px 114px 12px 114px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid #06F;
-    background: #FFF;
-    color: #000;
-    font-family: sfpd;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-top:9px;
-    margin-bottom:9px;
+.MainMenuBtnCont {
+  margin: 18px 23px 9px 22px;
 }
-.MainMenuBtnFlex{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
+.MainMenuBtnDf {
+  display: flex;
+  width: 330px;
+  padding: 13px 114px 12px 114px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #06f;
+  background: #fff;
+  color: #000;
+  font-family: sfpd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
-.MainMenuBtnDfMini{
-    display: flex;
-    width: 160px;
-    padding: 13px 53px 12px 52px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid #06F;
-    background: #FFF;
-    color: #000;
-    font-family: sfpd;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-bottom:9px;
-    width:160px;
-    overflow: hidden;
-
+.MainMenuBtnFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.MainMenuBtnDfMini {
+  display: flex;
+  width: 160px;
+  padding: 13px 53px 12px 52px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #06f;
+  background: #fff;
+  color: #000;
+  font-family: sfpd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 9px;
+  width: 160px;
+  overflow: hidden;
 }

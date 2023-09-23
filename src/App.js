@@ -5,7 +5,7 @@ import Header from "./Header/index";
 
 function App() {
   return (
-  <MainMenu></MainMenu>
+    <MainMenu></MainMenu>
   )
 }
 
