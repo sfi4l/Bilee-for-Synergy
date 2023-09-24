@@ -1,3 +1,13 @@
+@font-face {
+  font-family: sfpd; /* Гарнитура шрифта */
+  src: url(./Img/spdfnn.OTF); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: sfpdn; /* Гарнитура шрифта */
+  src: url(./Img/MDSF.OTF); /* Путь к файлу со шрифтом */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

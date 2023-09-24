@@ -1,0 +1,12 @@
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border-radius: 5px;
+  border: 1px solid var(--outline-color);
+  background-color: var(--highlight-color);
+}

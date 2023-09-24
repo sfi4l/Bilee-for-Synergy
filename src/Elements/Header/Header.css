@@ -1,0 +1,37 @@
+.Header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.HeaderButton {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.MenuButton {
+  right: 23px;
+}
+
+.BackButton {
+  left: 17px;
+}
+
+.LogoText {
+  color: var(--logo);
+  font-family: sfpdn;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

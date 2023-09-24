@@ -1,0 +1,30 @@
+.Menu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Title {
+  color: var(--title-color);
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 16px;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-family: sfpdn;
+} 
+
+.Subtitle {
+  color: var(--subtitle-color);
+  margin: 0;
+  margin-left: 16px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: sfpd;
+}

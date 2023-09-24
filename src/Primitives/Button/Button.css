@@ -1,0 +1,17 @@
+.Button {
+  width: 100%;
+  height: var(--height);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sfpd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  gap: 13px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+}

@@ -1,70 +1,4 @@
-@font-face {
-  font-family: sfpd; /* Гарнитура шрифта */
-  src: url(../Img/spdfnn.OTF); /* Путь к файлу со шрифтом */
-}
-@font-face {
-  font-family: sfpdn; /* Гарнитура шрифта */
-  src: url(../Img/MDSF.OTF); /* Путь к файлу со шрифтом */
-}
-
-.MainMenuCont {
-  /* position: absolute; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.MainMenuLogoText {
-  color: #1d5cff;
-  font-family: sfpdn;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-
-  /* padding-top: 23px; */
-  /* padding-left: 161px; */
-  /* padding-right: 115px; */
-  /* margin-bottom: 35px; */
-}
-.MainMenuMenuSvg {
-  position: absolute;
-  right: 23px;
-  width: 24px;
-  height: 24px;
-  /* padding-top: 13px; */
-  /* padding-right: 23px; */
-}
-.MainMenuMenuTxt {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 30px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.MainMenuMeetNews {
-}
-
-.MainMenuMeetTxt {
-  color: #000;
-
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  margin-top: 20px;
-  margin-left: 16px;
-  font-family: sfpdn;
-}
-
-.MainMenuNewsTxt {
+.NewsTxt {
   text-align: left;
   margin: 0;
   margin-top: 30px;
@@ -79,7 +13,7 @@
   font-family: sfpd;
 }
 
-.MainMenuAllNews {
+.AllNews {
   width: calc(100vw - 16px - 16px);
   display: flex;
   flex-direction: row;
@@ -103,7 +37,7 @@
   border-radius: 5px;
 }
 
-.MainMenuBlueNews {
+.BlueNews {
   background: conic-gradient(
     from 180deg,
     rgba(255, 255, 255, 0) 0deg,
@@ -111,7 +45,7 @@
   );
 }
 
-.MainMenuBrownNews {
+.BrownNews {
   background: conic-gradient(
     from 70deg,
     #ad6868 0deg,
@@ -122,7 +56,7 @@
     #ad6868 360deg
   );
 }
-.MainMenuGreenNews {
+.GreenNews {
   background: conic-gradient(
     from 230deg,
     #53d034 0deg,
@@ -132,7 +66,7 @@
     #53d034 360deg
   );
 }
-.MainMenuPinkNews {
+.PinkNews {
   background: conic-gradient(
     from 180deg,
     #FF00F5 0deg,
@@ -143,7 +77,8 @@
     #FF00F5 360deg
   );
 }
-.MainMenuNewsFont {
+
+.NewsFont {
   color: #000000;
   font-family: sfpd;
   font-size: 16px;
@@ -154,7 +89,7 @@
   height: 100%;
 }
 
-.MainMenuTodayWork {
+.TodayWork {
   display: flex;
   width: 100%;
 
@@ -166,7 +101,7 @@
   margin-top: 26px;
 }
 
-.MainMenuTodotxt1 {
+.Todotxt1 {
   color: #000;
   text-align: center;
   font-family: sfpd;
@@ -179,7 +114,7 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-.MainMenuTodotxt2 {
+.Todotxt2 {
   color: #000;
   text-align: center;
   font-family: sfpd;
@@ -191,48 +126,11 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-.MainMenuChangeClr {
+.ChangeClr {
   color: #f00;
 }
 
-.MainMenuBtnCont {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 9px;
-
+.BtnCont {
   width: calc(100% - 22px - 22px);
   margin: 18px 22px 22px 22px;
-}
-
-.MainMenuBtn {
-  grid-column-end: span 1;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid #06f;
-  overflow: hidden;
-  font-family: sfpd;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  width: 100%;
-  height: 44px;
-}
-
-.MainMenuBtnBlue {
-  background: #06f;
-  color: #fff;
-}
-
-.MainMenuBtnWhite {
-  background: #fff;
-  color: #000;
-}
-
-.MainMenuBtn:nth-child(-n + 2),
-.MainMenuBtn:last-child {
-  grid-column-end: span 2;
 }
