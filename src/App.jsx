@@ -11,6 +11,8 @@ const App = () => {
     ...themeTG
   }
 
+  theme.accent = themeTG.button_color
+
   return (
     <ThemeContext.Provider value={theme}>
     <div className="App" style={{
