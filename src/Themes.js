@@ -9,7 +9,8 @@ const Themes = {
     hint_color: "#6C6C6C",
     accent: "#0066FF",
     button_text_color: "#FFFFFF",
-    bg_color: "#ffffff"
+    bg_color: "#ffffff",
+    main_menu_gradient: "#ececec"
   },
   dark: {
     logo_color: "#3FC1F8",
@@ -19,7 +20,8 @@ const Themes = {
     hint_color: "#E6E6E6",
     accent: "#0066FF",
     button_text_color: "#000000",
-    bg_color: "#222222"
+    bg_color: "#222222",
+    main_menu_gradient: "#000000"
   }
 }
 

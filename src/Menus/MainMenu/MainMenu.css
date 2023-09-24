@@ -93,7 +93,7 @@
   display: flex;
   width: 100%;
 
-  background: linear-gradient(180deg, #ececec 0%, #ffffff00 100%);
+  background: linear-gradient(180deg, var(--main-menu-gradient) 0%, #ffffff00 100%);
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;

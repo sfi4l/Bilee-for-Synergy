@@ -20,7 +20,8 @@ const App = () => {
         "--bg-color": theme.bg_color,
         "--text-color": theme.text_color,
         "--hint-color": theme.hint_color,
-        "--red": theme.red
+        "--red": theme.red,
+        "--main-menu-gradient": theme.main_menu_gradient
       }}>
         <MainMenu />
       </div>
