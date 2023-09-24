@@ -2,22 +2,24 @@ import { createContext } from "react"
 
 const Themes = {
   light: {
-    logo: "#1D5CFF",
+    logo_color: "#1D5CFF",
     red: "#FF0000",
     green: "#00DC7D",
-    neutral: "#000000",
-    secondary_neutral: "#6C6C6C",
+    text_color: "#000000",
+    hint_color: "#6C6C6C",
     accent: "#0066FF",
-    anti_neutral: "#FFFFFF"
+    button_text_color: "#FFFFFF",
+    bg_color: "#ffffff"
   },
   dark: {
-    logo: "#3FC1F8",
+    logo_color: "#3FC1F8",
     red: "#FF0000",
     green: "#00DC7D",
-    neutral: "#FFFFFF",
-    secondary_neutral: "#6C6C6C",
+    text_color: "#FFFFFF",
+    hint_color: "#E6E6E6",
     accent: "#0066FF",
-    anti_neutral: "#000000"
+    button_text_color: "#000000",
+    bg_color: "#222222"
   }
 }
 

@@ -3,7 +3,7 @@
   margin: 0;
   margin-top: 30px;
   margin-left: 16px;
-  color: #6c6c6c;
+  color: var(--hint-color);
 
   font-size: 16px;
   font-style: normal;
@@ -40,7 +40,7 @@
 .BlueNews {
   background: conic-gradient(
     from 180deg,
-    rgba(255, 255, 255, 0) 0deg,
+    #ffffff00 0deg,
     #06f 360deg
   );
 }
@@ -50,8 +50,8 @@
     from 70deg,
     #ad6868 0deg,
     #ad686854 50deg,
-    rgba(255, 255, 255, 0) 100deg,
-    rgba(255, 255, 255, 0) 130deg,
+    #ffffff00 100deg,
+    #ffffff00 130deg,
     #ad686848 245deg,
     #ad6868 360deg
   );
@@ -61,8 +61,8 @@
     from 230deg,
     #53d034 0deg,
     #53d03449 140deg,
-    rgba(255, 255, 255, 0) 280deg,
-    rgba(255, 255, 255, 0) 320deg,
+    #ffffff00 280deg,
+    #ffffff00 320deg,
     #53d034 360deg
   );
 }
@@ -71,15 +71,15 @@
     from 180deg,
     #FF00F5 0deg,
     #FF00F554 50deg,
-    rgba(255, 255, 255, 0) 170deg,
-    rgba(255, 255, 255, 0) 200deg,
+    #ffffff00 170deg,
+    #ffffff00 200deg,
     #FF00F548 245deg,
     #FF00F5 360deg
   );
 }
 
 .NewsFont {
-  color: #000000;
+  color: var(--text-color);
   font-family: sfpd;
   font-size: 16px;
   font-weight: 600;
@@ -93,7 +93,7 @@
   display: flex;
   width: 100%;
 
-  background: linear-gradient(180deg, #ececec 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, #ececec 0%, #ffffff00 100%);
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -102,7 +102,7 @@
 }
 
 .Todotxt1 {
-  color: #000;
+  color: var(--text-color);
   text-align: center;
   font-family: sfpd;
   font-size: 24px;
@@ -115,7 +115,7 @@
   margin-right: 20px;
 }
 .Todotxt2 {
-  color: #000;
+  color: var(--text-color);
   text-align: center;
   font-family: sfpd;
   font-size: 16px;
@@ -126,11 +126,12 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-.ChangeClr {
-  color: #f00;
-}
 
 .BtnCont {
   width: calc(100% - 22px - 22px);
   margin: 18px 22px 22px 22px;
+}
+
+.ChangeClr {
+  color: var(--red)
 }

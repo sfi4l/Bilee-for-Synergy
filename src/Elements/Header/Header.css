@@ -28,7 +28,7 @@
 }
 
 .LogoText {
-  color: var(--logo);
+  color: var(--logo-color);
   font-family: sfpdn;
   font-size: 24px;
   font-style: normal;

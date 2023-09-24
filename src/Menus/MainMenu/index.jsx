@@ -5,7 +5,7 @@ import Menu from "../Menu"
 
 const MainMenu = () => {
   return (
-    <Menu title="Привет! Это Ваше меню" subtitle="Привет!">
+    <Menu title="Привет! Это Ваше меню">
       <div className="MeetNews">
         <p className="NewsTxt">Новости</p>
 

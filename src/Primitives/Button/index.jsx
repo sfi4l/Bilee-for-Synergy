@@ -14,9 +14,9 @@ const Button = ({
   const theme = useContext(ThemeContext)
   height = height ?? "44px"
 
-  let styleTextColor = theme.anti_neutral
+  let styleTextColor = theme.button_text_color
   if (!textColor) {
-    if (!highlightColor) styleTextColor = theme.neutral
+    if (!highlightColor) styleTextColor = theme.text_color
   } else styleTextColor = theme[textColor]
 
   return (

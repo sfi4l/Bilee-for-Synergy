@@ -5,17 +5,12 @@ import { useContext } from "react"
 import { ThemeContext } from "../../Themes"
 
 const Header = ({ backButtonVisible }) => {
-  const theme = useContext(ThemeContext)
-  console.log(theme.neutral)
-
   return (
-    <div className="Header" style={{ "--logo": theme.logo }}>
-      {backButtonVisible ? (
+    <div className="Header">
+      {backButtonVisible && (
         <button className="HeaderButton BackButton">
           <img src={backImg} alt="" />
         </button>
-      ) : (
-        <></>
       )}
       <p className="LogoText">Bilee</p>
       <button className="HeaderButton MenuButton" onClick={() => alert(1)}>

@@ -7,10 +7,7 @@ const Menu = ({ children, title, subtitle, backButtonVisible }) => {
   const theme = useContext(ThemeContext)
 
   return (
-    <div className="Menu" style={{
-      "--title-color": theme.neutral,
-      "--subtitle-color": theme.secondary_neutral
-    }}>
+    <div className="Menu">
       <Header backButtonVisible={backButtonVisible} />
       <p className="Title">{title}</p>
       {subtitle && <p className="Subtitle">{subtitle}</p>}
