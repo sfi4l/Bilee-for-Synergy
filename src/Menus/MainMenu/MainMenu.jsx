@@ -58,7 +58,7 @@ const MainMenu = () => {
         <Grid.Item columnEnd="span 2">
           <Button>Предприятие</Button>
         </Grid.Item>
-        <IconButton icon={menu}>Записи</IconButton>
+        <Button>Записи</Button>
         <Button>Настройки</Button>
         <Button>Услуги</Button>
         <Button>Сотрудники</Button>

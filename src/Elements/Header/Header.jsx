@@ -1,24 +1,19 @@
 import "./Header.css"
 import menuImg from "../../Img/Menu.svg"
 import backImg from "../../Img/Back.png"
-import { useContext } from "react"
-import { ThemeContext } from "../../Themes"
+import ThemedIcon from "../../Primitives/ThemedIcon/ThemedIcon"
 
 const Header = ({ backButtonVisible }) => {
-  const theme = useContext(ThemeContext)
-  
   return (
-    <div className="Header" style={{
-      "--icon-filter": theme.icons_filter
-    }}>
+    <div className="Header">
       {backButtonVisible && (
         <button className="HeaderButton BackButton">
-          <img src={backImg} alt="" />
+          <ThemedIcon icon={backImg} />
         </button>
       )}
       <p className="LogoText">Bilee</p>
       <button className="HeaderButton MenuButton">
-        <img src={menuImg} alt="" />
+        <ThemedIcon icon={menuImg} />
       </button>
     </div>
   )
