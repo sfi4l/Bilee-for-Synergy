@@ -21,7 +21,7 @@ const Themes = {
     accent: "#0066FF",
     button_text_color: "#000000",
     bg_color: "#222222",
-    main_menu_gradient: "#000000"
+    main_menu_gradient: "#00000080"
   }
 }
 
