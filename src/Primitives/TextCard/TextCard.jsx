@@ -1,14 +1,13 @@
 import { useContext } from "react"
+import Card from "../Card/Card"
+import "./TextCard.css"
 import { ThemeContext } from "../../Themes"
-import Card from "../Card"
-import "./Button.css"
 
-const Button = ({
+const TextCard = ({
   children,
   outlineColor,
   highlightColor,
   textColor,
-  onClick,
   height
 }) => {
   const theme = useContext(ThemeContext)
@@ -20,19 +19,21 @@ const Button = ({
   } else styleTextColor = theme[textColor]
 
   return (
-    <Card outlineColor={outlineColor} highlightColor={highlightColor}>
-      <button
-        onClick={onClick}
-        className="Button"
+    <Card
+      outlineColor={outlineColor}
+      highlightColor={highlightColor}
+      height={height}
+    >
+      <div
+        className="TextCard"
         style={{
-          "--height": height,
           "--text-color": styleTextColor
         }}
       >
         {children}
-      </button>
+      </div>
     </Card>
   )
 }
 
-export default Button
+export default TextCard

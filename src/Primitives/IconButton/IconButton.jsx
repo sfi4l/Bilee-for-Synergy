@@ -1,6 +1,6 @@
 import { Children } from "react"
-import Button from "../Button"
-import "./IconButton.css"
+import Button from "../Button/Button"
+import IconText from "../IconText/IconText"
 
 const IconButton = ({
   children,
@@ -19,8 +19,9 @@ const IconButton = ({
       onClick={onClick}
       height={height}
     >
-      <img src={icon} />
-      {children}
+      <IconText icon={icon}>
+        {children}
+      </IconText>
     </Button>
   )
 }

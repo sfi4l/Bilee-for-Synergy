@@ -8,20 +8,22 @@ const Themes = {
     text_color: "#000000",
     hint_color: "#6C6C6C",
     accent: "#0066FF",
-    button_text_color: "#FFFFFF",
+    button_text_color: "#ffffff",
     bg_color: "#ffffff",
-    main_menu_gradient: "#ececec"
+    main_menu_gradient: "#ececec",
+    icons_filter: "none"
   },
   dark: {
     logo_color: "#3FC1F8",
     red: "#FF0000",
     green: "#00DC7D",
-    text_color: "#FFFFFF",
-    hint_color: "#E6E6E6",
+    text_color: "#ffffff",
+    hint_color: "#aaaaaa",
     accent: "#0066FF",
     button_text_color: "#000000",
-    bg_color: "#222222",
-    main_menu_gradient: "#00000080"
+    bg_color: "#000000",
+    main_menu_gradient: "#00000080",
+    icons_filter: "invert(100%)"
   }
 }
 

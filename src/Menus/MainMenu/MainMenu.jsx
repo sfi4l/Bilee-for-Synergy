@@ -1,7 +1,9 @@
 import "./MainMenu.css"
-import Button from "../../Primitives/Button"
+import Button from "../../Primitives/Button/Button"
 import Grid from "@react-css/grid"
-import Menu from "../Menu"
+import Menu from "../Menu/Menu"
+import menu from "../../Img/Menu.svg"
+import IconButton from "../../Primitives/IconButton/IconButton"
 
 const MainMenu = () => {
   return (
@@ -36,7 +38,7 @@ const MainMenu = () => {
           <div className="Todotxt">
             <p className="Todotxt1">На сегодня у Вас N записей</p>
             <p className="Todotxt2">
-              Заполненность <span className="ChangeClr">N%(-n) ↓</span>{" "}
+              Заполненность <span className="ChangeClr"> N% (-n) ↓</span>
             </p>
           </div>
         </div>
@@ -49,19 +51,19 @@ const MainMenu = () => {
         gap="9px"
       >
         <Grid.Item columnEnd="span 2">
-          <Button outlineColor={"accent"} highlightColor={"accent"}>
+          <Button highlightColor="accent">
             Карточка сотрудника
           </Button>
         </Grid.Item>
         <Grid.Item columnEnd="span 2">
-          <Button outlineColor={"accent"}>Предприятие</Button>
+          <Button>Предприятие</Button>
         </Grid.Item>
-        <Button outlineColor={"accent"}>Записи</Button>
-        <Button outlineColor={"accent"}>Настройки</Button>
-        <Button outlineColor={"accent"}>Услуги</Button>
-        <Button outlineColor={"accent"}>Сотрудники</Button>
+        <IconButton icon={menu}>Записи</IconButton>
+        <Button>Настройки</Button>
+        <Button>Услуги</Button>
+        <Button>Сотрудники</Button>
         <Grid.Item columnEnd="span 2">
-          <Button outlineColor={"accent"} highlightColor={"accent"}>
+          <Button highlightColor="accent">
             Подписка
           </Button>
         </Grid.Item>

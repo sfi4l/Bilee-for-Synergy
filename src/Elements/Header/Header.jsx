@@ -5,15 +5,19 @@ import { useContext } from "react"
 import { ThemeContext } from "../../Themes"
 
 const Header = ({ backButtonVisible }) => {
+  const theme = useContext(ThemeContext)
+  
   return (
-    <div className="Header">
+    <div className="Header" style={{
+      "--icon-filter": theme.icons_filter
+    }}>
       {backButtonVisible && (
         <button className="HeaderButton BackButton">
           <img src={backImg} alt="" />
         </button>
       )}
       <p className="LogoText">Bilee</p>
-      <button className="HeaderButton MenuButton" onClick={() => alert(1)}>
+      <button className="HeaderButton MenuButton">
         <img src={menuImg} alt="" />
       </button>
     </div>

@@ -1,28 +1,38 @@
 import "./App.css"
-import { useInitData, useThemeParams } from "@vkruglikov/react-telegram-web-app"
-import MainMenu from "./Menus/MainMenu/index"
+import { useInitData, useThemeParams, useExpand } from "@vkruglikov/react-telegram-web-app"
+import MainMenu from "./Menus/MainMenu/MainMenu"
 import Themes, { ThemeContext } from "./Themes"
 
 const App = () => {
   const [colorScheme, themeTG] = useThemeParams()
+  const [initData, initDataRaw] = useInitData()
+  const [isExpanded, expand] = useExpand()
+  let theme = Themes[colorScheme]
 
-  let theme = {
-    ...Themes[colorScheme],
-    ...themeTG
+  if (initDataRaw) {
+    theme = {
+      ...theme,
+      ...themeTG
+    }
+
+    theme.accent = themeTG.button_color
   }
 
-  theme.accent = themeTG.button_color
+  if (!isExpanded) expand()
 
   return (
     <ThemeContext.Provider value={theme}>
-    <div className="App" style={{
-        "--logo-color": theme.logo_color,
-        "--bg-color": theme.bg_color,
-        "--text-color": theme.text_color,
-        "--hint-color": theme.hint_color,
-        "--red": theme.red,
-        "--main-menu-gradient": theme.main_menu_gradient
-      }}>
+      <div
+        className="App"
+        style={{
+          "--logo-color": theme.logo_color,
+          "--bg-color": theme.bg_color,
+          "--text-color": theme.text_color,
+          "--hint-color": theme.hint_color,
+          "--red": theme.red,
+          "--main-menu-gradient": theme.main_menu_gradient
+        }}
+      >
         <MainMenu />
       </div>
     </ThemeContext.Provider>

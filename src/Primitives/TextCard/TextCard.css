@@ -1,0 +1,14 @@
+.TextCard {
+  width: 100%;
+  height: 100%;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sfpd;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--text-color);
+}
