@@ -13,6 +13,7 @@ const Card = ({
   const theme = useContext(ThemeContext)
 
   let styleOutlineColor = theme.accent
+  if (outlineColor) styleOutlineColor = theme[outlineColor]
   let styleHighlightColor = "none"
   if (highlightColor) {
     styleHighlightColor = theme[highlightColor]

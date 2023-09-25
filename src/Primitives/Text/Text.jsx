@@ -2,12 +2,22 @@ import { useContext } from "react"
 import "./Text.css"
 import { ThemeContext } from "../../Themes"
 
-const Text = ({ children, font, size, weight, style, color, className }) => {
+const Text = ({
+  children,
+  font,
+  size,
+  weight,
+  style,
+  color,
+  align,
+  className
+}) => {
   const theme = useContext(ThemeContext)
   if (color) color = theme[color]
   font = font ?? "sfpd"
   size = size ?? "16px"
   className = " " + className ?? ""
+  align = align ?? "left"
 
   return (
     <div
@@ -17,7 +27,8 @@ const Text = ({ children, font, size, weight, style, color, className }) => {
         "--weight": weight,
         "--style": style,
         "--text-color": color,
-        "--size": size
+        "--size": size,
+        "--align": align
       }}
     >
       {children}
