@@ -42,11 +42,15 @@ const EmployeeMenu = () => {
       </Grid>
 
       <Grid rows="repeat(3, 1fr)" columns="repeat(7, 1fr)" rowGap="6px" columnGap="8px" className="DaysContainer">
-        <TextCard className="DayCard" >
-          <Text font="Inter" weight="400">
-            Пн
-          </Text>
-        </TextCard>
+        {(() =>
+          ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].forEach(el => (
+            <TextCard className="DayCard" >
+              <Text font="Inter" weight="400">
+                {el}
+              </Text>
+            </TextCard>
+          ))
+        )()}
       </Grid>
     </Menu>
   )
