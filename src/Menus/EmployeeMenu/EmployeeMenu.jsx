@@ -11,6 +11,65 @@ import Text from "../../Primitives/Text/Text"
 import TextCard from "../../Primitives/TextCard/TextCard"
 
 const EmployeeMenu = () => {
+  const mockedDayData = [
+    {
+      text: "",
+      type: 1
+    },
+    {
+      text: "",
+      type: 1
+    },
+    {
+      text: "1",
+      type: 1
+    },
+    {
+      text: "2",
+      type: 1
+    },
+    {
+      text: "3",
+      type: 3
+    },
+    {
+      text: "4",
+      type: 4
+    },
+    {
+      text: "5",
+      type: 5
+    },
+    {
+      text: "6",
+      type: 5
+    },
+    {
+      text: "7",
+      type: 4
+    },
+    {
+      text: "8",
+      type: 4
+    },
+    {
+      text: "9",
+      type: 5
+    },
+    {
+      text: "10",
+      type: 5
+    },
+    {
+      text: "11",
+      type: 4
+    },
+    {
+      text: "12",
+      type: 4
+    }
+  ]
+
   return (
     <Menu title="Николай, Ваша карточка:">
       <Grid
@@ -49,13 +108,28 @@ const EmployeeMenu = () => {
         className="DaysContainer"
       >
         {(() =>
-          ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map(el => (
+          ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((el) => (
             <TextCard className="DayCard" outlineColor="neutral">
               <Text font="Inter" weight="400">
                 {el}
               </Text>
             </TextCard>
           )))()}
+        {(() =>
+          mockedDayData.map(({ text, type }) => {
+            let props = {
+              "outlineColor": "accent",
+              "textColor": ""
+            }
+
+            return (
+              <TextCard className="DayCard" {...props}>
+                <Text font="Inter" weight="400">
+                  {text}
+                </Text>
+              </TextCard>
+            )
+          }))()}
       </Grid>
     </Menu>
   )
