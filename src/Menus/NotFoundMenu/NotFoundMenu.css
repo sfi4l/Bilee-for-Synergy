@@ -1,0 +1,19 @@
+.Magnifier{
+    flex-shrink: 0;
+    width:60%;
+    margin:52px 0px 23px 0px;
+}
+.MagnifierContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.MainText{
+    width:60%;
+    margin-bottom:57px;
+}
+.MainBtn{
+    width:80%;
+    margin-bottom:83px;
+}

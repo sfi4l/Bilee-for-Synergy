@@ -3,6 +3,7 @@ import { useInitData, useThemeParams, useExpand } from "@vkruglikov/react-telegr
 import MainMenu from "./Menus/MainMenu/MainMenu"
 import Themes, { ThemeContext } from "./Themes"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
+import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
 
 const App = () => {
   const [colorScheme, themeTG] = useThemeParams()
@@ -34,8 +35,8 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
-        {/* <MainMenu /> */}
-        <EmployeeMenu />
+        <MainMenu />
+        {/* <EmployeeMenu /> */}
       </div>
     </ThemeContext.Provider>
   )
