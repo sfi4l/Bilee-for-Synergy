@@ -1,0 +1,8 @@
+.Text {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--size);
+  font-style: var(--style);
+  font-weight: var(--weight);
+  line-height: normal;
+}

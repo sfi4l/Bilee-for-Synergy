@@ -2,6 +2,7 @@ import "./App.css"
 import { useInitData, useThemeParams, useExpand } from "@vkruglikov/react-telegram-web-app"
 import MainMenu from "./Menus/MainMenu/MainMenu"
 import Themes, { ThemeContext } from "./Themes"
+import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 
 const App = () => {
   const [colorScheme, themeTG] = useThemeParams()
@@ -33,7 +34,8 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
-        <MainMenu />
+        {/* <MainMenu /> */}
+        <EmployeeMenu />
       </div>
     </ThemeContext.Provider>
   )

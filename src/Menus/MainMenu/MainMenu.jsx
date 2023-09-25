@@ -8,15 +8,7 @@ import TextCard from "../../Primitives/TextCard/TextCard"
 
 const MainMenu = () => {
   return (
-    <Menu
-      title="Запись №12445"
-      // title="Привет! Это Ваше меню"
-      add={
-        <TextCard outlineColor="accent" height="29px" width="auto">
-          Создано
-        </TextCard>
-      }
-    >
+    <Menu title="Привет! Это Ваше меню">
       <div className="MeetNews">
         <p className="NewsTxt">Новости</p>
 

@@ -1,0 +1,4 @@
+.ButtonContainer {
+  width: calc(100% - 16px - 16px);
+  margin: 28px 16px 10px 16px;
+}

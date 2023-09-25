@@ -1,12 +1,14 @@
 @font-face {
-  font-family: sfpd; /* Гарнитура шрифта */
-  src: url(./Img/spdfnn.OTF); /* Путь к файлу со шрифтом */
+  font-family: sfpd;
+  src: url(./Img/spdfnn.OTF);
 }
 
 @font-face {
-  font-family: sfpdn; /* Гарнитура шрифта */
-  src: url(./Img/MDSF.OTF); /* Путь к файлу со шрифтом */
+  font-family: sfpdn;
+  src: url(./Img/MDSF.OTF);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 body {
   margin: 0;

@@ -1,6 +1,6 @@
 import { Children } from "react"
 import Button from "../Button/Button"
-import IconText from "../IconText/IconText"
+import Iconify from "../Iconify/Iconify"
 
 const IconButton = ({
   children,
@@ -9,7 +9,8 @@ const IconButton = ({
   highlightColor,
   textColor,
   onClick,
-  height
+  height,
+  iconSize
 }) => {
   return (
     <Button
@@ -19,9 +20,9 @@ const IconButton = ({
       onClick={onClick}
       height={height}
     >
-      <IconText icon={icon}>
+      <Iconify icon={icon} size={iconSize}>
         {children}
-      </IconText>
+      </Iconify>
     </Button>
   )
 }

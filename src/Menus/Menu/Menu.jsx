@@ -3,17 +3,20 @@ import Header from "../../Elements/Header/Header"
 import "./Menu.css"
 import { ThemeContext } from "../../Themes"
 
-const Menu = ({ children, title, subtitle, backButtonVisible, add }) => {
+const Menu = ({ children, title, subtitle, onBack, onMenu, add }) => {
   const theme = useContext(ThemeContext)
 
   return (
     <div className="Menu">
-      <Header backButtonVisible={backButtonVisible} />
+      <Header onBack={onBack} onMenu={onMenu} />
+
       <div className="TitleContainer">
         <p className="Title">{title}</p>
         {add}
       </div>
+
       {subtitle && <p className="Subtitle">{subtitle}</p>}
+
       {children}
     </div>
   )

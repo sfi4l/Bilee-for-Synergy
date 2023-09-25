@@ -5,11 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: sfpd;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
   color: var(--text-color);
 
   padding-right: 7px;
