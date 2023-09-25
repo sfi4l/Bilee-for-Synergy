@@ -10,7 +10,8 @@ const IconButton = ({
   textColor,
   onClick,
   height,
-  iconSize
+  iconSize,
+  className
 }) => {
   return (
     <Button
@@ -19,6 +20,7 @@ const IconButton = ({
       textColor={textColor}
       onClick={onClick}
       height={height}
+      className={className}
     >
       <Iconify icon={icon} size={iconSize}>
         {children}

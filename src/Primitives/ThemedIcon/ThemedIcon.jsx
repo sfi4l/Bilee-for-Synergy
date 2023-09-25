@@ -2,13 +2,14 @@ import "./ThemedIcon.css"
 import { useContext } from "react"
 import { ThemeContext } from "../../Themes"
 
-const ThemedIcon = ({ icon }) => {
+const ThemedIcon = ({ icon, className }) => {
   const theme = useContext(ThemeContext)
+  className = " " + className ?? ""
 
   return (
     <img
       src={icon}
-      className="ThemedIcon"
+      className={"ThemedIcon" + className}
       alt=""
       style={{
         "--icon-filter": theme.icons_filter

@@ -8,6 +8,7 @@ import Grid from "@react-css/grid"
 import Button from "../../Primitives/Button/Button"
 import IconButton from "../../Primitives/IconButton/IconButton"
 import Text from "../../Primitives/Text/Text"
+import TextCard from "../../Primitives/TextCard/TextCard"
 
 const EmployeeMenu = () => {
   return (
@@ -38,6 +39,14 @@ const EmployeeMenu = () => {
             08:00-21:00
           </Text>
         </IconButton>
+      </Grid>
+
+      <Grid rows="repeat(3, 1fr)" columns="repeat(7, 1fr)" rowGap="6px" columnGap="8px" className="DaysContainer">
+        <TextCard className="DayCard" >
+          <Text font="Inter" weight="400">
+            Пн
+          </Text>
+        </TextCard>
       </Grid>
     </Menu>
   )

@@ -7,10 +7,13 @@ const Button = ({
   highlightColor,
   textColor,
   onClick,
-  height
+  height,
+  className
 }) => {
+  className = " " + className ?? ""
+  
   return (
-    <button onClick={onClick} className="Button">
+    <button onClick={onClick} className={"Button" + className}>
       <TextCard
         outlineColor={outlineColor}
         highlightColor={highlightColor}
