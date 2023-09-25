@@ -4,6 +4,7 @@ import MainMenu from "./Menus/MainMenu/MainMenu"
 import Themes, { ThemeContext } from "./Themes"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
+import SupportText from "./Elements/SupportText/SupportText"
 
 const App = () => {
   const [colorScheme, themeTG] = useThemeParams()
@@ -35,8 +36,7 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
-        <MainMenu />
-        {/* <EmployeeMenu /> */}
+       <NotFoundMenu></NotFoundMenu>
       </div>
     </ThemeContext.Provider>
   )
