@@ -2,7 +2,14 @@ import { useContext } from "react"
 import "./Card.css"
 import { ThemeContext } from "../../Themes"
 
-const Card = ({ children, outlineColor, highlightColor, height, width }) => {
+const Card = ({
+  children,
+  outlineColor,
+  highlightColor,
+  height,
+  width,
+  className
+}) => {
   const theme = useContext(ThemeContext)
 
   let styleOutlineColor = theme.accent
@@ -13,10 +20,11 @@ const Card = ({ children, outlineColor, highlightColor, height, width }) => {
   }
   height = height ?? "auto"
   width = width ?? "100%"
+  className = " " + className ?? ""
 
   return (
     <div
-      className="Card"
+      className={"Card" + className}
       style={{
         "--outline-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor,

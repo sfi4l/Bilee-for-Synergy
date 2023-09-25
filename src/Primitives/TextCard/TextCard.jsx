@@ -9,7 +9,8 @@ const TextCard = ({
   highlightColor,
   textColor,
   height,
-  width
+  width,
+  className
 }) => {
   const theme = useContext(ThemeContext)
   height = height ?? "44px"
@@ -24,6 +25,7 @@ const TextCard = ({
       highlightColor={highlightColor}
       height={height}
       width={width}
+      className={className}
     >
       <div
         className="TextCard"

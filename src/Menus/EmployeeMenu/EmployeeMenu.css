@@ -2,3 +2,12 @@
   width: calc(100% - 16px - 16px);
   margin: 28px 16px 10px 16px;
 }
+
+.DaysContainer {
+  width: calc(100% - 16px - 16px);
+  margin: 0px 16px 0px 16px;
+}
+
+.DayCard {
+  aspect-ratio: 1 / 1;
+}

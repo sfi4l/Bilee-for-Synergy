@@ -10,10 +10,12 @@ const Menu = ({ children, title, subtitle, onBack, onMenu, add }) => {
     <div className="Menu">
       <Header onBack={onBack} onMenu={onMenu} />
 
-      <div className="TitleContainer">
-        <p className="Title">{title}</p>
-        {add}
-      </div>
+      {title && (
+        <div className="TitleContainer">
+          <p className="Title">{title}</p>
+          {add}
+        </div>
+      )}
 
       {subtitle && <p className="Subtitle">{subtitle}</p>}
 
