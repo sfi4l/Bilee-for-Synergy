@@ -4,11 +4,20 @@
   overflow: hidden;
 }
 
+.TitleContainer {
+  display: flex;
+  width: calc(100% - 16px - 16px);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  
+  margin: 20px 16px 0px 16px;
+}
+
 .Title {
   color: var(--text-color);
   margin: 0;
-  margin-top: 20px;
-  margin-left: 16px;
 
   font-size: 24px;
   font-style: normal;
@@ -16,6 +25,10 @@
   line-height: normal;
   font-family: sfpdn;
 } 
+
+.TitleContainer > *:nth-child(2) {
+  flex-grow: 1;
+}
 
 .Subtitle {
   color: var(--hint-color);

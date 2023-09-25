@@ -4,10 +4,19 @@ import Grid from "@react-css/grid"
 import Menu from "../Menu/Menu"
 import menu from "../../Img/Menu.svg"
 import IconButton from "../../Primitives/IconButton/IconButton"
+import TextCard from "../../Primitives/TextCard/TextCard"
 
 const MainMenu = () => {
   return (
-    <Menu title="Привет! Это Ваше меню">
+    <Menu
+      title="Запись №12445"
+      // title="Привет! Это Ваше меню"
+      add={
+        <TextCard outlineColor="accent" height="29px" width="auto">
+          Создано
+        </TextCard>
+      }
+    >
       <div className="MeetNews">
         <p className="NewsTxt">Новости</p>
 
@@ -51,9 +60,7 @@ const MainMenu = () => {
         gap="9px"
       >
         <Grid.Item columnEnd="span 2">
-          <Button highlightColor="accent">
-            Карточка сотрудника
-          </Button>
+          <Button highlightColor="accent">Карточка сотрудника</Button>
         </Grid.Item>
         <Grid.Item columnEnd="span 2">
           <Button>Предприятие</Button>
@@ -63,9 +70,7 @@ const MainMenu = () => {
         <Button>Услуги</Button>
         <Button>Сотрудники</Button>
         <Grid.Item columnEnd="span 2">
-          <Button highlightColor="accent">
-            Подписка
-          </Button>
+          <Button highlightColor="accent">Подписка</Button>
         </Grid.Item>
       </Grid>
     </Menu>

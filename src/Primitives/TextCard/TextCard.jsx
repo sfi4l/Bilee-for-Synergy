@@ -8,11 +8,11 @@ const TextCard = ({
   outlineColor,
   highlightColor,
   textColor,
-  height
+  height,
+  width
 }) => {
   const theme = useContext(ThemeContext)
   height = height ?? "44px"
-
   let styleTextColor = theme.button_text_color
   if (!textColor) {
     if (!highlightColor) styleTextColor = theme.text_color
@@ -23,6 +23,7 @@ const TextCard = ({
       outlineColor={outlineColor}
       highlightColor={highlightColor}
       height={height}
+      width={width}
     >
       <div
         className="TextCard"

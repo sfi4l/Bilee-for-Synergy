@@ -1,8 +1,8 @@
 .TextCard {
-  width: 100%;
+  width: calc(100% - 7px - 7px);
   height: 100%;
 
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-family: sfpd;
@@ -11,4 +11,7 @@
   font-weight: 500;
   line-height: normal;
   color: var(--text-color);
+
+  padding-right: 7px;
+  padding-left: 7px;
 }
