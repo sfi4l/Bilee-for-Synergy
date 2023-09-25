@@ -34,8 +34,8 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
-        <MainMenu />
-        {/* <EmployeeMenu /> */}
+        {/* <MainMenu /> */}
+        <EmployeeMenu />
       </div>
     </ThemeContext.Provider>
   )
