@@ -1,36 +1,13 @@
 import "./App.css"
-import { useInitData, useThemeParams, useExpand } from "@vkruglikov/react-telegram-web-app"
-import MainMenu from "./Menus/MainMenu/MainMenu"
+import {
+  useInitData,
+  useThemeParams,
+  useExpand
+} from "@vkruglikov/react-telegram-web-app"
 import Themes, { ThemeContext } from "./Themes"
-import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
-import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
-import FilterMenu from "./Menus/FilterMenu/FilterMenu"
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
-import Settings from "./Menus/Settings/Settings"
-import NotificationSettings from "./Menus/NotificationSettings/NotificationSettings"
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainMenu />
-  }, {
-    path: "/employee",
-    element: <EmployeeMenu />
-  }, {
-    path: "/filter",
-    element: <FilterMenu />
-  }, {
-    path: "/notfound",
-    element: <NotFoundMenu title="Вы ещё не добавили ни одной услуги"/>
-  }, {
-    path: "/settings",
-    element: <Settings/>
-  }, {
-    path: "/settings/notification",
-    element: <NotificationSettings/>
-  }
-
-])
+import { RouterProvider } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
+import { router } from "./Routing"
 
 const App = () => {
   const [colorScheme, themeTG] = useThemeParams()
@@ -64,7 +41,9 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
-        <RouterProvider router={router} />
+        <AnimatePresence mode="wait">
+          <RouterProvider router={router} />
+        </AnimatePresence>
       </div>
     </ThemeContext.Provider>
   )
