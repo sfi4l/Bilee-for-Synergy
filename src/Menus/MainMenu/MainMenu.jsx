@@ -58,7 +58,7 @@ const MainMenu = () => {
           <Button>Предприятие</Button>
         </Grid.Item>
         <Button>Записи</Button>
-        <Button>Настройки</Button>
+        <Button onClick={()=> navigate("/settings")}>Настройки</Button>
         <Button>Услуги</Button>
         <Button>Сотрудники</Button>
         <Grid.Item columnEnd="span 2">

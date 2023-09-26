@@ -6,6 +6,7 @@ import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
 import FilterMenu from "./Menus/FilterMenu/FilterMenu"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import Settings from "./Menus/Settings/Settings"
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,9 @@ const router = createBrowserRouter([
   }, {
     path: "/notfound",
     element: <NotFoundMenu title="Вы ещё не добавили ни одной услуги"/>
+  }, {
+    path: "/settings",
+    element: <Settings/>
   }
 ])
 
