@@ -6,14 +6,14 @@ import SupportedMenu from "../SupportedMenu/SupportedMenu"
 import NotFoundIcon from "../../Elements/NotFoundIcon/NotFoundIcon"
 import { useNavigate } from "react-router-dom"
 
-const NotFoundMenu = ({ title, onClick }) => {
+const NotFoundMenu = ({ title, onClick ,nav }) => {
   const navigate = useNavigate()
-  onClick = onClick ?? (() => navigate("/filter"))
-
+  onClick = onClick ?? (() => navigate(nav))
   return (
     <SupportedMenu>
       <NotFoundIcon title={title} margin="63px 0px 57px 0px" />
-
+      
+  
       <Button highlightColor="accent_color" onClick={onClick} className="AddButton">
         Добавить
       </Button>

@@ -59,7 +59,7 @@ const MainMenu = () => {
         </Grid.Item>
         <Button>Записи</Button>
         <Button onClick={()=> navigate("/settings")}>Настройки</Button>
-        <Button>Услуги</Button>
+        <Button onClick={()=> navigate("/notfoundservice")}>Услуги</Button>
         <Button>Сотрудники</Button>
         <Grid.Item columnEnd="span 2">
           <Button highlightColor="accent_color">Подписка</Button>
