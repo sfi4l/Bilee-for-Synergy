@@ -20,16 +20,18 @@ const router = createBrowserRouter([
     path: "/filter",
     element: <FilterMenu />
   }, {
-    path: "/notfound",
-    element: <NotFoundMenu title="Вы ещё не добавили ни одной услуги"/>
+    path: "/notfoundfilial",
+    element: <NotFoundMenu title="Вы ещё не добавили ни одного филиала"/>
   }, {
     path: "/settings",
     element: <Settings/>
   }, {
     path: "/settings/notification",
     element: <NotificationSettings/>
+  }, {
+    path: "/notfoundservice",
+    element: <NotFoundMenu nav="/filter" title="Вы ещё не добавили ни одной услуги"/>
   }
-
 ])
 
 const App = () => {
