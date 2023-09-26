@@ -37,7 +37,7 @@ const App = () => {
   const [initData, initDataRaw] = useInitData()
   const [isExpanded, expand] = useExpand()
   let theme = Themes[colorScheme]
-  theme = Themes["dark"]
+  // theme = Themes["dark"]
 
   if (initDataRaw) {
     theme = {

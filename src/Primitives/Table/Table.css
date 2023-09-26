@@ -3,9 +3,9 @@
   height: 40px;
   box-sizing: border-box;
 
-  border: var(--neutral-color);
   border-bottom: 1px solid;
   border-right: 1px solid;
+  border-color: var(--neutral-color);
 
   display: flex;
   align-items: center;
