@@ -6,6 +6,7 @@ import tune_icon from "../../Img/tune_icon.svg"
 import "./ServicesFilterMenu.css"
 import NotFoundIcon from "../../Elements/NotFoundIcon/NotFoundIcon"
 import { useNavigate } from "react-router-dom"
+import ServiceCard from "./ServiceCard/ServiceCard"
 
 const ServicesFilterMenu = () => {
   return (
@@ -23,10 +24,16 @@ const ServicesFilterMenu = () => {
         </Iconify>
       </Button>
 
+<ServiceCard margin={"13px 0px 6px 0px"} type={1} mainText={"Маникюр, Комибнированный"}/>
+<ServiceCard margin={"0px 0px 6px 0px"} type={2} mainText={"Маникюр, Женский"}/>
+<ServiceCard margin={"0px 0px 6px 0px"} type={3} mainText={"Маникюр, Мужской"}/>
+
+
+{/* 
       <NotFoundIcon
         title="По заданным фильтрам ничего не найдено"
         margin="16px 0px 50px 0px"
-      />
+      /> */}
 
       <Button highlightColor="accent_color">
         Добавить
