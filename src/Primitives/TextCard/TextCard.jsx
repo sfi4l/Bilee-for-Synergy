@@ -10,6 +10,7 @@ const TextCard = ({
   textColor,
   height,
   width,
+  margin,
   className
 }) => {
   const theme = useContext(ThemeContext)
@@ -26,6 +27,7 @@ const TextCard = ({
       height={height}
       width={width}
       className={className}
+      margin={margin}
     >
       <div
         className="TextCard"

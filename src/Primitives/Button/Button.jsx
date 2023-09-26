@@ -8,12 +8,15 @@ const Button = ({
   textColor,
   onClick,
   height,
+  margin,
   className
 }) => {
-  className = " " + className ?? ""
+  className = className && (" " + className) || ""
   
   return (
-    <button onClick={onClick} className={"Button" + className}>
+    <button onClick={onClick} className={"Button" + className} style={{
+      "--margin": margin
+    }}>
       <TextCard
         outlineColor={outlineColor}
         highlightColor={highlightColor}

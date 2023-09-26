@@ -10,14 +10,18 @@ const Text = ({
   style,
   color,
   align,
+  width,
+  margin,
   className
 }) => {
   const theme = useContext(ThemeContext)
   if (color) color = theme[color]
   font = font ?? "sfpd"
   size = size ?? "16px"
-  className = " " + className ?? ""
+  className = className && (" " + className) || ""
   align = align ?? "left"
+  width = width ?? "auto"
+  margin = margin ?? "0"
 
   return (
     <div
@@ -28,7 +32,9 @@ const Text = ({
         "--style": style,
         "--text-color": color,
         "--size": size,
-        "--align": align
+        "--align": align,
+        "--width": width,
+        "--margin": margin
       }}
     >
       {children}

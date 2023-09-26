@@ -4,7 +4,7 @@ import { ThemeContext } from "../../Themes"
 
 const ThemedIcon = ({ icon, className }) => {
   const theme = useContext(ThemeContext)
-  className = " " + className ?? ""
+  className = className && (" " + className) || ""
 
   return (
     <img

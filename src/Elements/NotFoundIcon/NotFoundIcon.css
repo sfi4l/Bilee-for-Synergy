@@ -1,0 +1,14 @@
+.Magnifier {
+  flex-shrink: 0;
+  width: 45%;
+  margin-bottom: 23px;
+}
+
+.NotFoundIcon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  margin: var(--margin);
+}

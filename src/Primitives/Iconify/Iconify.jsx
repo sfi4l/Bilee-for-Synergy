@@ -3,7 +3,7 @@ import "./Iconify.css"
 
 const Iconify = ({ children, icon, size, className }) => {
   size = size ?? "24px"
-  className = " " + className ?? ""
+  className = className && (" " + className) || ""
 
   return (
     <div className={"Iconify" + className} style={{

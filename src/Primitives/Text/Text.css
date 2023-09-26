@@ -6,6 +6,6 @@
   font-weight: var(--weight);
   line-height: normal;
   text-align: var(--align);
-
-  margin: 0;
+  width: var(--width);
+  margin: var(--margin);
 }

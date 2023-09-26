@@ -8,11 +8,12 @@ const Card = ({
   highlightColor,
   height,
   width,
+  margin,
   className
 }) => {
   const theme = useContext(ThemeContext)
 
-  let styleOutlineColor = theme.accent
+  let styleOutlineColor = theme.accent_color
   if (outlineColor) styleOutlineColor = theme[outlineColor]
   let styleHighlightColor = "none"
   if (highlightColor) {
@@ -21,7 +22,8 @@ const Card = ({
   }
   height = height ?? "auto"
   width = width ?? "100%"
-  className = " " + className ?? ""
+  className = className && (" " + className) || ""
+  margin = margin ?? "0" 
 
   return (
     <div
@@ -30,7 +32,8 @@ const Card = ({
         "--outline-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor,
         "--height": height,
-        "--width": width
+        "--width": width,
+        "--margin": margin
       }}
     >
       {children}

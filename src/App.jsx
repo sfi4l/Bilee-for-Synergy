@@ -4,13 +4,31 @@ import MainMenu from "./Menus/MainMenu/MainMenu"
 import Themes, { ThemeContext } from "./Themes"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
-import SupportText from "./Elements/SupportText/SupportText"
+import FilterMenu from "./Menus/FilterMenu/FilterMenu"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainMenu />
+  }, {
+    path: "/employee",
+    element: <EmployeeMenu />
+  }, {
+    path: "/filter",
+    element: <FilterMenu />
+  }, {
+    path: "/notfound",
+    element: <NotFoundMenu title="Вы ещё не добавили ни одной услуги"/>
+  }
+])
 
 const App = () => {
   const [colorScheme, themeTG] = useThemeParams()
   const [initData, initDataRaw] = useInitData()
   const [isExpanded, expand] = useExpand()
   let theme = Themes[colorScheme]
+  theme = Themes["dark"]
 
   if (initDataRaw) {
     theme = {
@@ -18,7 +36,7 @@ const App = () => {
       ...themeTG
     }
 
-    theme.accent = themeTG.button_color
+    theme.accent_color = themeTG.button_color
   }
 
   if (!isExpanded) expand()
@@ -36,7 +54,7 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
-       <NotFoundMenu></NotFoundMenu>
+        <RouterProvider router={router} />
       </div>
     </ThemeContext.Provider>
   )

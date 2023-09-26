@@ -9,8 +9,11 @@ import Button from "../../Primitives/Button/Button"
 import IconButton from "../../Primitives/IconButton/IconButton"
 import Text from "../../Primitives/Text/Text"
 import TextCard from "../../Primitives/TextCard/TextCard"
+import { useNavigate } from "react-router-dom"
 
 const EmployeeMenu = () => {
+  const navigate = useNavigate()
+
   const mockedDayData = [
     {
       text: "",
@@ -78,7 +81,7 @@ const EmployeeMenu = () => {
         gap="12px"
         className="ButtonContainer"
       >
-        <Button highlightColor="green" textColor="text_color">
+        <Button highlightColor="green" textColor="text_on_accent_color" onClick={() => navigate("/notfound")}>
           <Text font="Inter" weight="600">
             Запись доступна
           </Text>
@@ -118,8 +121,28 @@ const EmployeeMenu = () => {
         {(() =>
           mockedDayData.map(({ text, type }) => {
             let props = {
-              "outlineColor": "accent",
-              "textColor": ""
+              outlineColor: "hint_color",
+              textColor: "hint_color"
+            }
+
+            switch (type) {
+              case 3:
+                props = {
+                  highlightColor: "accent_color"
+                }
+                break
+              
+              case 4:
+                props = {
+                  outlineColor: "accent_color"
+                }
+                break
+              
+              case 5:
+                props = {
+                  outlineColor: "neutral"
+                }
+                break
             }
 
             return (
