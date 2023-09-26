@@ -7,6 +7,7 @@ import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
 import FilterMenu from "./Menus/FilterMenu/FilterMenu"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Settings from "./Menus/Settings/Settings"
+import NotificationSettings from "./Menus/NotificationSettings/NotificationSettings"
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
   }, {
     path: "/settings",
     element: <Settings/>
+  }, {
+    path: "/settings/notification",
+    element: <NotificationSettings/>
   }
+
 ])
 
 const App = () => {

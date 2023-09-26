@@ -81,7 +81,7 @@ const EmployeeMenu = () => {
         gap="12px"
         className="ButtonContainer"
       >
-        <Button highlightColor="green" textColor="text_on_accent_color" onClick={() => navigate("/notfound")}>
+        <Button highlightColor="green" textColor="text_on_accent_color">
           <Text font="Inter" weight="600">
             Запись доступна
           </Text>
