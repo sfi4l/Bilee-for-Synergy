@@ -1,0 +1,11 @@
+.ServiceCard{
+  min-height: 77px;
+  display:flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 19px 20px 20px 17px;
+  align-items: center;
+  
+}
+
