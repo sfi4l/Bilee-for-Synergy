@@ -1,5 +1,6 @@
 import TextCard from "../TextCard/TextCard"
 import "./Button.css"
+import { motion } from "framer-motion"
 
 const Button = ({
   children,
@@ -14,7 +15,7 @@ const Button = ({
   className = className && (" " + className) || ""
   
   return (
-    <button onClick={onClick} className={"Button" + className} style={{
+    <motion.button onClick={onClick} className={"Button" + className} style={{
       "--margin": margin
     }}>
       <TextCard
@@ -25,7 +26,7 @@ const Button = ({
       >
         {children}
       </TextCard>
-    </button>
+    </motion.button>
   )
 }
 

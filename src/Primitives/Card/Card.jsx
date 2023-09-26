@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import "./Card.css"
 import { ThemeContext } from "../../Themes"
+import { motion } from "framer-motion"
 
 const Card = ({
   children,
@@ -26,18 +27,19 @@ const Card = ({
   margin = margin ?? "0" 
 
   return (
-    <div
+    <motion.div
       className={"Card" + className}
-      style={{
+      animate={{
         "--outline-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor,
         "--height": height,
         "--width": width,
         "--margin": margin
       }}
+      transition={{ duration: 0.1, ease: "easeIn" }}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 

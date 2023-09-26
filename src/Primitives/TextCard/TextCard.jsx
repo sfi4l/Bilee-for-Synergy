@@ -2,6 +2,7 @@ import { useContext } from "react"
 import Card from "../Card/Card"
 import "./TextCard.css"
 import { ThemeContext } from "../../Themes"
+import { motion } from "framer-motion"
 
 const TextCard = ({
   children,
@@ -29,14 +30,14 @@ const TextCard = ({
       className={className}
       margin={margin}
     >
-      <div
+      <motion.div
         className="TextCard"
         style={{
           "--text-color": styleTextColor
         }}
       >
         {children}
-      </div>
+      </motion.div>
     </Card>
   )
 }
