@@ -1,5 +1,5 @@
-import Menu from "../Menu/Menu"
 import "./EmployeeMenu.css"
+import SupportedMenu from "../SupportedMenu/SupportedMenu"
 import group_icon from "../../Img/group_icon.png"
 import clock_icon from "../../Img/clock_icon.png"
 import location_icon from "../../Img/location_icon.png"
@@ -10,6 +10,9 @@ import IconButton from "../../Primitives/IconButton/IconButton"
 import Text from "../../Primitives/Text/Text"
 import TextCard from "../../Primitives/TextCard/TextCard"
 import { useNavigate } from "react-router-dom"
+import UserInfo from "./UserInfo/UserInfo"
+import Table from "../../Primitives/Table/Table"
+import UserServices from "./UserServices/UserServices"
 
 const EmployeeMenu = () => {
   const navigate = useNavigate()
@@ -74,14 +77,20 @@ const EmployeeMenu = () => {
   ]
 
   return (
-    <Menu title="Николай, Ваша карточка:">
+    <SupportedMenu title="Николай, Ваша карточка:">
+      <UserInfo avatar={avatar} />
+
       <Grid
         rows="repeat(2, 1fr)"
         columns="repeat(2, 1fr)"
         gap="12px"
         className="ButtonContainer"
       >
-        <Button highlightColor="green" textColor="text_on_accent_color" onClick={() => navigate("/notfound")}>
+        <Button
+          highlightColor="green"
+          textColor="text_on_accent_color"
+          onClick={() => navigate("/notfound")}
+        >
           <Text font="Inter" weight="600">
             Запись доступна
           </Text>
@@ -120,33 +129,8 @@ const EmployeeMenu = () => {
           )))()}
         {(() =>
           mockedDayData.map(({ text, type }) => {
-            let props = {
-              outlineColor: "hint_color",
-              textColor: "hint_color"
-            }
-
-            switch (type) {
-              case 3:
-                props = {
-                  highlightColor: "accent_color"
-                }
-                break
-              
-              case 4:
-                props = {
-                  outlineColor: "accent_color"
-                }
-                break
-              
-              case 5:
-                props = {
-                  outlineColor: "neutral"
-                }
-                break
-            }
-
             return (
-              <TextCard className="DayCard" {...props}>
+              <TextCard className="DayCard" {...colorsForType(type)}>
                 <Text font="Inter" weight="400">
                   {text}
                 </Text>
@@ -154,8 +138,70 @@ const EmployeeMenu = () => {
             )
           }))()}
       </Grid>
-    </Menu>
+
+      <Text font="Inter" margin="36px 0px 15px 0px">
+        Сводная статистика
+      </Text>
+
+      <Table rows={4} columns={2}>
+        <Text weight="400" font="Inter" size="12px">
+          Всего записей
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          10 324
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          Уникальных клиентов
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          573
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          Средний чек
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          3 194 RUR
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          Общая выручка
+        </Text>
+        <Text weight="400" font="Inter" size="12px">
+          549 124 RUR
+        </Text>
+      </Table>
+
+      <Text font="Inter" margin="27px 0px 15px 0px">
+        Ваши услуги
+      </Text>
+
+      <UserServices names={["Стрижка, мужская", "Стрижка, женская", "Стрижка, детская", "Стрижка, машинкой"]} />
+    </SupportedMenu>
   )
 }
 
 export default EmployeeMenu
+
+const colorsForType = (type) => {
+  switch (type) {
+    case 3:
+      return {
+        highlightColor: "accent_color"
+      }
+
+    case 4:
+      return {
+        outlineColor: "accent_color"
+      }
+
+    case 5:
+      return {
+        outlineColor: "neutral"
+      }
+
+    default:
+      return {
+        outlineColor: "hint_color",
+        textColor: "hint_color"
+      }
+  }
+}
