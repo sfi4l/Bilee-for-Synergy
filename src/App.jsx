@@ -60,6 +60,7 @@ const App = () => {
           "--text-color": theme.text_color,
           "--hint-color": theme.hint_color,
           "--red": theme.red,
+          "--neutral-color": theme.neutral,
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
