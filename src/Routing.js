@@ -1,7 +1,7 @@
 import MainMenu from "./Menus/MainMenu/MainMenu"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
-import FilterMenu from "./Menus/FilterMenu/FilterMenu"
+import ServicesFilterMenu from "./Menus/ServicesFilterMenu/ServicesFilterMenu"
 import {
   createBrowserRouter,
   useLocation,
@@ -51,11 +51,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/filter",
-        element: <FilterMenu />
-      },
-      {
-        path: "/notfound",
-        element: <NotFoundMenu title="Вы ещё не добавили ни одного филиала" />
+        element: <ServicesFilterMenu />
       },
       {
         path: "/settings",
@@ -64,6 +60,12 @@ export const router = createBrowserRouter([
       {
         path: "/settings/notification",
         element: <NotificationSettings />
+      }, {
+        path: "/notfoundservice",
+        element: <NotFoundMenu nav="/filter" title="Вы ещё не добавили ни одной услуги"/>
+      }, {
+        path: "/notfoundfilial",
+        element: <NotFoundMenu title="Вы ещё не добавили ни одного филиала"/>
       }
     ]
   }
