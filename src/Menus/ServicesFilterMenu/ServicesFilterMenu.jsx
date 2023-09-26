@@ -3,11 +3,11 @@ import Iconify from "../../Primitives/Iconify/Iconify"
 import Text from "../../Primitives/Text/Text"
 import SupportedMenu from "../SupportedMenu/SupportedMenu"
 import tune_icon from "../../Img/tune_icon.svg"
-import "./FilterMenu.css"
+import "./ServicesFilterMenu.css"
 import NotFoundIcon from "../../Elements/NotFoundIcon/NotFoundIcon"
 import { useNavigate } from "react-router-dom"
 
-const FilterMenu = () => {
+const ServicesFilterMenu = () => {
   return (
     <SupportedMenu>
       <Text size="24px" margin="27px 0px 0px 0px">
@@ -35,4 +35,4 @@ const FilterMenu = () => {
   )
 }
 
-export default FilterMenu
+export default ServicesFilterMenu

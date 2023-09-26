@@ -4,7 +4,7 @@ import MainMenu from "./Menus/MainMenu/MainMenu"
 import Themes, { ThemeContext } from "./Themes"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
-import FilterMenu from "./Menus/FilterMenu/FilterMenu"
+import ServicesFilterMenu from "./Menus/ServicesFilterMenu/ServicesFilterMenu"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Settings from "./Menus/Settings/Settings"
 import NotificationSettings from "./Menus/NotificationSettings/NotificationSettings"
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <EmployeeMenu />
   }, {
     path: "/filter",
-    element: <FilterMenu />
+    element: <ServicesFilterMenu />
   }, {
     path: "/notfoundfilial",
     element: <NotFoundMenu title="Вы ещё не добавили ни одного филиала"/>
