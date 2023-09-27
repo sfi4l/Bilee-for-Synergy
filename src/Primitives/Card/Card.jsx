@@ -32,7 +32,7 @@ const Card = ({
       style={{
         "--height": height,
         "--width": width,
-        "--margin": margin
+        "--margin": margin,
       }}
       initial={{
         "--outline-color": styleOutlineColor,

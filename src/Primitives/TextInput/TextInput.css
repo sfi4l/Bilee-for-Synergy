@@ -1,0 +1,17 @@
+.TextArea {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+
+  border: none;
+  outline: none;
+  padding: 13px 17px 13px 17px;
+  resize: none;
+}
+
+.LimitText {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
