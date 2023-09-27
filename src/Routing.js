@@ -7,8 +7,8 @@ import {
   useLocation,
   useOutlet
 } from "react-router-dom"
-import Settings from "./Menus/Settings/Settings"
-import NotificationSettings from "./Menus/NotificationSettings/NotificationSettings"
+import SettingsMenu from "./Menus/SettingsMenu/SettingsMenu"
+import NotificationSettingsMenu from "./Menus/NotificationSettingsMenu/NotificationSettingsMenu"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
@@ -56,11 +56,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/settings",
-        element: <Settings />
+        element: <SettingsMenu />
       },
       {
-        path: "/settings/notification",
-        element: <NotificationSettings />
+        path: "/settings/notifications",
+        element: <NotificationSettingsMenu />
       }, {
         path: "/notfoundservice",
         element: <NotFoundMenu nav="/filter" title="Вы ещё не добавили ни одной услуги"/>

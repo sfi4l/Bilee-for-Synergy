@@ -4,7 +4,7 @@ import SupportedMenu from "../SupportedMenu/SupportedMenu"
 import { useState } from "react";
 
 
-const NotificationSettings = () => {
+const NotificationSettingsMenu = () => {
   const [buttonColors, setButtonColors] = useState(['green', 'red', 'red', 'green', 'green', 'green', 'green']);
 
   const handle = (index) => {
@@ -40,4 +40,4 @@ const NotificationSettings = () => {
   );
 };
 
-export default NotificationSettings;
+export default NotificationSettingsMenu;
