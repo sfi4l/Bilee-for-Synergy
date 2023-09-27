@@ -8,6 +8,8 @@
   outline: none;
   padding: 13px 17px 13px 17px;
   resize: none;
+  background-color: #00000000;
+  color: var(--text-color);
 }
 
 .LimitText {
