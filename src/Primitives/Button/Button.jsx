@@ -15,7 +15,7 @@ const Button = ({
   
   return (
     <button onClick={onClick} className={"Button" + className} style={{
-      "--margin": margin
+      "margin": margin
     }}>
       <TextCard
         outlineColor={outlineColor}

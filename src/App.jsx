@@ -31,13 +31,9 @@ const App = () => {
       <div
         className="App"
         style={{
-          "--logo-color": theme.logo_color,
           "--bg-color": theme.bg_color,
           "--text-color": theme.text_color,
-          "--hint-color": theme.hint_color,
-          "--red": theme.red,
           "--neutral-color": theme.neutral,
-          "--accent-color": theme.accent_color,
           "--main-menu-gradient": theme.main_menu_gradient,
           "pointerEvents": popup ? "none" : "auto",
           "height": popup ? "100%" : "auto"

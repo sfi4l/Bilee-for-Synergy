@@ -5,6 +5,8 @@ import Menu from "../Menu/Menu"
 import { useNavigate } from "react-router-dom"
 import { usePopup } from "../../Hooks/usePopup"
 import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
+import Text from "../../Primitives/Text/Text"
+import Color from "../../Primitives/Color/Color"
 
 const MainMenu = () => {
   const navigate = useNavigate()
@@ -13,37 +15,41 @@ const MainMenu = () => {
   return (
     <Menu title="Привет! Это Ваше меню" onBack={false}>
       <div className="MeetNews">
-        <p className="NewsTxt">Новости</p>
+        <Text weight="400" color="hint_color" margin="30px 0px 10px 16px">
+          Новости
+        </Text>
 
         <div className="AllNews">
           <div className="BlueNews NewsCard">
-            <p className="NewsFont">
+            <Text>
               Мы <br />
               запусти
               <br />
               лись!
-            </p>
+            </Text>
           </div>
           <div className="BrownNews NewsCard">
-            <p className="NewsFont">Скидки</p>
+            <Text>Скидки</Text>
           </div>
           <div className="GreenNews NewsCard">
-            <p className="NewsFont">Жопа</p>
+            <Text width="auto">Жопа</Text>
           </div>
           <div className="PinkNews NewsCard">
-            <p className="NewsFont">
+            <Text>
               Шок <br />
               контент
-            </p>
+            </Text>
           </div>
         </div>
 
         <div className="TodayWork">
           <div className="Todotxt">
-            <p className="Todotxt1">На сегодня у Вас N записей</p>
-            <p className="Todotxt2">
-              Заполненность <span className="ChangeClr"> N% (-n) ↓</span>
-            </p>
+            <Text size="24px" align="center" margin="46px 0px 20px 20px">
+              На сегодня у Вас N записей
+            </Text>
+            <Text weight="400" align="center" margin="8px 20px 0px 20px">
+              Заполненность <Color color="red"> N% (-n) ↓</Color>
+            </Text>
           </div>
         </div>
       </div>
@@ -64,7 +70,7 @@ const MainMenu = () => {
         </Grid.Item>
 
         <Grid.Item columnEnd="span 2">
-          <Button>Предприятие</Button>
+          <Button onClick={() => navigate("/wtf")}>Предприятие</Button>
         </Grid.Item>
 
         <Button

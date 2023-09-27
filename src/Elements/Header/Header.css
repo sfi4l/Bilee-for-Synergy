@@ -26,12 +26,3 @@
 .BackButton {
   left: 17px;
 }
-
-.LogoText {
-  color: var(--logo-color);
-  font-family: sfpdn;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}

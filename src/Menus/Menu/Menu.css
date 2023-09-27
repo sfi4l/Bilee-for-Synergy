@@ -19,29 +19,6 @@
   margin: 20px 16px 0px 16px;
 }
 
-.Title {
-  color: var(--text-color);
-  margin: 0;
-
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  font-family: sfpdn;
-} 
-
 .TitleContainer > *:nth-child(2) {
   flex-grow: 1;
-}
-
-.Subtitle {
-  color: var(--hint-color);
-  margin: 0;
-  margin-left: 16px;
-
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  font-family: sfpd;
 }

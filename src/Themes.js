@@ -13,7 +13,7 @@ const Themes = {
     button_text_color: "#ffffff",
     bg_color: "#ffffff",
     main_menu_gradient: "#ececec",
-    icons_filter: "none"  
+    icons_filter: "none"
   },
   dark: {
     logo_color: "#3FC1F8",

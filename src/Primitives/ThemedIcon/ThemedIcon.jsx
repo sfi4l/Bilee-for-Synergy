@@ -1,18 +1,24 @@
 import "./ThemedIcon.css"
 import { useContext } from "react"
 import { ThemeContext } from "../../Themes"
+import { motion } from "framer-motion"
 
-const ThemedIcon = ({ icon, className }) => {
+const ThemedIcon = ({ icon, size, rotation, className }) => {
   const theme = useContext(ThemeContext)
   className = className && (" " + className) || ""
+  size = size ?? "auto"
 
   return (
-    <img
+    <motion.img
       src={icon}
       className={"ThemedIcon" + className}
       alt=""
       style={{
-        "--icon-filter": theme.icons_filter
+        "filter": theme.icons_filter,
+        "width": size
+      }}
+      animate={{
+        rotate: rotation
       }}
     />
   )

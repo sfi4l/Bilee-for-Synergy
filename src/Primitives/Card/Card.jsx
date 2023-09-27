@@ -10,6 +10,7 @@ const Card = ({
   height,
   width,
   margin,
+  transition,
   className
 }) => {
   const theme = useContext(ThemeContext)
@@ -30,19 +31,22 @@ const Card = ({
     <motion.div
       className={"Card" + className}
       style={{
-        "--height": height,
-        "--width": width,
-        "--margin": margin,
+        "margin": margin,
+        "border": outlineColor ? "1px solid" : "none"
       }}
       initial={{
-        "--outline-color": styleOutlineColor,
+        "height": height,
+        "width": width,
+        "border-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor
       }}
       animate={{
-        "--outline-color": styleOutlineColor,
+        "height": height,
+        "width": width,
+        "border-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor
       }}
-      transition={{ duration: 0.1, ease: "easeIn" }}
+      transition={transition ?? { duration: 0.1, ease: "easeIn" }}
     >
       {children}
     </motion.div>

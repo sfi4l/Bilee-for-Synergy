@@ -33,7 +33,7 @@ const TextCard = ({
       <motion.div
         className="TextCard"
         style={{
-          "--text-color": styleTextColor
+          "color": styleTextColor
         }}
       >
         {children}

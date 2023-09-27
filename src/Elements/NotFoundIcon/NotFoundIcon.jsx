@@ -8,7 +8,7 @@ const NotFoundIcon = ({ title, margin }) => {
     <div className="NotFoundIcon" style={{
       "--margin": margin
     }}>
-      <ThemedIcon icon={Magnifier} className="Magnifier" />
+      <ThemedIcon size="45%" icon={Magnifier} className="Magnifier" />
 
       <Text
         size="24px"

@@ -2,11 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: var(--width);
-  height: var(--height);
   box-sizing: border-box;
   overflow: hidden;
-  margin: var(--margin);
 
   border-radius: 5px;
   border: 1px solid var(--outline-color);

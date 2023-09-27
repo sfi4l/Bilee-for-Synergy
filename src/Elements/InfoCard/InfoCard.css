@@ -1,0 +1,10 @@
+.InsideInfo {
+  margin: 2px 16px 16px 16px;
+}
+
+.FloatingContainer {
+  position: absolute;
+
+  top: 11px;
+  right: 11px;
+}
