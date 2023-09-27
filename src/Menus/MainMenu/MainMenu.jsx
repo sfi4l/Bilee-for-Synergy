@@ -3,9 +3,12 @@ import Button from "../../Primitives/Button/Button"
 import Grid from "@react-css/grid"
 import Menu from "../Menu/Menu"
 import { useNavigate } from "react-router-dom"
+import { usePopup } from "../../Hooks/usePopup"
+import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
 
 const MainMenu = () => {
   const navigate = useNavigate()
+  const [displayPopup, exitPopup] = usePopup()
 
   return (
     <Menu title="Привет! Это Ваше меню" onBack={false}>
@@ -52,15 +55,32 @@ const MainMenu = () => {
         gap="9px"
       >
         <Grid.Item columnEnd="span 2">
-          <Button highlightColor="accent_color" onClick={() => navigate("/employee")}>Карточка сотрудника</Button>
+          <Button
+            highlightColor="accent_color"
+            onClick={() => navigate("/employee")}
+          >
+            Карточка сотрудника
+          </Button>
         </Grid.Item>
+
         <Grid.Item columnEnd="span 2">
           <Button>Предприятие</Button>
         </Grid.Item>
-        <Button>Записи</Button>
-        <Button onClick={()=> navigate("/settings")}>Настройки</Button>
-        <Button onClick={()=> navigate("/notfoundservice")}>Услуги</Button>
+
+        <Button
+          onClick={() =>
+            displayPopup(<ConfirmPopup onCancel={() => exitPopup()} />)
+          }
+        >
+          Записи
+        </Button>
+
+        <Button onClick={() => navigate("/settings")}>Настройки</Button>
+
+        <Button onClick={() => navigate("/notfoundservice")}>Услуги</Button>
+
         <Button>Сотрудники</Button>
+
         <Grid.Item columnEnd="span 2">
           <Button highlightColor="accent_color">Подписка</Button>
         </Grid.Item>

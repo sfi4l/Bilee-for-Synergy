@@ -8,24 +8,20 @@ import Themes, { ThemeContext } from "./Themes"
 import { RouterProvider } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import { router } from "./Routing"
+import ConfirmPopup from "./Popup/ConfirmPopup/ConfirmPopup"
+import { useTheme } from "./Hooks/useTheme"
+import { useState } from "react"
+
+export let setPopup
 
 const App = () => {
-  const [colorScheme, themeTG] = useThemeParams()
-  const [initData, initDataRaw] = useInitData()
+  const theme = useTheme()
   const [isExpanded, expand] = useExpand()
-  let theme = Themes[colorScheme]
-  // theme = Themes["dark"]
-
-  if (initDataRaw) {
-    theme = {
-      ...theme,
-      ...themeTG
-    }
-
-    theme.accent_color = themeTG.button_color
-  }
 
   if (!isExpanded) expand()
+
+  const [popup, setPopupState] = useState(undefined)
+  setPopup = setPopupState
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -41,6 +37,7 @@ const App = () => {
           "--main-menu-gradient": theme.main_menu_gradient
         }}
       >
+        <AnimatePresence>{popup}</AnimatePresence>
         <AnimatePresence mode="wait">
           <RouterProvider router={router} />
         </AnimatePresence>

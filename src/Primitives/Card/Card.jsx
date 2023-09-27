@@ -29,12 +29,18 @@ const Card = ({
   return (
     <motion.div
       className={"Card" + className}
-      animate={{
-        "--outline-color": styleOutlineColor,
-        "--highlight-color": styleHighlightColor,
+      style={{
         "--height": height,
         "--width": width,
         "--margin": margin
+      }}
+      initial={{
+        "--outline-color": styleOutlineColor,
+        "--highlight-color": styleHighlightColor
+      }}
+      animate={{
+        "--outline-color": styleOutlineColor,
+        "--highlight-color": styleHighlightColor
       }}
       transition={{ duration: 0.1, ease: "easeIn" }}
     >
