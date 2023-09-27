@@ -1,4 +1,4 @@
-import { Line, LineChart } from "recharts"
+import { Line, LineChart, ResponsiveContainer } from "recharts"
 import Text from "../../Primitives/Text/Text"
 import InfoCard from "../InfoCard/InfoCard"
 import "./GraphCard.css"
@@ -38,9 +38,11 @@ const GraphCard = ({ label, text }) => {
         </Text>
       }
     >
-      <LineChart width={310} height={130} data={data}>
-        <Line type="monotone" dataKey="y" stroke={theme.accent_color} />
-      </LineChart>
+      <ResponsiveContainer width="100%" height={130} className="Chart">
+        <LineChart data={data} margin={{top: 0, right: 0, bottom: 0, left: 0}}>
+          <Line type="monotone" dataKey="y" stroke={theme.accent_color} strokeWidth={2} dot={false} />
+        </LineChart>
+      </ResponsiveContainer>
     </InfoCard>
   )
 }

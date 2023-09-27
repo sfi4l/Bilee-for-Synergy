@@ -5,7 +5,7 @@ import "./InfoCard.css"
 const InfoCard = ({ label, title, add, children }) => {
   return (
     <Card outlineColor="neutral">
-      <Text margin="9px 0px 0px 16px">{label}</Text>
+      <Text margin="9px 16px 0px 16px">{label}</Text>
 
       {add && (
         <div className="FloatingContainer">
