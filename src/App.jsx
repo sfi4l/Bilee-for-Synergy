@@ -16,6 +16,7 @@ export let setPopup
 
 const App = () => {
   const theme = useTheme()
+  // const theme = Themes.dark
   const [isExpanded, expand] = useExpand()
 
   useEffect(() => {
