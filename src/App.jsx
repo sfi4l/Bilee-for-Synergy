@@ -10,7 +10,7 @@ import { AnimatePresence } from "framer-motion"
 import { router } from "./Routing"
 import ConfirmPopup from "./Popup/ConfirmPopup/ConfirmPopup"
 import { useTheme } from "./Hooks/useTheme"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export let setPopup
 
@@ -18,7 +18,9 @@ const App = () => {
   const theme = useTheme()
   const [isExpanded, expand] = useExpand()
 
-  if (!isExpanded) expand()
+  useEffect(() => {
+    expand()
+  }, [])
 
   const [popup, setPopupState] = useState(undefined)
   setPopup = setPopupState
