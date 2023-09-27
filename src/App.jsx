@@ -34,12 +34,14 @@ const App = () => {
           "--hint-color": theme.hint_color,
           "--red": theme.red,
           "--neutral-color": theme.neutral,
-          "--main-menu-gradient": theme.main_menu_gradient
+          "--main-menu-gradient": theme.main_menu_gradient,
+          "pointerEvents": popup ? "none" : "auto",
+          "height": popup ? "100%" : "auto"
         }}
       >
         <AnimatePresence>{popup}</AnimatePresence>
         <AnimatePresence mode="wait">
-          <RouterProvider router={router} />
+          <RouterProvider router={router}/>
         </AnimatePresence>
       </div>
     </ThemeContext.Provider>
