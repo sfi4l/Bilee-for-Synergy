@@ -1,19 +1,11 @@
-/* @keyframes menu_disappear {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-} */
 
 .Menu {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  min-height: 100%;
-  
-  /* animation: menu_disappear 300ms ease; */
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .TitleContainer {

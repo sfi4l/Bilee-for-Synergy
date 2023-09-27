@@ -11,8 +11,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 html {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 body {
@@ -25,13 +25,13 @@ body {
   font-size: 16px;
   font-weight: 600;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 #root {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 code {
