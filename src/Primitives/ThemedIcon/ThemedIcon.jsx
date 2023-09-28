@@ -19,7 +19,6 @@ const ThemedIcon = ({ icon, size, color, rotation, className }) => {
       style={{
         "filter": hexToCSSFilter(color).filter.slice(0, -1),
         width: size,
-        height: size
       }}
       animate={{
         rotate: rotation
