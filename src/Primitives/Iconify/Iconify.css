@@ -3,11 +3,4 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-
-  gap: 13px;
-}
-
-.Iconify > img {
-  height: var(--size);
-  width: var(--size)
 }

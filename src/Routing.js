@@ -12,6 +12,7 @@ import NotificationSettingsMenu from "./Menus/NotificationSettingsMenu/Notificat
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import WtfMenu from "./Menus/WtfMenu/WtfMenu"
+import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
 
 const AnimatedOutlet = () => {
   const outlet = useOutlet()
@@ -69,8 +70,11 @@ export const router = createBrowserRouter([
         path: "/notfoundfilial",
         element: <NotFoundMenu title="Вы ещё не добавили ни одного филиала"/>
       }, {
-        path: "wtf",
+        path: "/wtf",
         element: <WtfMenu />
+      }, {
+        path: "/records",
+        element: <RecordsMenu />
       }
     ]
   }

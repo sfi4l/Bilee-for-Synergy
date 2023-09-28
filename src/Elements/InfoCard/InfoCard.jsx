@@ -2,10 +2,21 @@ import Card from "../../Primitives/Card/Card"
 import Text from "../../Primitives/Text/Text"
 import "./InfoCard.css"
 
-const InfoCard = ({ label, title, add, insideMargin, children }) => {
+const InfoCard = ({
+  label,
+  labelMargin,
+  title,
+  add,
+  insideMargin,
+  outlineColor,
+  children
+}) => {
   return (
-    <Card outlineColor="neutral" width="calc(100vw - 16px - 16px)">
-      <Text margin="9px 16px 0px 16px">{label}</Text>
+    <Card
+      outlineColor={outlineColor ?? "neutral"}
+      width="calc(100vw - 16px - 16px)"
+    >
+      <Text margin={`${labelMargin ?? "9px"} 16px 0px 16px`}>{label}</Text>
 
       {add && <div className="FloatingContainer">{add}</div>}
 
@@ -18,7 +29,7 @@ const InfoCard = ({ label, title, add, insideMargin, children }) => {
       {children && (
         <div
           style={{
-            "margin": insideMargin ?? "2px 16px 16px 16px"
+            margin: insideMargin ?? "2px 16px 16px 16px"
           }}
           className="InsideContainer"
         >

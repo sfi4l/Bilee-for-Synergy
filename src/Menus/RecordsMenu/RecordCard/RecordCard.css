@@ -1,0 +1,14 @@
+.RecordInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin: 10px 0px 10px 0px;
+}
+
+.RecordStatus {
+  position: absolute;
+
+  right: 16px;
+  bottom: 15px;
+}

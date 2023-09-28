@@ -73,13 +73,7 @@ const MainMenu = () => {
           <Button onClick={() => navigate("/wtf")}>Предприятие</Button>
         </Grid.Item>
 
-        <Button
-          onClick={() =>
-            displayPopup(<ConfirmPopup onCancel={() => exitPopup()} />)
-          }
-        >
-          Записи
-        </Button>
+        <Button onClick={() => navigate("/records")}>Записи</Button>
 
         <Button onClick={() => navigate("/settings")}>Настройки</Button>
 
@@ -88,7 +82,14 @@ const MainMenu = () => {
         <Button>Сотрудники</Button>
 
         <Grid.Item columnEnd="span 2">
-          <Button highlightColor="accent_color">Подписка</Button>
+          <Button
+            highlightColor="accent_color"
+            onClick={() =>
+              displayPopup(<ConfirmPopup onCancel={() => exitPopup()} />)
+            }
+          >
+            Подписка
+          </Button>
         </Grid.Item>
       </Grid>
     </Menu>
