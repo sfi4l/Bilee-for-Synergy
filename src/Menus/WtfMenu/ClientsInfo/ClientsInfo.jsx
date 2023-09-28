@@ -103,7 +103,7 @@ const ClientsInfo = () => {
             </Text>
           ))}
           {tableData.flat().map((text) => (
-            <>{text}</>
+            <Text>{text}</Text>
           ))}
         </Table>
       </InfoCard>
