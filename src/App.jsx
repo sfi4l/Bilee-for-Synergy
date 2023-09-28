@@ -15,8 +15,8 @@ import { useEffect, useState } from "react"
 export let setPopup
 
 const App = () => {
-  const theme = useTheme()
-  // const theme = Themes.dark
+  // const theme = useTheme()
+  const theme = Themes.dark
   const [isExpanded, expand] = useExpand()
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const App = () => {
         className="App"
         style={{
           "--bg-color": theme.bg_color,
-          "--text-color": theme.text_ёcolor,
+          "--text-color": theme.text_color,
           "--neutral-color": theme.neutral,
           "--main-menu-gradient": theme.main_menu_gradient,
           "pointerEvents": popup ? "none" : "auto",
