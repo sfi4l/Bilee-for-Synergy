@@ -3,7 +3,7 @@ import InfoCard from "../../../Elements/InfoCard/InfoCard"
 import Color from "../../../Primitives/Color/Color"
 import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
 
-const FilialsInfo = () => {
+const FinancesInfo = () => {
   return (
     <AnimatedInfo>
       <GraphCard label="Дневная выручка" text="43 000 RUR" />
@@ -22,4 +22,4 @@ const FilialsInfo = () => {
   )
 }
 
-export default FilialsInfo
+export default FinancesInfo

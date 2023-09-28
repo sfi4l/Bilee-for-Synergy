@@ -9,7 +9,6 @@ const ThemedIcon = ({ icon, size, color, rotation, className }) => {
   className = className && (" " + className) || ""
   size = size ?? "24px"
   color = theme[color ?? "text_color"]
-  console.log(hexToCSSFilter(color).filter)
 
   return (
     <motion.img

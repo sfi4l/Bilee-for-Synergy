@@ -5,7 +5,7 @@ import PickerCard from "./PickerCard/PickerCard"
 import ServicesInfo from "./ServicesInfo/ServicesInfo"
 import "./WtfMenu.css"
 import ClientsInfo from "./ClientsInfo/ClientsInfo"
-import FilialsInfo from "./FilialsInfo/FilialsInfo"
+import FinancesInfo from "./FilialsInfo/FinancesInfo"
 import { LayoutGroup } from "framer-motion"
 
 const WtfMenu = () => {
@@ -14,7 +14,7 @@ const WtfMenu = () => {
   return (
     <SupportedMenu title="Сегодня 27 сентября">
       <PickerCard
-        items={["Услуги", "Клиенты", "Финансы"]}
+        items={["Финансы", "Клиенты", "Услуги"]}
         onPick={i => setSelected(i)}
         margin="35px 0px 0px 0px"
       />
@@ -23,13 +23,13 @@ const WtfMenu = () => {
       <div className="Info">
         <LayoutGroup>
           {selected == 0 && (
-            <ServicesInfo />
+            <FinancesInfo />
           )}
           {selected == 1 && (
             <ClientsInfo />
           )}
           {selected == 2 && (
-            <FilialsInfo />
+            <ServicesInfo />
           )}
         </LayoutGroup>
       </div>

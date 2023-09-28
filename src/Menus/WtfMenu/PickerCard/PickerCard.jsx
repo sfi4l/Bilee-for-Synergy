@@ -1,14 +1,15 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Card from "../../../Primitives/Card/Card"
 import "./PickerCard.css"
 import Text from "../../../Primitives/Text/Text"
 import ThemedIcon from "../../../Primitives/ThemedIcon/ThemedIcon"
 import expand_icon from "../../../Img/expand_icon.png"
 import Button from "../../../Primitives/Button/Button"
-import { motion } from "framer-motion"
+import { ThemeContext } from "../../../Themes"
 
 const PickerCard = ({ items, onPick, margin }) => {
-  const [index, setIndex] = useState(0)
+  const theme = useContext(ThemeContext)
+
   const [expanded, setExpanded] = useState(false)
   const [order, setOrder] = useState(
     items.map((el, i) => ({
@@ -16,7 +17,6 @@ const PickerCard = ({ items, onPick, margin }) => {
       id: i
     }))
   )
-  const [picked, setPick] = useState(0)
 
   const pick = (ni) => {
     setExpanded(false)
@@ -41,8 +41,7 @@ const PickerCard = ({ items, onPick, margin }) => {
     <Card
       margin={margin}
       outlineColor="neutral"
-      height={expanded ? `calc(38px * ${items.length} - 1px)` : "37px"}
-      transition={{}}
+      height={expanded ? `calc(38px * ${items.length} + 1px)` : "37px"}
     >
       <Button
         outlineColor={false}
@@ -64,7 +63,9 @@ const PickerCard = ({ items, onPick, margin }) => {
             outlineColor={false}
             height="37px"
             onClick={() => pick(id)}
-            className="PickVariant"
+            style={{
+              "border-top": `1px solid ${theme.neutral}`
+            }}
           >
             <div className="PickerCard">
               <Text>{text}</Text>

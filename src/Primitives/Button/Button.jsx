@@ -9,13 +9,15 @@ const Button = ({
   onClick,
   height,
   margin,
-  className
+  className,
+  style
 }) => {
   className = className && (" " + className) || ""
   
   return (
     <button onClick={onClick} className={"Button" + className} style={{
-      "margin": margin
+      "margin": margin,
+      ...style
     }}>
       <TextCard
         outlineColor={outlineColor}
