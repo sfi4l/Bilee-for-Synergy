@@ -32,7 +32,7 @@ const App = () => {
         className="App"
         style={{
           "--bg-color": theme.bg_color,
-          "--text-color": theme.text_color,
+          "--text-color": theme.text_ёcolor,
           "--neutral-color": theme.neutral,
           "--main-menu-gradient": theme.main_menu_gradient,
           "pointerEvents": popup ? "none" : "auto",
