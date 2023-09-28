@@ -37,7 +37,7 @@ const GraphCard = ({ label, text }) => {
           {text}
         </Text>
       }
-      insideMargin="2px 0px 0px 0px"
+      insideMargin="0px 0px 0px 0px"
     >
       <ResponsiveContainer width="100%" height={130} className="Chart">
         <LineChart data={data} margin={{top: 0, right: 0, bottom: 0, left: 0}}>

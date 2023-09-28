@@ -4,3 +4,8 @@
   top: 11px;
   right: 11px;
 }
+
+.InsideContainer {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

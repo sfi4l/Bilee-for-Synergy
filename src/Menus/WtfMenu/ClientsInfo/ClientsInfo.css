@@ -1,0 +1,8 @@
+.ClientsInfoTableContainer {
+  padding: 0px 16px 0px 16px;
+  font-weight: 400;
+}
+
+.ClientsInfoTableContainer > .TableGrid > .Cell:nth-child(-n + 4) {
+  border: none !important;
+}

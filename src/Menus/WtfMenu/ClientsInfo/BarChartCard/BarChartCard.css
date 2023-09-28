@@ -1,0 +1,28 @@
+.Legend {
+  display: flex;
+  flex-direction: column;
+  margin: 13px 10px 0px 0px;
+  gap: 4px;
+}
+
+.LegendItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LegendItemName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.LegendItemCircle {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+
+  border-radius: 100%;
+}

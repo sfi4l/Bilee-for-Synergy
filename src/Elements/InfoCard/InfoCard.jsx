@@ -4,7 +4,7 @@ import "./InfoCard.css"
 
 const InfoCard = ({ label, title, add, insideMargin, children }) => {
   return (
-    <Card outlineColor="neutral">
+    <Card outlineColor="neutral" width="calc(100vw - 16px - 16px)">
       <Text margin="9px 16px 0px 16px">{label}</Text>
 
       {add && <div className="FloatingContainer">{add}</div>}
@@ -20,6 +20,7 @@ const InfoCard = ({ label, title, add, insideMargin, children }) => {
           style={{
             "margin": insideMargin ?? "2px 16px 16px 16px"
           }}
+          className="InsideContainer"
         >
           {children}
         </div>
