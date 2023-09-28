@@ -11,7 +11,8 @@ const Card = ({
   width,
   margin,
   transition,
-  className
+  className,
+  onClick
 }) => {
   const theme = useContext(ThemeContext)
 
@@ -47,6 +48,7 @@ const Card = ({
         "--highlight-color": styleHighlightColor
       }}
       transition={transition ?? { duration: 0.1, ease: "easeIn" }}
+      onClick={onClick}
     >
       {children}
     </motion.div>

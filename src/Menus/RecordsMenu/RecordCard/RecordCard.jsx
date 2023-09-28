@@ -6,7 +6,7 @@ import manager_icon from "../../../Img/manager_icon.png"
 import location_icon from "../../../Img/location_icon.png"
 import TextCard from "../../../Primitives/TextCard/TextCard"
 
-const RecordCard = ({ name, cost, type, person, address, date }) => {
+const RecordCard = ({ name, cost, type, person, address, date, onClick }) => {
   return (
     <InfoCard
       label={name}
@@ -21,6 +21,7 @@ const RecordCard = ({ name, cost, type, person, address, date }) => {
       }
       insideMargin="0px 16px 12px 16px"
       outlineColor={type == 0 ? "neutral" : "accent_color"}
+      onClick={onClick}
     >
       <div className="RecordInfo">
         <Iconify size="15px" icon={manager_icon} color="hint_color" gap="5px">

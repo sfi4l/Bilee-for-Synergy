@@ -34,16 +34,6 @@ const BarChartCard = () => {
 
   const chartData = [
     {
-      month: "Фев.",
-      new: 39,
-      old: 58
-    },
-    {
-      month: "Мар.",
-      new: 29,
-      old: 80
-    },
-    {
       month: "Апр.",
       new: 48,
       old: 34
@@ -123,11 +113,12 @@ const BarChartCard = () => {
         <LegendItem name="Постоянные" value="2342" color={theme.accent_color} />
       </div>
 
-      <Text weight="400" size="12px">
+      <Text weight="400" size="14px">
         <ResponsiveContainer width="100%" height={170}>
           <BarChart
             data={chartData}
             margin={{ left: 0, right: 0, top: 20, bottom: 20 }}
+            barSize={12} 
           >
             <XAxis
               dataKey="month"
@@ -136,8 +127,8 @@ const BarChartCard = () => {
               axisLine={false}
               stroke={theme.text_color}
             />
-            <Bar dataKey="new" barSize={9} fill={theme.green} />
-            <Bar dataKey="old" barSize={9} fill={theme.accent_color} />
+            <Bar dataKey="new" fill={theme.green} />
+            <Bar dataKey="old" fill={theme.accent_color} />
           </BarChart>
         </ResponsiveContainer>
       </Text>

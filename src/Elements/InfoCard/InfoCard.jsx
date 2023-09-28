@@ -9,12 +9,14 @@ const InfoCard = ({
   add,
   insideMargin,
   outlineColor,
+  onClick,
   children
 }) => {
   return (
     <Card
       outlineColor={outlineColor ?? "neutral"}
       width="calc(100vw - 16px - 16px)"
+      onClick={onClick}
     >
       <Text margin={`${labelMargin ?? "9px"} 16px 0px 16px`}>{label}</Text>
 
