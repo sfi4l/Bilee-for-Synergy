@@ -59,7 +59,6 @@ const PickerCard = ({
           square
           icon={expand_icon}
           rotation={expanded ? 180 : 0}
-          className="ExpandIcon"
         />
       </div>
       <Card

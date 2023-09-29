@@ -14,10 +14,8 @@
   flex-direction: row-reverse;
   align-items: center;
   padding-right: 12px;
-}
-
-.ExpandIcon {
   z-index: 3;
+  pointer-events: none;
 }
 
 .PickerCard {
