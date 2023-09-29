@@ -3,7 +3,7 @@ import Header from "../../Elements/Header/Header"
 import "./Menu.css"
 import Text from "../../Primitives/Text/Text"
 
-const Menu = ({ children, title, subtitle, onBack, onMenu, add }) => {
+const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
   const navigate = useNavigate()
   onBack = onBack ?? (() => navigate(-1))
   onMenu = onMenu ?? (() => navigate("/"))
@@ -27,7 +27,9 @@ const Menu = ({ children, title, subtitle, onBack, onMenu, add }) => {
         </Text>
       )}
 
-      {children}
+      <div style={{margin: padding}}>
+        {children}
+      </div>
     </div>
   )
 }

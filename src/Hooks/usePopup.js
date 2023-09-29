@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 import { setPopup } from "../App"
 
 export const usePopup = () => {

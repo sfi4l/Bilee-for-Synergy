@@ -5,12 +5,8 @@ import Popup from "../Popup/Popup"
 
 const ConfirmPopup = ({ onConfirm, onCancel }) => {
   return (
-    <Popup>
-      <Text size="24px" align="center" margin="40px 0px 47px 0px">
-        Это точно та кнопка? Подтвердите действие “Удалить”
-      </Text>
-      
-      <TextInput lines={6} margin="0px 0px 16px 0px"/>
+    <Popup title="Это точно та кнопка? Подтвердите действие “Удалить”" titleMargin="40px 0px 0px 0px">
+      <TextInput lines={6} margin="47px 0px 16px 0px"/>
 
       <Button highlightColor="accent_color" onClick={onConfirm}>
         Подтвердить
