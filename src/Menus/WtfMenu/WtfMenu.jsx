@@ -1,7 +1,7 @@
 import { useState } from "react"
 import FilterCard from "../../Elements/FilterCard/FilterCard"
 import SupportedMenu from "../SupportedMenu/SupportedMenu"
-import PickerCard from "./PickerCard/PickerCard"
+import PickerCard from "../../Elements/PickerCard/PickerCard"
 import ServicesInfo from "./ServicesInfo/ServicesInfo"
 import "./WtfMenu.css"
 import ClientsInfo from "./ClientsInfo/ClientsInfo"

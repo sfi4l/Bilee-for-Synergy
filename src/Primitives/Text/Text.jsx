@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import "./Text.css"
 import { ThemeContext } from "../../Themes"
+import { motion } from "framer-motion"
 
 const Text = ({
   children,
@@ -12,6 +13,7 @@ const Text = ({
   align,
   width,
   margin,
+  motionKey,
   className
 }) => {
   const theme = useContext(ThemeContext)
@@ -24,7 +26,7 @@ const Text = ({
   margin = margin ?? "0"
 
   return (
-    <div
+    <motion.div layout
       className={"Text" + className}
       style={{
         "--font-family": font,
@@ -36,9 +38,11 @@ const Text = ({
         "--width": width,
         "--margin": margin
       }}
+      key={motionKey}
+      layoutId={motionKey}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 

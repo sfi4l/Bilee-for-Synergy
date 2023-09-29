@@ -30,7 +30,7 @@ const TextCard = ({
       className={className}
       margin={margin}
     >
-      <motion.div
+      <motion.div layout
         className="TextCard"
         style={{
           "--text-color": styleTextColor

@@ -10,6 +10,7 @@ import edit_icon from "../../Img/edit_icon.png"
 import Button from "../../Primitives/Button/Button"
 import { usePopup } from "../../Hooks/usePopup"
 import EditVisitDayPopup from "./EditVisitDayPopup/EditVisitDayPopup"
+import EditSpecialistPopup from "./EditSpecialistPopup/EditSpecialistPopup"
 
 export const recordLoader = ({ params }) => {
   return {
@@ -52,7 +53,9 @@ const RecordEditMenu = () => {
       </Card>
 
       <Card margin="12px 0px 0px 0px" outlineColor="neutral">
-        <div className="SidedInfoContainer TopHalfContainer">
+        <div className="SidedInfoContainer TopHalfContainer" onClick={() => {
+          displayPopup(<EditSpecialistPopup onCancel={exitPopup}/>)
+        }}>
           <Text font="Inter">Николай К. • Мастер</Text>
           <ThemedIcon icon={edit_icon} />
         </div>

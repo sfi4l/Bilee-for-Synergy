@@ -12,7 +12,8 @@ const Card = ({
   margin,
   transition,
   className,
-  onClick
+  onClick,
+  ref
 }) => {
   const theme = useContext(ThemeContext)
 
@@ -25,29 +26,31 @@ const Card = ({
   }
   height = height ?? "auto"
   width = width ?? "100%"
-  className = className && (" " + className) || ""
-  margin = margin ?? "0" 
+  className = (className && " " + className) || ""
+  margin = margin ?? "0"
 
   return (
     <motion.div
+      layout
+      ref={ref}
       className={"Card" + className}
       style={{
-        "margin": margin,
-        "border": outlineColor != false ? "1px solid" : "none"
+        margin: margin,
+        border: outlineColor != false ? "1px solid" : "none"
       }}
       initial={{
-        "height": height,
-        "width": width,
+        height: height,
+        width: width,
         "border-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor
       }}
       animate={{
-        "height": height,
-        "width": width,
+        height: height,
+        width: width,
         "border-color": styleOutlineColor,
         "--highlight-color": styleHighlightColor
       }}
-      transition={transition ?? { duration: 0.1, ease: "easeIn" }}
+      transition={transition ?? { duration: 0.15, ease: "easeIn" }}
       onClick={onClick}
     >
       {children}
