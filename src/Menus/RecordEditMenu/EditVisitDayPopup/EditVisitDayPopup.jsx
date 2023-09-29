@@ -16,11 +16,12 @@ const EditVisitDayPopup = ({
   onCancel
 }) => {
   const [date, setDate] = useState(initialDate)
+  const [time, setTime] = useState(initialTime)
 
   return (
     <Popup title="Изменить дату визита">
       <div className="PickersContainer">
-        <TextCard height="47px" outlineColor="neutral">
+      <TextCard height="47px" outlineColor="neutral">
           <Text align="center">
             {date.toLocaleString('default', { day: "numeric", month: 'long' })}
           </Text>
@@ -29,9 +30,15 @@ const EditVisitDayPopup = ({
             if (onDateChange) onDateChange(date)
           }}/>
         </TextCard>
-        <Card height="47px" outlineColor="neutral">
-          
-        </Card>
+        <TextCard height="47px" outlineColor="neutral">
+          <Text align="center">
+            {time}
+          </Text>
+          <input type="time" className="DatePicker" onInput={e => {
+            setTime(e.target.value)
+            if (onTimeChange) onTimeChange(time)
+          }}/>
+        </TextCard>
       </div>
       <Text weight="400" align="center" margin="15px 0px 0px 0px">
         Длительность услуги: {duration}
