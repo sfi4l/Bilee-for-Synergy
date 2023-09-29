@@ -39,7 +39,7 @@ const RecordEditMenu = () => {
           <Text font="Inter">Георгиевский пр-кт, 33к5</Text>
         </div>
         <div className="SidedInfoContainer BottomHalfContainer" onClick={() => {
-          displayPopup(<EditVisitDayPopup duration="2 часа" onCancel={exitPopup}/>)
+          displayPopup(<EditVisitDayPopup initialDate={new Date("2023-09-01")} duration="2 часа" onCancel={exitPopup}/>)
         }}>
           <div>
             <Text font="Inter">1 сентября, четверг</Text>

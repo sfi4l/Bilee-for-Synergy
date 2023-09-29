@@ -2,20 +2,37 @@ import "./EditVisitDayPopup.css"
 import Popup from "../../../Popup/Popup/Popup"
 import Button from "../../../Primitives/Button/Button"
 import Text from "../../../Primitives/Text/Text"
+import Card from "../../../Primitives/Card/Card"
+import { useState } from "react"
+import TextCard from "../../../Primitives/TextCard/TextCard"
 
 const EditVisitDayPopup = ({
-  date,
-  time,
+  initialDate,
+  initialTime,
   duration,
   onDateChange,
   onTimeChange,
   onSave,
   onCancel
 }) => {
+  const [date, setDate] = useState(initialDate)
+
   return (
     <Popup title="Изменить дату визита">
-      <input type="date"/>
-      <input type="time"/>
+      <div className="PickersContainer">
+        <TextCard height="47px" outlineColor="neutral">
+          <Text align="center">
+            {date.toLocaleString('default', { day: "numeric", month: 'long' })}
+          </Text>
+          <input type="date" className="DatePicker" onInput={e => {
+            setDate(new Date(e.target.value))
+            if (onDateChange) onDateChange(date)
+          }}/>
+        </TextCard>
+        <Card height="47px" outlineColor="neutral">
+          
+        </Card>
+      </div>
       <Text weight="400" align="center" margin="15px 0px 0px 0px">
         Длительность услуги: {duration}
       </Text>
