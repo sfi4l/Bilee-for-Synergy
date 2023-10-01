@@ -18,7 +18,7 @@ const InfoCard = ({
       width="calc(100vw - 16px - 16px)"
       onClick={onClick}
     >
-      <Text margin={`${labelMargin ?? "9px"} 16px 0px 16px`}>{label}</Text>
+      <Text font="Inter" margin={`${labelMargin ?? "9px"} 16px 0px 16px`}>{label}</Text>
 
       {add && <div className="FloatingContainer">{add}</div>}
 

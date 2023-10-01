@@ -4,8 +4,11 @@
   font-size: var(--size);
   font-style: var(--style);
   font-weight: var(--weight);
-  line-height: normal;
+  line-height: var(--line-height);
   text-align: var(--align);
   width: var(--width);
   margin: var(--margin);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
 }

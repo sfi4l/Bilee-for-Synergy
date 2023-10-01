@@ -36,7 +36,6 @@ const App = () => {
           "--neutral-color": theme.neutral,
           "--main-menu-gradient": theme.main_menu_gradient,
           "pointerEvents": popup ? "none" : "auto",
-          "height": popup ? "100%" : "auto"
         }}
       >
         <AnimatePresence>{popup}</AnimatePresence>

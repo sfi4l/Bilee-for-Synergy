@@ -24,7 +24,7 @@ const Popup = ({ children, title, titleMargin }) => {
       }}
     >
       <motion.div className="MenuContainer">
-        <Text size="24px" align="center" margin={titleMargin ?? "20px 0px 25px 0px"}>
+        <Text size="24px" align="center" margin={titleMargin ?? "27px 0px 25px 0px"}>
           {title}
         </Text>
         {children}

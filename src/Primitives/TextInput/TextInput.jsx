@@ -3,13 +3,13 @@ import Card from "../Card/Card"
 import "./TextInput.css"
 import Text from "../Text/Text"
 
-const TextInput = ({ onChange, lines, limit, margin, className }) => {
-  const [value, setValue] = useState("")
+const TextInput = ({ onChange, lines, limit, defaultValue, className }) => {
+  const [value, setValue] = useState(defaultValue)
   const [active, setActive] = useState(false)
   limit = limit ?? 1000
 
   return (
-    <Card className="TextInput" outlineColor={active ? "accent_color" : "neutral"} margin={margin}>
+    <Card className="TextInput" outlineColor={active ? "accent_color" : "neutral"} margin="0px 3px" width="calc(100% - 3px - 3px)">
       <textarea
         rows={lines}
         value={value}

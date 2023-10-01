@@ -14,6 +14,7 @@ import { useState } from "react"
 import WtfMenu from "./Menus/WtfMenu/WtfMenu"
 import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
 import RecordEditMenu, { recordLoader } from "./Menus/RecordEditMenu/RecordEditMenu"
+import ContentMenu from "./Menus/ContentMenu/ContentMenu"
 
 const AnimatedOutlet = () => {
   const outlet = useOutlet()
@@ -80,6 +81,9 @@ export const router = createBrowserRouter([
         path: "/records/:recordId",
         element: <RecordEditMenu />,
         loader: recordLoader
+      }, {
+        path: "/content",
+        element: <ContentMenu />
       }
     ]
   }

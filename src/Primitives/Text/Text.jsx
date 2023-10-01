@@ -8,6 +8,8 @@ const Text = ({
   font,
   size,
   weight,
+  lineHeight,
+  maxLines,
   style,
   color,
   align,
@@ -18,25 +20,22 @@ const Text = ({
 }) => {
   const theme = useContext(ThemeContext)
   if (color) color = theme[color]
-  font = font ?? "sfpd"
-  size = size ?? "16px"
   className = className && (" " + className) || ""
-  align = align ?? "left"
-  width = width ?? "auto"
-  margin = margin ?? "0"
 
   return (
     <motion.div layout
       className={"Text" + className}
       style={{
-        "--font-family": font,
-        "--weight": weight,
-        "--style": style,
+        "--font-family": font ?? "sfpd",
+        "--weight": weight ?? "unset",
+        "--style": style ?? "unset",
         "--text-color": color,
-        "--size": size,
-        "--align": align,
-        "--width": width,
-        "--margin": margin
+        "--size": size ?? "16px",
+        "--align": align ?? "left",
+        "--width": width ?? "auto",
+        "--margin": margin ?? "0",
+        "--line-height": lineHeight ?? "normal",
+        "--max-lines": maxLines ?? "unset"
       }}
       key={motionKey}
       layoutId={motionKey}
