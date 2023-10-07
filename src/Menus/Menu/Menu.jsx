@@ -27,9 +27,7 @@ const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
         </Text>
       )}
 
-      <div style={{margin: padding}}>
-        {children}
-      </div>
+      <div style={{ margin: padding }}>{children}</div>
     </div>
   )
 }

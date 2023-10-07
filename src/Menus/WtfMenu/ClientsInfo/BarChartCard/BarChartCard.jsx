@@ -161,13 +161,13 @@ const BarChartCard = () => {
             <Bar
               dataKey="new"
               fill={theme.green}
-              background={{ fill: theme.hint_color + "80", radius: 100 }}
+              background={{ fill: theme.chart_background, radius: 100 }}
               radius={100}
             />
             <Bar
               dataKey="old"
               fill={theme.accent_color}
-              background={{ fill: theme.hint_color + "80", radius: 100 }}
+              background={{ fill: theme.chart_background, radius: 100 }}
               radius={100}
             />
           </BarChart>

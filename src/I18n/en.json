@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "main": {
+      "title": "Hi! This is your menu",
+      "news": "News",
+      "today_records": "You have {{amount}} records for today",
+      "occupancy": "Occupancy",
+      "employee_card": "Employee card",
+      "company": "Company",
+      "records": "Records",
+      "settings": "Settings",
+      "services": "Services",
+      "employees": "Employees",
+      "subscription": "Subscription"
+    },
+    "employee": {
+      "title": "{{name}}, your card:",
+      "record_available": "Record available",
+      "nolimit": "No limit",
+      "statistics": "Summary statistics",
+      "total_records": "Total records",
+      "unique_clients": "Unique clients",
+      "average_bill": "Average bill",
+      "total_revenue": "Total revenue",
+      "your_services": "Your services"
+    }
+  }
+}

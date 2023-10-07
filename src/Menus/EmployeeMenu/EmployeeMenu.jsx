@@ -9,14 +9,11 @@ import Button from "../../Primitives/Button/Button"
 import IconButton from "../../Primitives/IconButton/IconButton"
 import Text from "../../Primitives/Text/Text"
 import TextCard from "../../Primitives/TextCard/TextCard"
-import { useNavigate } from "react-router-dom"
 import UserInfo from "./UserInfo/UserInfo"
 import Table from "../../Primitives/Table/Table"
 import UserServices from "./UserServices/UserServices"
 
 const EmployeeMenu = () => {
-  const navigate = useNavigate()
-
   const mockedDayData = [
     {
       text: "",

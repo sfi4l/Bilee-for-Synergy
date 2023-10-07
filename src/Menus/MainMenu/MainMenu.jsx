@@ -7,16 +7,20 @@ import { usePopup } from "../../Hooks/usePopup"
 import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
 import Text from "../../Primitives/Text/Text"
 import Color from "../../Primitives/Color/Color"
+import { Translation, useTranslation } from "i18nano"
 
 const MainMenu = () => {
+  const t = useTranslation()
   const navigate = useNavigate()
   const [displayPopup, exitPopup] = usePopup()
 
+  console.log()
+
   return (
-    <Menu title="Привет! Это Ваше меню" onBack={false}>
+    <Menu title={t("menu.main.title")} onBack={false}>
       <div className="MeetNews">
         <Text weight="400" color="hint_color" margin="30px 0px 10px 16px">
-          Новости
+          {t("menu.main.news")}
         </Text>
 
         <div className="AllNews">
@@ -44,11 +48,13 @@ const MainMenu = () => {
 
         <div className="TodayWork">
           <div className="Todotxt">
-            <Text size="24px" align="center" margin="46px 0px 20px 20px">
-              На сегодня у Вас N записей
+            <Text size="24px" align="center" margin="46px 20px 0px 20px">
+              {t("menu.main.today_records", {
+                amount: "N"
+              })}
             </Text>
             <Text weight="400" align="center" margin="8px 20px 0px 20px">
-              Заполненность <Color color="red"> N% (-n) ↓</Color>
+              {t("menu.main.occupancy")} <Color color="red"> N% (-n) ↓</Color>
             </Text>
           </div>
         </div>
@@ -65,21 +71,21 @@ const MainMenu = () => {
             highlightColor="accent_color"
             onClick={() => navigate("/employee")}
           >
-            Карточка сотрудника
+            {t("menu.main.employee_card")}
           </Button>
         </Grid.Item>
 
         <Grid.Item columnEnd="span 2">
-          <Button onClick={() => navigate("/wtf")}>Предприятие</Button>
+          <Button onClick={() => navigate("/wtf")}>{t("menu.main.company")}</Button>
         </Grid.Item>
 
-        <Button onClick={() => navigate("/records")}>Записи</Button>
+        <Button onClick={() => navigate("/records")}>{t("menu.main.records")}</Button>
 
-        <Button onClick={() => navigate("/settings")}>Настройки</Button>
+        <Button onClick={() => navigate("/settings")}>{t("menu.main.settings")}</Button>
 
-        <Button onClick={() => navigate("/notfoundservice")}>Услуги</Button>
+        <Button onClick={() => navigate("/notfoundservice")}>{t("menu.main.services")}</Button>
 
-        <Button>Сотрудники</Button>
+        <Button>{t("menu.main.employees")}</Button>
 
         <Grid.Item columnEnd="span 2">
           <Button
@@ -88,7 +94,7 @@ const MainMenu = () => {
               displayPopup(<ConfirmPopup onCancel={() => exitPopup()} />)
             }
           >
-            Подписка
+            {t("menu.main.subscription")}
           </Button>
         </Grid.Item>
       </Grid>

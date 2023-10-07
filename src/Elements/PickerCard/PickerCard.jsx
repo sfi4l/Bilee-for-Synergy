@@ -66,7 +66,7 @@ const PickerCard = ({
         height={
           expanded
             ? `${maxHeight ? Math.min(maxHeight, cardHeight) : cardHeight}px`
-            : `${itemHeight + 2}px`
+            : `${itemHeight + 1}px`
         }
         className={"PickerCard" + (expanded ? " PickerCardExpanded" : "")}
       >

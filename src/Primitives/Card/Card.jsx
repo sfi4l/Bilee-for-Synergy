@@ -41,13 +41,13 @@ const Card = ({
       initial={{
         height: height,
         width: width,
-        "border-color": styleOutlineColor,
+        borderColor: styleOutlineColor,
         "--highlight-color": styleHighlightColor
       }}
       animate={{
         height: height,
         width: width,
-        "border-color": styleOutlineColor,
+        borderColor: styleOutlineColor,
         "--highlight-color": styleHighlightColor
       }}
       transition={transition ?? { duration: 0.15, ease: "easeIn" }}

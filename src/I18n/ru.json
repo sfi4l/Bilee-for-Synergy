@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "main": {
+      "title": "Привет! Это Ваше меню",
+      "news": "Новости",
+      "today_records": "На сегодня у Вас {{amount}} записи",
+      "occupancy": "Заполненность",
+      "employee_card": "Карточка сотрудника",
+      "company": "Предприятие",
+      "records": "Записи",
+      "settings": "Настройки",
+      "services": "Услуги",
+      "employees": "Сотрудники",
+      "subscription": "Подписка"
+    },
+    "employee": {
+      "title": "{{name}}, Ваша карточка:",
+      "record_available": "Запись доступна",
+      "nolimit": "Без лимита",
+      "statistics": "Сводная статистика",
+      "total_records": "Всего записей",
+      "unique_clients": "Уникальных клиентов",
+      "average_bill": "Средний чек",
+      "total_revenue": "Общая выручка",
+      "your_services": "Ваши услуги"
+    }
+  }
+}
