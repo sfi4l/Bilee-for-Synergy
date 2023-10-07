@@ -4,8 +4,11 @@ import SupportedMenu from "../SupportedMenu/SupportedMenu"
 import NotFoundIcon from "../../Elements/NotFoundIcon/NotFoundIcon"
 import ServiceCard from "./ServiceCard/ServiceCard"
 import FilterCard from "../../Elements/FilterCard/FilterCard"
+import { useTranslation } from "i18nano"
 
 const ServicesFilterMenu = () => {
+  const t = useTranslation()
+
   const mockedCardData = [
     {
       name: "Маникюр, Комибнированный",
@@ -28,14 +31,16 @@ const ServicesFilterMenu = () => {
   return (
     <SupportedMenu>
       <Text size="24px" margin="27px 0px 0px 0px">
-        Ваши услуги:
+      {t("menu.services.your_services")}
       </Text>
       <Text color="hint_color" weight="400">
-        Найдено: {mockedCardData.length}
+        {t("menu.services.found", {
+          found: `${mockedCardData.length}`
+        })}
       </Text>
 
       <FilterCard margin="16px 0px 13px 0px">
-        Без фильтров
+      {t("menu.services.no_filters")}
       </FilterCard>
 
       {mockedCardData.map(({ name, type }) => (
@@ -48,13 +53,13 @@ const ServicesFilterMenu = () => {
 
       {mockedCardData.length == 0 && (
         <NotFoundIcon
-          title="По заданным фильтрам ничего не найдено"
+        title={t("menu.services.nothing_found_with_filters")}
           margin="16px 0px 50px 0px"
         />
       )}
 
-      <Button margin="7px 0px 6px 0px">Загрузить ещё</Button>
-      <Button highlightColor="accent_color">Добавить</Button>
+      <Button margin="7px 0px 6px 0px">{t("menu.services.load_more")}</Button>
+      <Button highlightColor="accent_color">{t("menu.services.add")}</Button>
     </SupportedMenu>
   )
 }

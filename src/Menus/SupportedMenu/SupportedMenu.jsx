@@ -1,8 +1,11 @@
+import { useTranslation } from "i18nano"
 import Text from "../../Primitives/Text/Text"
 import Menu from "../Menu/Menu"
 import "./SupportedMenu.css"
 
 const SupportedMenu = ({ children, title, subtitle, onBack, onMenu, add }) => {
+  const t = useTranslation()
+  
   return (
     <Menu
       title={title}
@@ -22,7 +25,7 @@ const SupportedMenu = ({ children, title, subtitle, onBack, onMenu, add }) => {
           weight="400"
           className="SupportText"
         >
-          Что-то не так? Нажмите на меня для связи с поддержкой
+          {t("support.click_me")}
         </Text>
       </div>
     </Menu>

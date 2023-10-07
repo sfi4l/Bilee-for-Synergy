@@ -7,6 +7,7 @@ import Button from "../../../Primitives/Button/Button"
 import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
 import "./ClientsInfo.css"
 import BarChartCard from "./BarChartCard/BarChartCard"
+import { useTranslation } from "i18nano"
 
 const UserName = ({ name, subtitle }) => {
   return (
@@ -20,6 +21,7 @@ const UserName = ({ name, subtitle }) => {
 }
 
 const ClientsInfo = () => {
+  const t = useTranslation()
   const tableHeader = ["Имя", "Записей", "Доход", "Последняя активность"]
   const tableData = [
     [

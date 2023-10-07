@@ -11,7 +11,7 @@ import SettingsMenu from "./Menus/SettingsMenu/SettingsMenu"
 import NotificationSettingsMenu from "./Menus/NotificationSettingsMenu/NotificationSettingsMenu"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-import WtfMenu from "./Menus/WtfMenu/WtfMenu"
+import CompanyMenu from "./Menus/CompanyMenu/CompanyMenu"
 import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
 import RecordEditMenu, { recordLoader } from "./Menus/RecordEditMenu/RecordEditMenu"
 import ContentMenu from "./Menus/ContentMenu/ContentMenu"
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
         element: <EmployeeMenu />
       },
       {
-        path: "/filter",
+        path: "/services",
         element: <ServicesFilterMenu />
       },
       {
@@ -67,13 +67,13 @@ export const router = createBrowserRouter([
         element: <NotificationSettingsMenu />
       }, {
         path: "/notfoundservice",
-        element: <NotFoundMenu nav="/filter" title="Вы ещё не добавили ни одной услуги"/>
+        element: <NotFoundMenu nav="/services" title="services"/>
       }, {
-        path: "/notfoundfilial",
-        element: <NotFoundMenu title="Вы ещё не добавили ни одного филиала"/>
+        path: "/notfoundbranch",
+        element: <NotFoundMenu title="branch"/>
       }, {
         path: "/wtf",
-        element: <WtfMenu />
+        element: <CompanyMenu />
       }, {
         path: "/records",
         element: <RecordsMenu />

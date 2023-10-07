@@ -23,6 +23,131 @@
       "average_bill": "Средний чек",
       "total_revenue": "Общая выручка",
       "your_services": "Ваши услуги"
+    },
+    "settings": {
+      "title": "Настройки",
+      "filials": "Филиалы",
+      "categories": "Категории",
+      "content": "Контент",
+      "notifications": "Уведомления",
+      "logging": "Логирование"
+    },
+    "notification_settings": {
+      "title": "Настройки уведомлений",
+      "new_records": "Новые записи",
+      "max_occupancy": "Макс. заполненность",
+      "limit_reaching": "Достижение лимита",
+      "work_day_start": "Начало рабочего дня",
+      "weekdays": "Выходные",
+      "breaks": "Перерывы",
+      "misc": "Прочее"
+    },
+    "branch": {
+      "notfound": {
+        "title": "Вы ещё не добавили ни одного филиала",
+        "add": "Добавить"
+      }
+    },
+    "services": {
+      "your_services": "Ваши услуги",
+      "found": "Найдено: {{found}}",
+      "no_filters": "Без фильтров",
+      "nothing_found_with_filters": "По заданным фильтрам ничего не найдено",
+      "load_more": "Загрузить ещё",
+      "add": "Добавить",
+      "notfound": {
+        "title": "Вы ещё не добавили ни одной услуги",
+        "add": "Добавить"
+      },
+      "card": {
+        "available": "Доступно",
+        "unavailable": "Недоступно",
+        "draft": "Черновик"
+      }
+    },
+    "content": {
+      "title": "Контент",
+      "greeting": "Приветствие",
+      "greeting_popup_name": "приветствие",
+      "help": "Раздел “Помощь”",
+      "help_popup_name": "помощь",
+      "name": "Название",
+      "name_popup_name": "название"
+    },
+    "records": {
+      "title": "Записи",
+      "configure_filters": "Настроить фильтры",
+      "load_more": "Загрузить ещё",
+      "card": {
+        "created": "Создано",
+        "done": "Выполнено"
+      }
+    },
+    "record_edit": {
+      "title": "Запись №{{no}}",
+      "created": "Создана",
+      "done": "Выполнена",
+      "confirm_record": "Подтвердить запись",
+      "cancel": "Отменить"
+    },
+    "company": {
+      "title": "Сегодня, {{today}}",
+      "configure_filters": "Настроить фильтры",
+      "finances": {
+        "title": "Финансы"
+      },
+      "clients": {
+        "title": "Клиенты"
+      },
+      "services": {
+        "title": "Услуги",
+        "most_popular": {
+          "label": "Самая популярная услуга этого года",
+          "comment": "За год {{people}} человек записались на неё {{records}} раз. Это {{records_daily}} записей каждый день"
+        },
+        "least_popular":  {
+          "label": "Самая непопулярная услуга этого года",
+          "comment": "За год на неё записались всего {{amount}} раз"
+        },
+        "most_profitable":  {
+          "label": "Самая прибыльная услуга этого года",
+          "comment": "За год она принесла {{profit}} {{currency}}. Это {{daily_profit}} {{currency}} в день"
+        },
+        "least_profitable":  {
+          "label": "Самая неприбыльная услуга этого года",
+          "comment": "За год она принесла всего {{profit}} {{currency}}"
+        },
+        "top_revenue": "5 <accent_color>лучших</color> по <accent_color>выручке</color>"
+      }
     }
+  },
+  "popup": {
+    "confirm": {
+      "title": "Это точно та кнопка? Подтвердите действие “{{action}}”",
+      "confirm": "Подтвердить",
+      "cancel": "Отмена"
+    },
+    "edit_content": {
+      "title": "Изменить {{name}}:",
+      "save": "Сохранить",
+      "cancel": "Отмена"
+    },
+    "visit_date_edit": {
+      "title": "Изменить дату визита",
+      "duration": "Длительность услуги: {{duration}}",
+      "save": "Сохранить",
+      "cancel": "Отмена"
+    },
+    "specialist_edit": {
+      "title": "Изменить специалиста",
+      "save": "Сохранить",
+      "cancel": "Отмена"
+    }
+  },
+  "action": {
+    "delete": "Удалить"
+  },
+  "support": {
+    "click_me": "Что-то не так? Нажмите на меня для связи с поддержкой"
   }
 }

@@ -77,7 +77,11 @@ const EmployeeMenu = () => {
   ]
 
   return (
-    <SupportedMenu title="Николай, Ваша карточка:">
+    <SupportedMenu
+      title={t("menu.employee.title", {
+        name: "Николай"
+      })}
+    >
       <UserInfo avatar={avatar} />
 
       <Grid

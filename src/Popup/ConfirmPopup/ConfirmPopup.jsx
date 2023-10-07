@@ -1,16 +1,26 @@
+import { useTranslation } from "i18nano"
 import Button from "../../Primitives/Button/Button"
-import Text from "../../Primitives/Text/Text"
-import TextInput from "../../Primitives/TextInput/TextInput"
 import Popup from "../Popup/Popup"
 
-const ConfirmPopup = ({ onConfirm, onCancel }) => {
+const ConfirmPopup = ({ onConfirm, onCancel, action }) => {
+  const t = useTranslation()
+
   return (
-    <Popup title="Это точно та кнопка? Подтвердите действие “Удалить”" titleMargin="40px 0px 47px 0px">
+    <Popup
+      title={t("popup.confirm.title", {
+        action: t(`action.${action}`)
+      })}
+      titleMargin="40px 0px 47px 0px"
+    >
       <Button highlightColor="accent_color" onClick={onConfirm}>
-        Подтвердить
+        {t("popup.confirm.confirm")}
       </Button>
-      <Button outlineColor="accent_color" margin="8px 0px 0px 0px" onClick={onCancel}>
-        Отмена
+      <Button
+        outlineColor="accent_color"
+        margin="8px 0px 0px 0px"
+        onClick={onCancel}
+      >
+        {t("popup.confirm.cancel")}
       </Button>
     </Popup>
   )

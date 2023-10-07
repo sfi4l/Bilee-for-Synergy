@@ -4,6 +4,7 @@ import FilterCard from "../../Elements/FilterCard/FilterCard"
 import RecordCard from "./RecordCard/RecordCard"
 import Button from "../../Primitives/Button/Button"
 import { useNavigate } from "react-router-dom"
+import { useTranslation } from "i18nano"
 
 export const recordsData = {
   12445: {
@@ -49,20 +50,26 @@ export const recordsData = {
 }
 
 const RecordsMenu = () => {
+  const t = useTranslation()
   const navigate = useNavigate()
 
   return (
-    <SupportedMenu title="Записи">
-      <FilterCard margin="19px 0px 13px 0px">Настроить фильтры</FilterCard>
+    <SupportedMenu title={t("menu.records.title")}>
+      <FilterCard margin="19px 0px 13px 0px">
+        {t("menu.records.configure_filters")}
+      </FilterCard>
 
       <div className="RecordsContainer">
-        {Object.keys(recordsData).map(recordId => (
-          <RecordCard {...recordsData[recordId]} onClick={() => navigate(`/records/${recordId}`)} />
+        {Object.keys(recordsData).map((recordId) => (
+          <RecordCard
+            {...recordsData[recordId]}
+            onClick={() => navigate(`/records/${recordId}`)}
+          />
         ))}
       </div>
 
       <Button height="37px" margin="21px 0px 0px 0px">
-        Загрузить ещё
+        {t("menu.records.load_more")}
       </Button>
     </SupportedMenu>
   )

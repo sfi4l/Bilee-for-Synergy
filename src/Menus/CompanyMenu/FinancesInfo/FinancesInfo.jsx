@@ -1,9 +1,12 @@
+import { useTranslation } from "i18nano"
 import GraphCard from "../../../Elements/GraphCard/GraphCard"
 import InfoCard from "../../../Elements/InfoCard/InfoCard"
 import Color from "../../../Primitives/Color/Color"
 import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
 
 const FinancesInfo = () => {
+  const t = useTranslation()
+  
   return (
     <AnimatedInfo>
       <GraphCard label="Дневная выручка" text="43 000 RUR" />

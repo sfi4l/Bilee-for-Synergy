@@ -6,8 +6,11 @@ import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
 import Color from "../../../Primitives/Color/Color"
 import Table from "../../../Primitives/Table/Table"
 import "./ServicesInfo.css"
+import { useTranslation } from "i18nano"
+import ColoredTranslation from "../../../Primitives/ColoredTranslation/ColoredTranslation"
 
 const ServicesInfo = () => {
+  const t = useTranslation()
   const tableHeader = [
     "Название",
     "Выручка",
@@ -26,33 +29,42 @@ const ServicesInfo = () => {
 
   return (
     <AnimatedInfo>
-      <InfoCard label="Самая популярная услуга этого года" title="Маник">
+      <InfoCard label={t("menu.company.services.most_popular.label")} title="Маник">
         <Text weight="400" color="hint_color">
-          За год 230 человек записались на неё 2000 раз. Это 20 записей каждый
-          день
+          {t("menu.company.services.most_popular.comment", {
+            people: "230",
+            records: "2000",
+            records_daily: "20"
+          })}
         </Text>
       </InfoCard>
-      <InfoCard label="Самая непопулярная услуга этого года" title="Маник">
+      <InfoCard label={t("menu.company.services.least_popular.label")} title="Маник">
         <Text weight="400" color="hint_color">
-          За год на неё записались всего 5 раз
+          {t("menu.company.services.least_popular.comment", {
+            amount: "5"
+          })}
         </Text>
       </InfoCard>
-      <InfoCard label="Самая прибыльная услуга этого года" title="Маник">
+      <InfoCard label={t("menu.company.services.most_profitable.label")} title="Маник">
         <Text weight="400" color="hint_color">
-          За год она принесла 100 000 RUR. Это 10 000 RUR в день
+          {t("menu.company.services.most_profitable.comment", {
+            currency: "RUR",
+            profit: "100 000",
+            daily_profit: "10 000"
+          })}
         </Text>
       </InfoCard>
-      <InfoCard label="Самая неприбыльная услуга этого года" title="Маник">
+      <InfoCard label={t("menu.company.services.least_profitable.label")} title="Маник">
         <Text weight="400" color="hint_color">
-          За год она принесла всего 2 000 RUR.
+          {t("menu.company.services.least_profitable.comment", {
+            currency: "RUR",
+            profit: "2 000"
+          })}
         </Text>
       </InfoCard>
       <InfoCard
         label={
-          <>
-            5 <Color color="accent_color">лучших</Color> по{" "}
-            <Color color="accent_color">выручке</Color>
-          </>
+          <ColoredTranslation path="menu.company.services.top_revenue"/>
         }
         insideMargin="2px 0px 0px 0px"
       >

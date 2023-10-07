@@ -5,8 +5,11 @@ import Iconify from "../../../Primitives/Iconify/Iconify"
 import manager_icon from "../../../Img/manager_icon.png"
 import location_icon from "../../../Img/location_icon.png"
 import TextCard from "../../../Primitives/TextCard/TextCard"
+import { useTranslation } from "i18nano"
 
 const RecordCard = ({ name, cost, type, person, address, date, onClick }) => {
+  const t = useTranslation()
+
   return (
     <InfoCard
       label={name}
@@ -42,7 +45,9 @@ const RecordCard = ({ name, cost, type, person, address, date, onClick }) => {
 
       <TextCard height="27px" width="95px" className="RecordStatus">
         <Text weight="400">
-          {type == 0 ? "Выполнено" : "Создано"}
+          {type == 0
+            ? t("menu.records.card.done")
+            : t("menu.records.card.created")}
         </Text>
       </TextCard>
     </InfoCard>

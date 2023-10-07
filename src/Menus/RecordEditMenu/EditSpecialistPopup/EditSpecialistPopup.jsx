@@ -1,14 +1,14 @@
 import "./EditSpecialistPopup.css"
 import Popup from "../../../Popup/Popup/Popup"
 import Button from "../../../Primitives/Button/Button"
-import Text from "../../../Primitives/Text/Text"
-import Card from "../../../Primitives/Card/Card"
-import TextCard from "../../../Primitives/TextCard/TextCard"
 import PickerCard from "../../../Elements/PickerCard/PickerCard"
+import { useTranslation } from "i18nano"
 
 const EditSpecialistPopup = ({ onSave, onCancel }) => {
+  const t = useTranslation()
+
   return (
-    <Popup title="Изменить специалиста">
+    <Popup title={t("popup.specialist_edit.title")}>
       <PickerCard
         items={[
           "Николай К. • Мастер",
@@ -31,14 +31,14 @@ const EditSpecialistPopup = ({ onSave, onCancel }) => {
         onClick={onSave}
         margin="53px 0px 0px 0px"
       >
-        Cохранить
+        {t("popup.specialist_edit.save")}
       </Button>
       <Button
         outlineColor="accent_color"
         onClick={onCancel}
         margin="8px 0px 0px 0px"
       >
-        Отмена
+        {t("popup.specialist_edit.cancel")}
       </Button>
     </Popup>
   )

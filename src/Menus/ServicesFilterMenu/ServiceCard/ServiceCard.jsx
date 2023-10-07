@@ -1,20 +1,23 @@
+import { useTranslation } from "i18nano"
 import Card from "../../../Primitives/Card/Card"
 import Text from "../../../Primitives/Text/Text"
 import TextCard from "../../../Primitives/TextCard/TextCard"
 import "./ServiceCard.css"
 
 const ServiceCard = ({ margin, type, text }) => {
+  const t = useTranslation()
+  
   let highlightColor = "green",
-    availability = "Доступно",
+    availability = t("menu.services.card.available"),
     color = "text_on_accent_color"
   if (type == 2) {
     highlightColor = "red"
-    availability = "Недоступно"
+    availability = t("menu.services.card.unavailable")
     color = "button_text_color"
   }
   if (type == 3) {
     highlightColor = "hint_color"
-    availability = "Черновик"
+    availability = t("menu.services.card.draft")
     color = "button_text_color"
   }
   return (

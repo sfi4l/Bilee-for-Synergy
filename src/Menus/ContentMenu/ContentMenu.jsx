@@ -7,9 +7,11 @@ import Text from "../../Primitives/Text/Text"
 import { useState } from "react"
 import { usePopup } from "../../Hooks/usePopup"
 import EditCardPopup from "./EditCardPopup/EditCardPopup"
+import { useTranslation } from "i18nano"
 
 const ContentMenu = () => {
-  const [welcomeText, setWelcomeText] = useState(
+  const t = useTranslation()
+  const [greetingText, setGreetingText] = useState(
     "Добро пожаловать в нашего бота! Здесь вы можете записаться на услуги, выбрать то, это и всё"
   )
   const [helpText, setHelpText] = useState(
@@ -19,20 +21,20 @@ const ContentMenu = () => {
   const [displayPopup, exitPopup] = usePopup()
 
   return (
-    <SupportedMenu title="Контент">
+    <SupportedMenu title={t("menu.content.title")}>
       <div className="ContentCards">
         <InfoCard
-          label="Приветствие"
+          label={t("menu.content.greeting")}
           add={<ThemedIcon icon={edit_icon} />}
           labelMargin="13px"
           insideMargin="3px 16px 14px 16px"
           onClick={() =>
             displayPopup(
               <EditCardPopup
-                cardName="приветствие"
-                defaultValue={welcomeText}
+                cardName={t("menu.content.greeting_popup_name")}
+                defaultValue={greetingText}
                 onSave={(value) => {
-                  setWelcomeText(value)
+                  setGreetingText(value)
                   exitPopup()
                 }}
                 onCancel={exitPopup}
@@ -47,19 +49,19 @@ const ContentMenu = () => {
             color="hint_color"
             maxLines="2"
           >
-            {welcomeText}
+            {greetingText}
           </Text>
         </InfoCard>
 
         <InfoCard
-          label="Раздел “Помощь”"
+          label={t("menu.content.help")}
           add={<ThemedIcon icon={edit_icon} />}
           labelMargin="13px"
           insideMargin="3px 16px 14px 16px"
           onClick={() =>
             displayPopup(
               <EditCardPopup
-                cardName="помощь"
+                cardName={t("menu.content.help_popup_name")}
                 defaultValue={helpText}
                 onSave={(value) => {
                   setHelpText(value)
@@ -82,14 +84,14 @@ const ContentMenu = () => {
         </InfoCard>
 
         <InfoCard
-          label="Название"
+          label={t("menu.content.name")}
           add={<ThemedIcon icon={edit_icon} />}
           labelMargin="13px"
           insideMargin="3px 16px 14px 16px"
           onClick={() =>
             displayPopup(
               <EditCardPopup
-                cardName="название"
+                cardName={t("menu.content.name_popup_name")}
                 defaultValue={nameText}
                 onSave={(value) => {
                   setNameText(value)

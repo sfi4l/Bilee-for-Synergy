@@ -91,7 +91,7 @@ const MainMenu = () => {
           <Button
             highlightColor="accent_color"
             onClick={() =>
-              displayPopup(<ConfirmPopup onCancel={() => exitPopup()} />)
+              displayPopup(<ConfirmPopup action="delete" onCancel={() => exitPopup()} />)
             }
           >
             {t("menu.main.subscription")}

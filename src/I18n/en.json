@@ -23,6 +23,114 @@
       "average_bill": "Average bill",
       "total_revenue": "Total revenue",
       "your_services": "Your services"
+    },
+    "settings": {
+      "title": "Settings",
+      "filials": "Branches",
+      "categories": "Categories",
+      "content": "Content",
+      "notifications": "Notifications",
+      "logging": "Logging"
+    },
+    "notification_settings": {
+      "title": "Notification Settings",
+      "new_records": "New records",
+      "max_occupancy": "Max occupancy",
+      "limit_reaching": "Limit reaching",
+      "work_day_start": "Work day start",
+      "weekdays": "Weekdays",
+      "breaks": "Breaks",
+      "misc": "Miscellaneous"
+    },
+    "branch": {
+      "notfound": {
+        "title": "You have not added any branches yet",
+        "add": "Add"
+      }
+    },
+    "services": {
+      "your_services": "Your services",
+      "found": "Found: {{found}}",
+      "no_filters": "No filters",
+      "nothing_found_with_filters": "Nothing found for the specified filters",
+      "load_more": "Load more",
+      "add": "Add",
+      "notfound": {
+        "title": "You haven't added any services yet",
+        "add": "Add"
+      },
+      "card": {
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "draft": "Draft"
+      }
+    },
+    "content": {
+      "title": "Content",
+      "greeting": "Greeting",
+      "greeting_popup_name": "greeting",
+      "help": "Help section",
+      "help_popup_name": "help",
+      "name": "Name",
+      "name_popup_name": "name"
+    },
+    "records": {
+      "title": "Records",
+      "configure_filters": "Configure filters",
+      "load_more": "Load more",
+      "card": {
+        "created": "Created",
+        "done": "Done"
+      }
+    },
+    "record_edit": {
+      "title": "Record #{{no}}",
+      "created": "Created",
+      "done": "Done",
+      "confirm_record": "Confirm record",
+      "cancel": "Cancel"
+    },
+    "company": {
+      "title": "Today, {{today}}",
+      "configure_filters": "Configure filters",
+      "finances": {
+        "title": "Finances"
+      },
+      "clients": {
+        "title": "Clients"
+      },
+      "services": {
+        "title": "Services"
+      }
     }
+  },
+  "popup": {
+    "confirm": {
+      "title": "Is that the right button? Confirm action “{{action}}”",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "edit_content": {
+      "title": "Edit {{name}}:",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "visit_date_edit": {
+      "title": "Edit visit date",
+      "duration": "Duration: {{duration}}",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "specialist_edit": {
+      "title": "Edit specialist",
+      "save": "Save",
+      "cancel": "Cancel"
+    }
+  },
+  "action": {
+    "delete": "Delete"
+  },
+  "support": {
+    "click_me": "Something's wrong? Tap on me to contact support"
   }
 }
