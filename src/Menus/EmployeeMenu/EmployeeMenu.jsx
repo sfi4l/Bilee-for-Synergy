@@ -12,8 +12,11 @@ import TextCard from "../../Primitives/TextCard/TextCard"
 import UserInfo from "./UserInfo/UserInfo"
 import Table from "../../Primitives/Table/Table"
 import UserServices from "./UserServices/UserServices"
+import { useTranslation } from "i18nano"
 
 const EmployeeMenu = () => {
+  const t = useTranslation()
+
   const mockedDayData = [
     {
       text: "",
@@ -85,12 +88,12 @@ const EmployeeMenu = () => {
       >
         <Button highlightColor="green" textColor="text_on_accent_color">
           <Text font="Inter" weight="600">
-            Запись доступна
+            {t("menu.employee.record_available")}
           </Text>
         </Button>
         <IconButton icon={group_icon}>
           <Text font="Inter" weight="600">
-            Без лимита
+            {t("menu.employee.no_limit")}
           </Text>
         </IconButton>
         <IconButton icon={location_icon}>
@@ -133,30 +136,30 @@ const EmployeeMenu = () => {
       </Grid>
 
       <Text font="Inter" margin="36px 0px 15px 0px">
-        Сводная статистика
+        {t("menu.employee.statistics")}
       </Text>
 
       <Table rows={4} columns={2}>
         <Text weight="400" font="Inter" size="12px">
-          Всего записей
+          {t("menu.employee.total_records")}
         </Text>
         <Text weight="400" font="Inter" size="12px">
           10 324
         </Text>
         <Text weight="400" font="Inter" size="12px">
-          Уникальных клиентов
+          {t("menu.employee.unique_clients")}
         </Text>
         <Text weight="400" font="Inter" size="12px">
           573
         </Text>
         <Text weight="400" font="Inter" size="12px">
-          Средний чек
+          {t("menu.employee.average_bill")}
         </Text>
         <Text weight="400" font="Inter" size="12px">
           3 194 RUR
         </Text>
         <Text weight="400" font="Inter" size="12px">
-          Общая выручка
+          {t("menu.employee.total_revenue")}
         </Text>
         <Text weight="400" font="Inter" size="12px">
           549 124 RUR
@@ -164,7 +167,7 @@ const EmployeeMenu = () => {
       </Table>
 
       <Text font="Inter" margin="27px 0px 15px 0px">
-        Ваши услуги
+        {t("menu.employee.your_services")}
       </Text>
 
       <UserServices

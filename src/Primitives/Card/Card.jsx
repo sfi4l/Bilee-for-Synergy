@@ -36,7 +36,7 @@ const Card = ({
       className={"Card" + className}
       style={{
         margin: margin,
-        border: outlineColor != false ? "1px solid" : "none"
+        border: outlineColor !== false ? "1px solid" : "none"
       }}
       initial={{
         height: height,

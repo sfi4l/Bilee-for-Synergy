@@ -16,7 +16,7 @@
     "employee": {
       "title": "{{name}}, Ваша карточка:",
       "record_available": "Запись доступна",
-      "nolimit": "Без лимита",
+      "no_limit": "Без лимита",
       "statistics": "Сводная статистика",
       "total_records": "Всего записей",
       "unique_clients": "Уникальных клиентов",

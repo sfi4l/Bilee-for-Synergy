@@ -16,7 +16,7 @@
     "employee": {
       "title": "{{name}}, your card:",
       "record_available": "Record available",
-      "nolimit": "No limit",
+      "no_limit": "No limit",
       "statistics": "Summary statistics",
       "total_records": "Total records",
       "unique_clients": "Unique clients",
