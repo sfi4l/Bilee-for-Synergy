@@ -9,12 +9,12 @@ const FinancesInfo = () => {
   
   return (
     <AnimatedInfo>
-      <GraphCard label="Дневная выручка" text="43 000 RUR" />
-      <GraphCard label="Общая выручка" text="549 000 RUR" />
-      <GraphCard label="Расходы" text="100 RUR" />
-      <GraphCard label="Чистая прибыль" text="548 900 RUR" />
+      <GraphCard label={t("menu.company.finances.daily_revenue")} text="43 000 RUR" />
+      <GraphCard label={t("menu.company.finances.total_revenue")} text="549 000 RUR" />
+      <GraphCard label={t("menu.company.finances.expenses")} text="100 RUR" />
+      <GraphCard label={t("menu.company.finances.net_profit")} text="548 900 RUR" />
       <InfoCard
-        label="Средний чек"
+        label={t("menu.company.finances.average_bill")}
         title={
           <>
             2394 <Color color="green">(12% ↑)</Color>

@@ -94,13 +94,59 @@
       "title": "Today, {{today}}",
       "configure_filters": "Configure filters",
       "finances": {
-        "title": "Finances"
+        "title": "Finances",
+        "daily_revenue": "Daily revenue",
+        "total_revenue": "Total revenue",
+        "expenses": "Expenses",
+        "net_profit": "Net profit",
+        "average_bill": "Average bill"
       },
       "clients": {
-        "title": "Clients"
+        "title": "Clients",
+        "clients": "Clients",
+        "records": "Records",
+        "activity": "Activity",
+        "users": "Users",
+        "add": "Add",
+        "users_total": "{{amount}} users total",
+        "table": {
+          "name": "Name",
+          "records": "Records",
+          "income": "Income",
+          "last_active": "Last active"
+        },
+        "traffic": "Traffic",
+        "new_users": "New users",
+        "regular_users": "Regular",
+        "most_active_days": "Most active days"
       },
       "services": {
-        "title": "Services"
+        "title": "Services",
+        "most_popular": {
+          "label": "Most popular service this year",
+          "comment": "Over the year, {{people}} people signed up for it {{records}} times. That's {{records_daily}} records every day"
+        },
+        "least_popular":  {
+          "label": "Least popular service this year",
+          "comment": "Only {{amount}} people signed up for it during the year"
+        },
+        "most_profitable":  {
+          "label": "Most profitable service this year",
+          "comment": "Over the year, it brought in {{profit}}. That's {{daily_profit}} per day"
+        },
+        "least_profitable":  {
+          "label": "Least profitable service this year",
+          "comment": "It brought in only {{profit}} during the year"
+        },
+        "top_revenue": "<accent_color>Top</color> 5 by <accent_color>revenue</color>",
+        "table": {
+          "name": "Name",
+          "revenue": "Revenue",
+          "amount": "No. of records",
+          "rating": "Rating",
+          "repeats": "% of repeat records",
+          "cancels": "% of cancellations"
+        }
       }
     }
   },
@@ -132,5 +178,30 @@
   },
   "support": {
     "click_me": "Something's wrong? Tap on me to contact support"
+  },
+  "dates": {
+    "months_short": {
+      "1": "Jan.",
+      "2": "Feb.",
+      "3": "Mar.",
+      "4": "Apr.",
+      "5": "May",
+      "6": "Jun.",
+      "7": "Jul.",
+      "8": "Aug.",
+      "9": "Sep.",
+      "10": "Oct.",
+      "11": "Nov.",
+      "12": "Dec."
+    },
+    "weekdays_short": {
+      "1": "Mo",
+      "2": "Tu",
+      "3": "We",
+      "4": "Th",
+      "5": "Fr",
+      "6": "Sa",
+      "7": "Su"
+    }
   }
 }

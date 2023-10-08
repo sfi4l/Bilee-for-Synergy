@@ -11,6 +11,7 @@ import {
   XAxis,
   YAxis
 } from "recharts"
+import { useTranslation } from "i18nano"
 
 const LegendItem = ({ color, name, value }) => {
   return (
@@ -30,87 +31,101 @@ const LegendItem = ({ color, name, value }) => {
 }
 
 const BarChartCard = () => {
+  const t = useTranslation()
   const theme = useContext(ThemeContext)
 
   const chartData = [
     {
-      month: "Апр.",
+      month: 4,
       new: 48,
       old: 34
     },
     {
-      month: "Май",
+      month: 5,
       new: 58,
       old: 58
     },
     {
-      month: "Июн.",
+      month: 6,
       new: 40,
       old: 80
     },
     {
-      month: "Июл.",
+      month: 7,
       new: 45,
       old: 30
     },
     {
-      month: "Авг.",
+      month: 8,
       new: 85,
       old: 80
     },
     {
-      month: "Сен.",
+      month: 9,
       new: 75,
       old: 80
     }
-  ]
+  ].map(data => ({
+    ...data,
+    month: t(`dates.months_short.${data.month}`)
+  }))
   const activeDaysData = [
     {
-      day: "Пн",
+      day: 1,
       new: 37,
       old: 155
     },
     {
-      day: "Вт",
+      day: 2,
       new: 18,
       old: 114
     },
     {
-      day: "Ср",
+      day: 3,
       new: 18,
       old: 218
     },
     {
-      day: "Чт",
+      day: 4,
       new: 19,
       old: 128
     },
     {
-      day: "Пт",
+      day: 5,
       new: 81,
       old: 138
     },
     {
-      day: "Сб",
+      day: 6,
       new: 75,
       old: 103
     },
     {
-      day: "Вс",
+      day: 7,
       new: 168,
       old: 230
     }
-  ]
+  ].map(data => ({
+    ...data,
+    day: t(`dates.weekdays_short.${data.day}`)
+  }))
 
   return (
-    <InfoCard label="Трафик" insideMargin="2px 16px 12px 16px">
+    <InfoCard
+      label={t("menu.company.clients.traffic")}
+      insideMargin="2px 16px 12px 16px"
+    >
       <div className="Legend">
         <LegendItem
-          name="Новые пользователи"
+          name={t("menu.company.clients.new_users")}
           value="1923"
           color={theme.green}
         />
-        <LegendItem name="Постоянные" value="2342" color={theme.accent_color} />
+        <LegendItem
+          name={t("menu.company.clients.regular_users")}
+          value="2342"
+          color={theme.accent_color}
+        />
       </div>
 
       <Text weight="400" size="14px">
@@ -118,7 +133,7 @@ const BarChartCard = () => {
           <BarChart
             data={chartData}
             margin={{ left: 0, right: 0, top: 20, bottom: 20 }}
-            barSize={12} 
+            barSize={12}
           >
             <XAxis
               dataKey="month"
@@ -133,7 +148,7 @@ const BarChartCard = () => {
         </ResponsiveContainer>
       </Text>
 
-      <Text weight="400">Наиболее активные дни</Text>
+      <Text weight="400">{t("menu.company.clients.most_active_days")}</Text>
       <Text color="hint_color" size="12px" weight="400">
         05.09.2023 - 12.09.2023
       </Text>
@@ -143,7 +158,7 @@ const BarChartCard = () => {
           <BarChart
             data={activeDaysData}
             layout="vertical"
-            margin={{ left: -34, right: 0, top: 18, bottom: 0 }}
+            margin={{ left: -32, right: 0, top: 18, bottom: 0 }}
             barSize={3}
             barGap={2}
           >

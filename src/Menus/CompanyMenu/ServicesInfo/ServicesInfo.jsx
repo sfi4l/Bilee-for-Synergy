@@ -12,12 +12,12 @@ import ColoredTranslation from "../../../Primitives/ColoredTranslation/ColoredTr
 const ServicesInfo = () => {
   const t = useTranslation()
   const tableHeader = [
-    "Название",
-    "Выручка",
-    "Кол-во записей",
-    "Рейтинг",
-    "% повторной записи",
-    "% отмен"
+    t("menu.company.services.table.name"),
+    t("menu.company.services.table.revenue"),
+    t("menu.company.services.table.amount"),
+    t("menu.company.services.table.rating"),
+    t("menu.company.services.table.repeats"),
+    t("menu.company.services.table.cancels"),
   ]
   const tableData = [
     ["Маник", "100 000 RUR", "1", "5.0", "23", "1"],
@@ -48,17 +48,15 @@ const ServicesInfo = () => {
       <InfoCard label={t("menu.company.services.most_profitable.label")} title="Маник">
         <Text weight="400" color="hint_color">
           {t("menu.company.services.most_profitable.comment", {
-            currency: "RUR",
-            profit: "100 000",
-            daily_profit: "10 000"
+            profit: "100 000 RUR",
+            daily_profit: "10 000 RUR"
           })}
         </Text>
       </InfoCard>
       <InfoCard label={t("menu.company.services.least_profitable.label")} title="Маник">
         <Text weight="400" color="hint_color">
           {t("menu.company.services.least_profitable.comment", {
-            currency: "RUR",
-            profit: "2 000"
+            profit: "2 000 RUR"
           })}
         </Text>
       </InfoCard>

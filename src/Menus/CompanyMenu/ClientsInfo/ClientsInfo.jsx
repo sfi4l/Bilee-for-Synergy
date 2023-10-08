@@ -8,6 +8,8 @@ import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
 import "./ClientsInfo.css"
 import BarChartCard from "./BarChartCard/BarChartCard"
 import { useTranslation } from "i18nano"
+import { useRelativeDateFormat } from "../../../Hooks/useRelativeDateFormat"
+import { useEffect, useState } from "react"
 
 const UserName = ({ name, subtitle }) => {
   return (
@@ -22,44 +24,61 @@ const UserName = ({ name, subtitle }) => {
 
 const ClientsInfo = () => {
   const t = useTranslation()
-  const tableHeader = ["Имя", "Записей", "Доход", "Последняя активность"]
+  const tableHeader = [
+    t("menu.company.clients.table.name"),
+    t("menu.company.clients.table.records"),
+    t("menu.company.clients.table.income"),
+    t("menu.company.clients.table.last_active")
+  ]
+  const format = useRelativeDateFormat()
+  const [startTime, _] = useState(new Date())
+  const [time, setTime] = useState(new Date())
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date())
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   const tableData = [
     [
       <UserName name="Антон" subtitle="Новый | рег. 11.09.2023" />,
       "0",
       "0 RUR",
-      "1 сек. назад"
+      format(time, startTime - 1000)
     ],
     [
       <UserName name="Антон" subtitle="Новый | рег. 11.09.2023" />,
       "0",
       "0 RUR",
-      "2 мин. назад"
+      format(time, startTime - 1000 * 60 * 2)
     ],
     [
       <UserName name="Антон" subtitle="Новый | рег. 11.09.2023" />,
       "0",
       "0 RUR",
-      "3 мин. назад"
+      format(time, startTime - 1000 * 60 * 3)
     ],
     [
       <UserName name="Антон" subtitle="Новый | рег. 11.09.2023" />,
       "0",
       "0 RUR",
-      "4 мин. назад"
+      format(time, startTime - 1000 * 60 * 4)
     ],
     [
       <UserName name="Антон" subtitle="Новый | рег. 11.09.2023" />,
       "0",
       "0 RUR",
-      "5 мин. назад"
+      format(time, startTime - 1000 * 60 * 5)
     ]
   ]
 
   return (
     <AnimatedInfo>
       <InfoCard
-        label="Клиенты"
+        label={t("menu.company.clients.clients")}
         title={
           <>
             2394 <Color color="green">(12% ↑)</Color>
@@ -67,25 +86,27 @@ const ClientsInfo = () => {
         }
       />
       <InfoCard
-        label="Записи"
+        label={t("menu.company.clients.records")}
         title={
           <>
             452 <Color color="green">(12% ↑)</Color>
           </>
         }
       />
-      <GraphCard label="Активность" />
+      <GraphCard label={t("menu.company.clients.activity")} />
       <InfoCard
-        label="Пользователи"
+        label={t("menu.company.clients.users")}
         insideMargin="2px 0px 0px 0px"
         add={
           <Button height="39px">
-            <Text margin="0px 10px">Добавить</Text>
+            <Text margin="0px 10px">{t("menu.company.clients.add")}</Text>
           </Button>
         }
       >
         <Text size="12px" weight="400" color="hint_color" margin="6px 16px">
-          123 456 пользователей всего
+          {t("menu.company.clients.users_total", {
+            amount: "123 456"
+          })}
         </Text>
         <Table
           columns={4}
