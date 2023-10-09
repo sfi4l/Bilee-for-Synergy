@@ -46,7 +46,6 @@ const App = () => {
             pointerEvents: popup ? "none" : "auto"
           }}
         >
-          {language}
           <AnimatePresence>{popup}</AnimatePresence>
           <AnimatePresence mode="wait">
             <RouterProvider router={router} />

@@ -1,0 +1,19 @@
+.NewsCard {
+  display: inline-flex;
+  align-items: center;
+  height: 110px;
+  width: 84px;
+  border-radius: 5px;
+  
+  background: conic-gradient(
+    from var(--angle),
+    #ffffff00 0deg,
+    var(--color) 180deg,
+    #ffffff00 340deg
+  );
+}
+
+.NewsCardText {
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}

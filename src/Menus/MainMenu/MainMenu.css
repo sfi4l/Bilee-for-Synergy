@@ -16,60 +16,6 @@
   display: none;
 }
 
-.NewsCard {
-  display: inline-flex;
-  padding: 26px 15px 27px 5px;
-  height: 57px;
-  width: 64px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.BlueNews {
-  background: conic-gradient(
-    from 180deg,
-    #ffffff00 0deg,
-    #06f 360deg
-  );
-}
-
-.BrownNews {
-  background: conic-gradient(
-    from 70deg,
-    #ad6868 0deg,
-    #ad686854 50deg,
-    #ffffff00 100deg,
-    #ffffff00 130deg,
-    #ad686848 245deg,
-    #ad6868 360deg
-  );
-}
-.GreenNews {
-  background: conic-gradient(
-    from 230deg,
-    #53d034 0deg,
-    #53d03449 140deg,
-    #ffffff00 280deg,
-    #ffffff00 320deg,
-    #53d034 360deg
-  );
-}
-.PinkNews {
-  background: conic-gradient(
-    from 180deg,
-    #FF00F5 0deg,
-    #FF00F554 50deg,
-    #ffffff00 170deg,
-    #ffffff00 200deg,
-    #FF00F548 245deg,
-    #FF00F5 360deg
-  );
-}
-
 .TodayWork {
   display: flex;
   width: 100%;

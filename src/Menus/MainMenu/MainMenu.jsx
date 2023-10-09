@@ -8,13 +8,12 @@ import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
 import Text from "../../Primitives/Text/Text"
 import Color from "../../Primitives/Color/Color"
 import { Translation, useTranslation } from "i18nano"
+import NewsCard from "./NewsCard/NewsCard"
 
 const MainMenu = () => {
   const t = useTranslation()
   const navigate = useNavigate()
   const [displayPopup, exitPopup] = usePopup()
-
-  console.log()
 
   return (
     <Menu title={t("menu.main.title")} onBack={false}>
@@ -24,26 +23,10 @@ const MainMenu = () => {
         </Text>
 
         <div className="AllNews">
-          <div className="BlueNews NewsCard">
-            <Text>
-              Мы <br />
-              запусти
-              <br />
-              лись!
-            </Text>
-          </div>
-          <div className="BrownNews NewsCard">
-            <Text>Скидки</Text>
-          </div>
-          <div className="GreenNews NewsCard">
-            <Text width="auto">Жопа</Text>
-          </div>
-          <div className="PinkNews NewsCard">
-            <Text>
-              Шок <br />
-              контент
-            </Text>
-          </div>
+          <NewsCard text="Мы запустились!" color="#0260E8" angle={0}/>
+          <NewsCard text="Скидки" color="#AD6868" angle={250}/>
+          <NewsCard text="Жопа" color="#53D034" angle={45}/>
+          <NewsCard text="Шок контент" color="#FF00F5" angle={5}/>
         </div>
 
         <div className="TodayWork">
