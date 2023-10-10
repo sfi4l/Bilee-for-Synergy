@@ -7,13 +7,22 @@ import { usePopup } from "../../Hooks/usePopup"
 import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
 import Text from "../../Primitives/Text/Text"
 import Color from "../../Primitives/Color/Color"
-import { Translation, useTranslation } from "i18nano"
+import { Translation, useTranslation, useTranslationChange } from "i18nano"
 import NewsCard from "./NewsCard/NewsCard"
+import { useEffect, useState } from "react"
+import { useFetch } from "../../Hooks/useFetch"
 
 const MainMenu = () => {
   const t = useTranslation()
+  const lang = useTranslationChange().lang
   const navigate = useNavigate()
   const [displayPopup, exitPopup] = usePopup()
+  const [stories, setStories] = useState()
+
+  useFetch(async get => {
+    const resp = await get(`/stories/${lang}`)
+    setStories(resp.data)
+  })
 
   return (
     <Menu title={t("menu.main.title")} onBack={false}>
@@ -23,10 +32,15 @@ const MainMenu = () => {
         </Text>
 
         <div className="AllNews">
-          <NewsCard text="Мы запустились!" color="#0260E8" angle={0}/>
+          {/* <NewsCard text="Мы запустились!" color="#0260E8" angle={0}/>
           <NewsCard text="Скидки" color="#AD6868" angle={250}/>
           <NewsCard text="Жопа" color="#53D034" angle={45}/>
-          <NewsCard text="Шок контент" color="#FF00F5" angle={5}/>
+          <NewsCard text="Шок контент" color="#FF00F5" angle={5}/> */}
+          {stories?.map(({ id, title, url, bg_color, bg_angle }) => (
+            <NewsCard key={id} text={title} color={bg_color} angle={bg_angle} url={url} />
+          )) ?? (
+            <NewsCard text="Пока ничего нет..." color="#00000060" angle={0} />
+          )}
         </div>
 
         <div className="TodayWork">
@@ -59,14 +73,22 @@ const MainMenu = () => {
         </Grid.Item>
 
         <Grid.Item columnEnd="span 2">
-          <Button onClick={() => navigate("/wtf")}>{t("menu.main.company")}</Button>
+          <Button onClick={() => navigate("/wtf")}>
+            {t("menu.main.company")}
+          </Button>
         </Grid.Item>
 
-        <Button onClick={() => navigate("/records")}>{t("menu.main.records")}</Button>
+        <Button onClick={() => navigate("/records")}>
+          {t("menu.main.records")}
+        </Button>
 
-        <Button onClick={() => navigate("/settings")}>{t("menu.main.settings")}</Button>
+        <Button onClick={() => navigate("/settings")}>
+          {t("menu.main.settings")}
+        </Button>
 
-        <Button onClick={() => navigate("/notfoundservice")}>{t("menu.main.services")}</Button>
+        <Button onClick={() => navigate("/notfoundservice")}>
+          {t("menu.main.services")}
+        </Button>
 
         <Button>{t("menu.main.employees")}</Button>
 
@@ -74,7 +96,9 @@ const MainMenu = () => {
           <Button
             highlightColor="accent_color"
             onClick={() =>
-              displayPopup(<ConfirmPopup action="delete" onCancel={() => exitPopup()} />)
+              displayPopup(
+                <ConfirmPopup action="delete" onCancel={() => exitPopup()} />
+              )
             }
           >
             {t("menu.main.subscription")}
