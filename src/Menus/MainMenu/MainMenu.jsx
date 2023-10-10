@@ -9,10 +9,12 @@ import Text from "../../Primitives/Text/Text"
 import Color from "../../Primitives/Color/Color"
 import { Translation, useTranslation, useTranslationChange } from "i18nano"
 import NewsCard from "./NewsCard/NewsCard"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useFetch } from "../../Hooks/useFetch"
+import { ThemeContext } from "../../Themes"
 
 const MainMenu = () => {
+  const theme = useContext(ThemeContext)
   const t = useTranslation()
   const lang = useTranslationChange().lang
   const navigate = useNavigate()
@@ -39,7 +41,7 @@ const MainMenu = () => {
           {stories?.map(({ id, title, url, bg_color, bg_angle }) => (
             <NewsCard key={id} text={title} color={bg_color} angle={bg_angle} url={url} />
           )) ?? (
-            <NewsCard text="Пока ничего нет..." color="#00000060" angle={0} />
+            <NewsCard text="Пока ничего нет..." color={`${theme.text_color}60`} angle={0} />
           )}
         </div>
 
