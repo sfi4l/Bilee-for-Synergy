@@ -16,4 +16,5 @@
 .NewsCardText {
   text-wrap: wrap;
   overflow-wrap: break-word;
+  word-break: break-all;
 }
