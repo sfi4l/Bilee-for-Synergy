@@ -2,7 +2,7 @@ import "./MainMenu.css"
 import Button from "../../Primitives/Button/Button"
 import Grid from "@react-css/grid"
 import Menu from "../Menu/Menu"
-import { useNavigate } from "react-router-dom"
+import { useFetcher, useLoaderData, useNavigate } from "react-router-dom"
 import { usePopup } from "../../Hooks/usePopup"
 import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
 import Text from "../../Primitives/Text/Text"
@@ -12,6 +12,7 @@ import NewsCard from "./NewsCard/NewsCard"
 import { useContext, useEffect, useState } from "react"
 import { useFetch } from "../../Hooks/useFetch"
 import { ThemeContext } from "../../Themes"
+import { useApi } from "../../Hooks/useApi"
 
 const MainMenu = () => {
   const theme = useContext(ThemeContext)
@@ -24,7 +25,7 @@ const MainMenu = () => {
   useFetch(async get => {
     const resp = await get(`/stories/${lang}`)
     setStories(resp.data)
-  })
+  }, true)
 
   return (
     <Menu title={t("menu.main.title")} onBack={false}>

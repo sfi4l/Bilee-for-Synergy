@@ -1,4 +1,4 @@
-import MainMenu from "./Menus/MainMenu/MainMenu"
+import MainMenu, { mainMenuLoader } from "./Menus/MainMenu/MainMenu"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
 import ServicesFilterMenu from "./Menus/ServicesFilterMenu/ServicesFilterMenu"
