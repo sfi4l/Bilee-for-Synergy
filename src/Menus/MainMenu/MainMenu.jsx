@@ -34,10 +34,6 @@ const MainMenu = () => {
         </Text>
 
         <div className="AllNews">
-          {/* <NewsCard text="Мы запустились!" color="#0260E8" angle={0}/>
-          <NewsCard text="Скидки" color="#AD6868" angle={250}/>
-          <NewsCard text="Жопа" color="#53D034" angle={45}/>
-          <NewsCard text="Шок контент" color="#FF00F5" angle={5}/> */}
           {stories?.map(({ id, title, url, bg_color, bg_angle }) => (
             <NewsCard key={id} text={title} color={bg_color} angle={bg_angle} url={url} />
           )) ?? (

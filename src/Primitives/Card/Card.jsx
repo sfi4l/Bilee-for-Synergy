@@ -19,7 +19,7 @@ const Card = ({
 
   let styleOutlineColor = theme.accent_color
   if (outlineColor) styleOutlineColor = theme[outlineColor]
-  let styleHighlightColor = "none"
+  let styleHighlightColor = theme.bg_color
   if (highlightColor) {
     styleHighlightColor = theme[highlightColor]
     if (!outlineColor) styleOutlineColor = styleHighlightColor
@@ -42,15 +42,15 @@ const Card = ({
         height: height,
         width: width,
         borderColor: styleOutlineColor,
-        "--highlight-color": styleHighlightColor
+        backgroundColor: styleHighlightColor
       }}
       animate={{
         height: height,
         width: width,
         borderColor: styleOutlineColor,
-        "--highlight-color": styleHighlightColor
+        backgroundColor: styleHighlightColor
       }}
-      transition={transition ?? { duration: 0.15, ease: "easeIn" }}
+      transition={transition ?? { duration: 0.12, ease: "easeIn" }}
       onClick={onClick}
     >
       {children}

@@ -14,13 +14,20 @@ const Button = ({
   motionKey,
   style
 }) => {
-  className = className && (" " + className) || ""
-  
+  className = (className && " " + className) || ""
+
   return (
-    <motion.button layout layoutId={motionKey} key={motionKey} onClick={onClick} className={"Button" + className} style={{
-      "margin": margin,
-      ...style
-    }}>
+    <motion.button
+      layout
+      layoutId={motionKey}
+      key={motionKey}
+      onClick={onClick}
+      className={"Button" + className}
+      style={{
+        margin: margin,
+        ...style
+      }}
+    >
       <TextCard
         outlineColor={outlineColor}
         highlightColor={highlightColor}

@@ -19,7 +19,7 @@ const Text = ({
   className
 }) => {
   const theme = useContext(ThemeContext)
-  if (color) color = theme[color]
+  color = color ? theme[color] : "var(--text-color)"
   className = className && (" " + className) || ""
 
   return (
@@ -29,13 +29,18 @@ const Text = ({
         "--font-family": font ?? "sfpd",
         "--weight": weight ?? "unset",
         "--style": style ?? "unset",
-        "--text-color": color,
         "--size": size ?? "16px",
         "--align": align ?? "left",
         "--width": width ?? "auto",
         "--margin": margin ?? "0",
         "--line-height": lineHeight ?? "normal",
         "--max-lines": maxLines ?? "unset"
+      }}
+      initial={{
+        color: color
+      }}
+      animate={{
+        color: color
       }}
       key={motionKey}
       layoutId={motionKey}
