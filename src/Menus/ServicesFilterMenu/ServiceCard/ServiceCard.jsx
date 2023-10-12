@@ -16,7 +16,7 @@ const ServiceCard = ({ margin, type, text }) => {
     color = "button_text_color"
   }
   if (type == 3) {
-    highlightColor = "hint_color"
+    highlightColor = "hint_background"
     availability = t("menu.services.card.draft")
     color = "button_text_color"
   }

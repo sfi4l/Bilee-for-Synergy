@@ -121,16 +121,16 @@ const EmployeeMenu = () => {
       >
         {(() =>
           ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((el) => (
-            <TextCard className="DayCard" outlineColor="neutral">
+            <TextCard key={el} className="DayCard" outlineColor="neutral">
               <Text font="Inter" weight="400">
                 {el}
               </Text>
             </TextCard>
           )))()}
         {(() =>
-          mockedDayData.map(({ text, type }) => {
+          mockedDayData.map(({ text, type }, i) => {
             return (
-              <TextCard className="DayCard" {...colorsForType(type)}>
+              <TextCard key={i} className="DayCard" {...colorsForType(type)}>
                 <Text font="Inter" weight="400">
                   {text}
                 </Text>

@@ -76,13 +76,14 @@ const PickerCard = ({
           } : null}>
             {order.map(({ text, id }, i) => (
               <Button
+                key={id}
                 outlineColor={false}
                 height={itemHeight}
                 onClick={i != 0 ? () => pick(id) : () => setExpanded(!expanded)}
                 style={
                   i != 0
                     ? {
-                        "border-top": `1px solid ${theme.neutral}`
+                        borderTop: `1px solid ${theme.neutral}`
                       }
                     : null
                 }

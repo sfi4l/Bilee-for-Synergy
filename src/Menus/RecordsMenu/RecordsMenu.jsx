@@ -62,6 +62,7 @@ const RecordsMenu = () => {
       <div className="RecordsContainer">
         {Object.keys(recordsData).map((recordId) => (
           <RecordCard
+            key={recordId}
             {...recordsData[recordId]}
             onClick={() => navigate(`/records/${recordId}`)}
           />

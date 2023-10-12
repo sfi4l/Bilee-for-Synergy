@@ -43,8 +43,9 @@ const ServicesFilterMenu = () => {
       {t("menu.services.no_filters")}
       </FilterCard>
 
-      {mockedCardData.map(({ name, type }) => (
+      {mockedCardData.map(({ name, type }, i) => (
         <ServiceCard
+          key={i}
           margin="0px 0px 6px 0px"
           type={type}
           text={name}

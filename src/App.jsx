@@ -22,8 +22,8 @@ const translations = {
 const App = () => {
   const [initData, _] = useInitData()
   const language = initData?.user?.language_code ?? "ru"
-  // const theme = useTheme()
-  const theme = Themes.dark
+  const theme = useTheme()
+  // const theme = Themes.dark
   const [isExpanded, expand] = useExpand()
 
   useEffect(() => {

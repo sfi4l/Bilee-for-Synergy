@@ -13,7 +13,8 @@ const Themes = {
     button_text_color: "#ffffff",
     bg_color: "#ffffff",
     main_menu_gradient: "#ececec",
-    chart_background: "#6C6C6C80"
+    chart_background: "#6C6C6C80",
+    hint_background: "#6C6C6C"
   },
   dark: {
     logo_color: "#3FC1F8",
@@ -27,7 +28,8 @@ const Themes = {
     button_text_color: "#ffffff",
     bg_color: "#212121",
     main_menu_gradient: "#00000080",
-    chart_background: "#6C6C6CC0"
+    chart_background: "#6C6C6CC0",
+    hint_background: "#6C6C6CC0"
   }
 }
 

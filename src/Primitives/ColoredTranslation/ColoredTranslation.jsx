@@ -6,9 +6,9 @@ const ColoredTranslation = ({ path, values }) => {
   const text = useTranslation()(path, values)
   return (
     <>
-      {reactStringReplace(text, /(<(?:.*?)>(?:.*?)<\/color>)/, tag => {
+      {reactStringReplace(text, /(<(?:.*?)>(?:.*?)<\/color>)/, (tag, i) => {
         const match = tag.match(/<(.*?)>(.*?)<\/color>/)
-        return <Color color={match[1]}>{match[2]}</Color>
+        return <Color key={i} color={match[1]}>{match[2]}</Color>
       })}
     </>
   )
