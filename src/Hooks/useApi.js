@@ -1,24 +1,42 @@
 import axios from "axios"
-import { setupCache } from "axios-cache-interceptor"
+import {
+  buildKeyGenerator,
+  buildMemoryStorage,
+  setupCache
+} from "axios-cache-interceptor"
 
 const api = axios.create({
   baseURL: "https://bilee.ru/api"
 })
 
-setupCache(api)
+const cacheStorage = buildMemoryStorage()
+const keyGenerator = buildKeyGenerator((request) => ({
+  method: request.method,
+  url: request.url
+}))
 
-export const useApi = (shouldCache) => {
-  const get = async (path) => {
-    return await api.get(path, { cache: shouldCache ? {} : false })
+setupCache(api, {
+  storage: cacheStorage,
+  generateKey: keyGenerator
+})
+
+export const useApi = (path, cacheCb) => {
+  const get = async () => {
+    return await api.get(path, { cache: cacheCb ? {} : false })
   }
 
-  const post = async (path, data) => {
-    return await api.post(path, { ...data, cache: shouldCache ? {} : false })
+  const post = async (data) => {
+    data.cache = cacheCb ? {} : false
+    return await api.post(path, data)
   }
 
-  const del = async (path) => {
-    return await api.delete(path, { cache: shouldCache ? {} : false })
+  const del = async () => {
+    return await api.delete(path, { cache: cacheCb ? {} : false })
   }
+
+  cacheStorage.get(keyGenerator({ method: "get", url: path })).then((saved) => {
+    cacheCb(saved.state === "cached" ? saved.data.data : null)
+  })
 
   return [get, post, del]
 }

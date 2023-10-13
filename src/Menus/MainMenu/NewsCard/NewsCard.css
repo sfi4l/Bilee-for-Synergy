@@ -2,9 +2,11 @@
   display: inline-flex;
   align-items: center;
   height: 110px;
-  width: 84px;
+  min-width: 84px;
+  max-width: 84px;
   border-radius: 5px;
-  
+  overflow: hidden;
+
   background: conic-gradient(
     from var(--angle),
     #ffffff00 0deg,

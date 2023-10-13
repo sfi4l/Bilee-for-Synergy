@@ -1,5 +1,6 @@
 .AllNews {
   width: calc(100vw - 16px - 16px);
+  height: 110px;
   display: flex;
   flex-direction: row;
   overflow-x: auto;

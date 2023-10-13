@@ -11,7 +11,7 @@ const NewsCard = ({ placeholder, text, color, angle }) => {
     <motion.div
       className="NewsCard"
       initial={{
-        "--angle": `0deg`,
+        "--angle": placeholder ? `0deg` : `${angle}deg`,
         "--color": placeholder ? `${theme.text_color}60` : color
       }}
       animate={{

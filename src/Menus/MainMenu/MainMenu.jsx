@@ -1,7 +1,7 @@
 import Grid from "@react-css/grid"
 import { useTranslation, useTranslationChange } from "i18nano"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useLoaderData, useNavigate, useNavigation } from "react-router-dom"
 import { useFetch } from "../../Hooks/useFetch"
 import { usePopup } from "../../Hooks/usePopup"
 import ConfirmPopup from "../../Popup/ConfirmPopup/ConfirmPopup"
@@ -11,18 +11,24 @@ import Text from "../../Primitives/Text/Text"
 import Menu from "../Menu/Menu"
 import "./MainMenu.css"
 import NewsCard from "./NewsCard/NewsCard"
+import { AnimatePresence } from "framer-motion"
 
 const MainMenu = () => {
   const t = useTranslation()
   const lang = useTranslationChange().lang
   const navigate = useNavigate()
   const [displayPopup, exitPopup] = usePopup()
-  const [stories, setStories] = useState()
+  const [stories, setStories] = useState(undefined)
 
-  useFetch(async (get) => {
-    const resp = await get(`/stories/${lang}`)
-    setStories(resp.data)
-  }, true)
+  useFetch(
+    `/stories/${lang}`,
+    async (get) => {
+      if (stories) return
+      const resp = await get()
+      setStories(resp.data)
+    },
+    setStories
+  )
 
   return (
     <Menu title={t("menu.main.title")} onBack={false}>
@@ -32,27 +38,18 @@ const MainMenu = () => {
         </Text>
 
         <div className="AllNews">
-          <NewsCard
-            {...(stories
-              ? {
-                  text: stories[0].title,
-                  color: stories[0].bg_color,
-                  angle: stories[0].bg_angle,
-                  url: stories[0].url
-                }
-              : { placeholder: true })}
-          />
-          {stories
-            ?.slice(1)
-            ?.map(({ id, title, url, bg_color, bg_angle }, i) => (
+          <AnimatePresence>
+            {stories === null && [0, 1, 2, 3].map(id => (<NewsCard key={id} placeholder />))}
+            {stories?.map(({ id, title, url, bg_color, bg_angle }, i) => (
               <NewsCard
-                key={id}
+                key={i}
                 text={title}
                 color={bg_color}
                 angle={bg_angle}
                 url={url}
               />
             ))}
+          </AnimatePresence>
         </div>
 
         <div className="TodayWork">
