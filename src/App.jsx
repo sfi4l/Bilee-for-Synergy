@@ -2,7 +2,8 @@ import "./App.css"
 import {
   useInitData,
   useThemeParams,
-  useExpand
+  useExpand,
+  useWebApp
 } from "@vkruglikov/react-telegram-web-app"
 import Themes, { ThemeContext } from "./Themes"
 import { RouterProvider } from "react-router-dom"
