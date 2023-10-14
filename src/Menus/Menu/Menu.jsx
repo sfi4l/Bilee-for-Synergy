@@ -9,6 +9,7 @@ const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
   const main = useWebApp().MainButton
   onBack = onBack ?? (() => {
     navigate(-1)
+    main.show()
     main.setText(`${main.text}-1`)
   })
   onMenu = onMenu ?? (() => navigate("/"))
