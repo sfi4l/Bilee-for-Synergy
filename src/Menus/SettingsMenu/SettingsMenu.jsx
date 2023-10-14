@@ -11,7 +11,7 @@ const SettingsMenu = () => {
     <SupportedMenu title={t("menu.settings.title")}>
       <Button
         outlineColor="accent_color"
-        onClick={() => navigate("/notfoundbranch")}
+        onClick={() => navigate("/branches")}
         margin="40px 0px 0px 0px"
       >
         {t("menu.settings.filials")}

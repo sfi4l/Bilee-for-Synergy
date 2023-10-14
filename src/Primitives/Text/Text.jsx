@@ -34,7 +34,8 @@ const Text = ({
         "--width": width ?? "auto",
         "--margin": margin ?? "0",
         "--line-height": lineHeight ?? "normal",
-        "--max-lines": maxLines ?? "unset"
+        "--max-lines": maxLines ?? "unset",
+        overflow: maxLines ? "hidden" : "unset"
       }}
       initial={{
         color: color

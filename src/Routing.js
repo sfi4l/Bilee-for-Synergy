@@ -1,7 +1,7 @@
 import MainMenu, { mainMenuLoader } from "./Menus/MainMenu/MainMenu"
 import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
 import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
-import ServicesFilterMenu from "./Menus/ServicesFilterMenu/ServicesFilterMenu"
+import ServicesMenu from "./Menus/ServicesMenu/ServicesMenu"
 import {
   createBrowserRouter,
   useLocation,
@@ -15,6 +15,7 @@ import CompanyMenu from "./Menus/CompanyMenu/CompanyMenu"
 import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
 import RecordEditMenu, { recordLoader } from "./Menus/RecordEditMenu/RecordEditMenu"
 import ContentMenu from "./Menus/ContentMenu/ContentMenu"
+import BranchesMenu from "./Menus/BranchesMenu/BranchesMenu"
 
 const AnimatedOutlet = () => {
   const outlet = useOutlet()
@@ -56,7 +57,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <ServicesFilterMenu />
+        element: <ServicesMenu />
       },
       {
         path: "/settings",
@@ -69,8 +70,8 @@ export const router = createBrowserRouter([
         path: "/notfoundservice",
         element: <NotFoundMenu nav="/services" title="services"/>
       }, {
-        path: "/notfoundbranch",
-        element: <NotFoundMenu title="branch"/>
+        path: "/branches",
+        element: <BranchesMenu />
       }, {
         path: "/wtf",
         element: <CompanyMenu />

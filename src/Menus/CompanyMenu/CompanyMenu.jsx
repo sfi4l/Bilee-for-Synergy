@@ -7,16 +7,17 @@ import "./CompanyMenu.css"
 import ClientsInfo from "./ClientsInfo/ClientsInfo"
 import FinancesInfo from "./FinancesInfo/FinancesInfo"
 import { LayoutGroup } from "framer-motion"
-import { useTranslation } from "i18nano"
+import { useTranslation, useTranslationChange } from "i18nano"
 
 const CompanyMenu = () => {
   const t = useTranslation()
+  const language = useTranslationChange().lang
   const [selected, setSelected] = useState(0)
 
   return (
     <SupportedMenu
       title={t("menu.company.title", {
-        today: new Date().toLocaleString("default", {
+        today: new Date().toLocaleString(language, {
           day: "numeric",
           month: "long"
         })

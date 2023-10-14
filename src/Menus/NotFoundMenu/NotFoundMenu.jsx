@@ -19,7 +19,6 @@ const NotFoundMenu = ({ title, onClick, nav }) => {
       <Button
         highlightColor="accent_color"
         onClick={onClick}
-        className="AddButton"
       >
         {t(`menu.${title}.notfound.add`)}
       </Button>

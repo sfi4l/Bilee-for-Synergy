@@ -3,9 +3,11 @@ import Text from "../../../Primitives/Text/Text"
 import { motion } from "framer-motion"
 import { useContext } from "react"
 import { ThemeContext } from "../../../Themes"
+import { useWebApp } from "@vkruglikov/react-telegram-web-app"
 
-const NewsCard = ({ placeholder, text, color, angle }) => {
+const NewsCard = ({ placeholder, text, url, color, angle }) => {
   const theme = useContext(ThemeContext)
+  const { openTelegramLink } = useWebApp()
 
   return (
     <motion.div
@@ -23,6 +25,7 @@ const NewsCard = ({ placeholder, text, color, angle }) => {
           ? { duration: 2, ease: "easeOut", repeat: "infinite" }
           : { duration: 0.5, ease: "easeIn" }
       }
+      onClick={() => openTelegramLink(url)}
     >
       <Text
         margin="0px 12px 0px 5px"

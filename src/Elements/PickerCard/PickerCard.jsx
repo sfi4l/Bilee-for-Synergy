@@ -18,7 +18,7 @@ const PickerCard = ({
 }) => {
   const theme = useContext(ThemeContext)
   itemHeight = itemHeight ?? 37
-  const cardHeight = (itemHeight + 1) * items.length + 2;
+  const cardHeight = (itemHeight + 1) * items.length + 2
 
   const [expanded, setExpanded] = useState(false)
   const [order, setOrder] = useState(
@@ -51,9 +51,12 @@ const PickerCard = ({
 
   return (
     <div className="PickerCardContainer" style={{ height: itemHeight, margin }}>
-      <div className="ExpandIconContainer" style={{
-        height: `${itemHeight}px`
-      }}>
+      <div
+        className="ExpandIconContainer"
+        style={{
+          height: `${itemHeight}px`
+        }}
+      >
         <ThemedIcon
           size="24px"
           square
@@ -71,9 +74,17 @@ const PickerCard = ({
         className={"PickerCard" + (expanded ? " PickerCardExpanded" : "")}
       >
         <AnimatePresence mode="popLayout">
-          <motion.div layoutScroll className="PickerItemsContainer" style={expanded ? {
-            "overflowY": "auto"  
-          } : null}>
+          <motion.div
+            layoutScroll
+            className="PickerItemsContainer"
+            style={
+              expanded
+                ? {
+                    overflowY: "auto"
+                  }
+                : null
+            }
+          >
             {order.map(({ text, id }, i) => (
               <Button
                 key={id}
@@ -83,13 +94,18 @@ const PickerCard = ({
                 style={
                   i != 0
                     ? {
-                        borderTop: `1px solid ${theme.neutral}`
+                        borderTop: `1px solid ${theme.hint_background}`
                       }
                     : null
                 }
               >
                 <div className="PickerItem">
-                  <Text width="100%" margin="0px 0px 0px 9px" {...textProps} motionKey={`item${id}`}>
+                  <Text
+                    width="100%"
+                    margin="0px 0px 0px 9px"
+                    {...textProps}
+                    motionKey={`item${id}`}
+                  >
                     {text}
                   </Text>
                 </div>

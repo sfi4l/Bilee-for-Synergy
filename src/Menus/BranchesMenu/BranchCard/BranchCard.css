@@ -1,11 +1,14 @@
-.ServiceCard{
+.BranchCard {
   min-height: 77px;
-  display:flex;
+  display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  padding: 19px 20px 20px 17px;
+  padding: 18px 20px 18px 17px;
   align-items: center;
-  
+  gap: 16px;
 }
 
+.BranchCard > .Card {
+  min-width: 76px;
+}

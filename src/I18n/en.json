@@ -42,10 +42,16 @@
       "breaks": "Breaks",
       "misc": "Miscellaneous"
     },
-    "branch": {
-      "notfound": {
-        "title": "You have not added any branches yet",
-        "add": "Add"
+    "branches": {
+      "title": "Branches",
+      "subtitle": "Amount: {{branches}}",
+      "no_branches": "You have not added any branches yet",
+      "load_more": "Load more",
+      "add": "Add",
+      "card": {
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "draft": "Draft"
       }
     },
     "services": {
@@ -126,15 +132,15 @@
           "label": "Most popular service this year",
           "comment": "Over the year, {{people}} people signed up for it {{records}} times. That's {{records_daily}} records every day"
         },
-        "least_popular":  {
+        "least_popular": {
           "label": "Least popular service this year",
           "comment": "Only {{amount}} people signed up for it during the year"
         },
-        "most_profitable":  {
+        "most_profitable": {
           "label": "Most profitable service this year",
           "comment": "Over the year, it brought in {{profit}}. That's {{daily_profit}} per day"
         },
-        "least_profitable":  {
+        "least_profitable": {
           "label": "Least profitable service this year",
           "comment": "It brought in only {{profit}} during the year"
         },

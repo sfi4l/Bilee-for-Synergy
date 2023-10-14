@@ -4,12 +4,13 @@ import Text from "../../../Primitives/Text/Text"
 import TextCard from "../../../Primitives/TextCard/TextCard"
 import "./ServiceCard.css"
 
-const ServiceCard = ({ margin, type, text }) => {
+const ServiceCard = ({ type, text }) => {
   const t = useTranslation()
-  
+
   let highlightColor = "green",
     availability = t("menu.services.card.available"),
     color = "text_on_accent_color"
+
   if (type == 2) {
     highlightColor = "red"
     availability = t("menu.services.card.unavailable")
@@ -20,9 +21,10 @@ const ServiceCard = ({ margin, type, text }) => {
     availability = t("menu.services.card.draft")
     color = "button_text_color"
   }
+
   return (
-    <Card margin={margin} className="ServiceCard" outlineColor={"neutral"}>
-      <Text className="TextInCard" size="16px" weight="600" width={"50%"}>
+    <Card className="ServiceCard" outlineColor="neutral">
+      <Text size="16px" weight="600" width="50%">
         {text}
       </Text>
       <TextCard
