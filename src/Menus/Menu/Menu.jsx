@@ -2,10 +2,15 @@ import { useNavigate } from "react-router-dom"
 import Header from "../../Elements/Header/Header"
 import "./Menu.css"
 import Text from "../../Primitives/Text/Text"
+import { useShowPopup } from "@vkruglikov/react-telegram-web-app"
 
 const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
   const navigate = useNavigate()
-  onBack = onBack ?? (() => navigate(-1))
+  const popup = useShowPopup()
+  onBack = onBack ?? (() => {
+    navigate(-1)
+    popup({ message: "-1" })
+  })
   onMenu = onMenu ?? (() => navigate("/"))
 
   return (
