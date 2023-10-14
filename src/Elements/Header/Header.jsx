@@ -17,17 +17,21 @@ const Header = ({ onBack, onMenu }) => {
     }
     backButton.onClick(onBack)
     backButton.show()
+
+    return () => {
+      backButton.offClick(onBack)
+    }
   }, [backButton])
 
   return (
     <div className="Header">
-      {onBack && (
+      {/* {onBack && (
         <FlatButton icon={backImg} onClick={onBack} className="BackButton"/>
-        )}
+        )} */}
       <Text font="sfpdn" size="24px" color="logo_color">
         Bilee
       </Text>
-      <FlatButton icon={menuImg} onClick={onMenu} className="MenuButton"/>
+      {/* <FlatButton icon={menuImg} onClick={onMenu} className="MenuButton"/> */}
     </div>
   )
 }

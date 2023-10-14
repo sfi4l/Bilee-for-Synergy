@@ -7,11 +7,7 @@ import { useShowPopup, useWebApp } from "@vkruglikov/react-telegram-web-app"
 const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
   const navigate = useNavigate()
   const main = useWebApp().MainButton
-  onBack = onBack ?? (() => {
-    navigate(-1)
-    main.show()
-    main.setText(`${main.text}-1`)
-  })
+  onBack = onBack ?? (() => navigate(-1))
   onMenu = onMenu ?? (() => navigate("/"))
 
   return (
