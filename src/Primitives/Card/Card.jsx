@@ -7,6 +7,7 @@ const Card = ({
   children,
   outlineColor,
   highlightColor,
+  hoverColor,
   height,
   width,
   margin,
@@ -49,6 +50,12 @@ const Card = ({
         width: width,
         borderColor: styleOutlineColor,
         backgroundColor: styleHighlightColor
+      }}
+      whileHover={!hoverColor ? undefined : {
+        backgroundColor: hoverColor,
+        transition: {
+          duration: 0.1
+        }
       }}
       transition={transition ?? { duration: 0.12, ease: "easeIn" }}
       onClick={onClick}

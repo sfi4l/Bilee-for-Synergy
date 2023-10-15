@@ -71,7 +71,7 @@ export const branchesLoader = () => {
     }
   ]
 
-  const branches = new Promise((r) => setTimeout(() => r(branchesRaw), 3000))
+  const branches = new Promise((r) => setTimeout(() => r(branchesRaw), 0))
 
   return { branches }
 }

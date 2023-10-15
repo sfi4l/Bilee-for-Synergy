@@ -18,7 +18,7 @@ const PickerCard = ({
 }) => {
   const theme = useContext(ThemeContext)
   itemHeight = itemHeight ?? 37
-  const cardHeight = (itemHeight + 1) * items.length + 2
+  const cardHeight = (itemHeight + 1) * items.length + 1
 
   const [expanded, setExpanded] = useState(false)
   const [order, setOrder] = useState(
@@ -27,8 +27,6 @@ const PickerCard = ({
       id: i
     }))
   )
-
-  const scrollRef = useRef(null)
 
   const pick = (ni) => {
     setExpanded(false)
@@ -64,6 +62,7 @@ const PickerCard = ({
           rotation={expanded ? 180 : 0}
         />
       </div>
+
       <Card
         outlineColor="neutral"
         height={
@@ -78,11 +77,11 @@ const PickerCard = ({
             layoutScroll
             className="PickerItemsContainer"
             style={
-              expanded
-                ? {
+              !expanded
+                ? null
+                : {
                     overflowY: "auto"
                   }
-                : null
             }
           >
             {order.map(({ text, id }, i) => (
@@ -98,6 +97,7 @@ const PickerCard = ({
                       }
                     : null
                 }
+                className="PickerItemButton"
               >
                 <div className="PickerItem">
                   <Text

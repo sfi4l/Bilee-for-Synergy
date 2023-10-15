@@ -8,6 +8,7 @@ const TextCard = ({
   children,
   outlineColor,
   highlightColor,
+  hoverColor,
   textColor,
   height,
   width,
@@ -25,13 +26,14 @@ const TextCard = ({
     <Card
       outlineColor={outlineColor}
       highlightColor={highlightColor}
+      hoverColor={hoverColor}
       height={height}
       width={width}
       className={className}
       margin={margin}
     >
       <motion.div layout
-        className="TextCard"
+        className="TextCardText"
         style={{
           "--text-color": styleTextColor
         }}

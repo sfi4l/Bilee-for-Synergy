@@ -53,6 +53,7 @@ const NotificationSettingsMenu = () => {
           onClick={() => handle(i)}
           margin="21px 0px 0px 0px"
           height="60px"
+          hoverColor={false}
         >
           <Text weight="400" size="24px" color={active ? "text_on_accent_color" : "text_color"}>
             {t(`menu.notification_settings.${translation}`)}

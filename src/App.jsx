@@ -9,7 +9,7 @@ import { RouterProvider } from "react-router-dom"
 import "./App.css"
 import { useTheme } from "./Hooks/useTheme"
 import { router } from "./Routing"
-import { ThemeContext } from "./Themes"
+import Themes, { ThemeContext } from "./Themes"
 
 export let setPopup
 
@@ -24,8 +24,8 @@ const App = () => {
   const [initData, initDataString] = useInitData()
   if (initDataString) IN_TELEGRAM = true
   const language = initData?.user?.language_code ?? "ru"
-  const theme = useTheme()
-  // const theme = Themes.dark
+  // const theme = useTheme()
+  const theme = Themes.dark
   const [_, expand] = useExpand()
 
   useEffect(() => {
