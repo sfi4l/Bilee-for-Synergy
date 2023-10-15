@@ -16,6 +16,7 @@ import RecordEditMenu, {
 import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
 import ServicesMenu from "./Menus/ServicesMenu/ServicesMenu"
 import SettingsMenu from "./Menus/SettingsMenu/SettingsMenu"
+import LogsMenu from "./Menus/LogsMenu/LogsMenu"
 
 const AnimatedOutlet = () => {
   const outlet = useOutlet()
@@ -110,7 +111,11 @@ export const router = createBrowserRouter([
       {
         path: "/content",
         element: <ContentMenu />
-      }
+      },
+      {
+        path: "/settings/logs",
+        element: <LogsMenu/>,
+      },
     ]
   }
 ])

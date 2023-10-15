@@ -33,7 +33,9 @@ const SettingsMenu = () => {
       >
         {t("menu.settings.notifications")}
       </Button>
-      <Button outlineColor="accent_color" margin="7px 0px 0px 0px">
+      <Button outlineColor="accent_color"
+        onClick={() => navigate("/settings/logs")}
+        margin="7px 0px 0px 0px">
         {t("menu.settings.logging")}
       </Button>
     </SupportedMenu>
