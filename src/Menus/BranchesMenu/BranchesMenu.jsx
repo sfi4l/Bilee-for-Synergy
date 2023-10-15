@@ -66,7 +66,7 @@ const BranchesMenu = ({ branches }) => {
 }
 
 export const BranchesMenuFallback = () => {
-  return <SupportedMenu></SupportedMenu>
+  return <SupportedMenu>Loading</SupportedMenu>
 }
 
 export default BranchesMenu

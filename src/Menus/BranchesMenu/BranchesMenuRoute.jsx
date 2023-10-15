@@ -78,6 +78,7 @@ export const branchesLoader = () => {
 
 const BranchesMenuRoute = () => {
   const [data] = useState(useRouteLoaderData("branches"))
+  
   return (
     <Suspense fallback={<BranchesMenuFallback />}>
       <Await resolve={data.branches}>
