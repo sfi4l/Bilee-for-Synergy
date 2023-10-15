@@ -13,14 +13,14 @@ const LogCard = ({ id, title, subtitle, margin }) => {
       outlineColor="neutral"
       margin={margin}
     >
-        <Text size="12px" weight="600" margin="19px 0px 0px 17px" maxLines={1}>
+        <Text size="12px" weight="600" margin="19px 17px 0px 17px">
           {title}
         </Text>
         <Text
           size="12px"
           weight="400"
           color="hint_color"
-          margin="8px 0px 10px 17px"
+          margin="8px 17px 15px 17px"
         >
           {subtitle}
         </Text>
