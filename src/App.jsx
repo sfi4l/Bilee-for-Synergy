@@ -1,17 +1,15 @@
-import "./App.css"
 import {
-  useInitData,
-  useThemeParams,
   useExpand,
-  useWebApp
+  useInitData
 } from "@vkruglikov/react-telegram-web-app"
-import Themes, { ThemeContext } from "./Themes"
-import { RouterProvider } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
-import { router } from "./Routing"
-import { useTheme } from "./Hooks/useTheme"
-import { Suspense, useEffect, useState } from "react"
 import { TranslationProvider } from "i18nano"
+import { useEffect, useState } from "react"
+import { RouterProvider } from "react-router-dom"
+import "./App.css"
+import { useTheme } from "./Hooks/useTheme"
+import { router } from "./Routing"
+import { ThemeContext } from "./Themes"
 
 export let setPopup
 
@@ -20,12 +18,15 @@ const translations = {
   ru: () => import("./I18n/ru.json")
 }
 
+export let IN_TELEGRAM = false
+
 const App = () => {
-  const [initData, _] = useInitData()
+  const [initData, initDataString] = useInitData()
+  if (initDataString) IN_TELEGRAM = true
   const language = initData?.user?.language_code ?? "ru"
   const theme = useTheme()
   // const theme = Themes.dark
-  const [isExpanded, expand] = useExpand()
+  const [_, expand] = useExpand()
 
   useEffect(() => {
     expand()

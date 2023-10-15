@@ -3,15 +3,16 @@ import Header from "../../Elements/Header/Header"
 import "./Menu.css"
 import Text from "../../Primitives/Text/Text"
 import { useShowPopup, useWebApp } from "@vkruglikov/react-telegram-web-app"
+import { motion } from "framer-motion"
 
-const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
+const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding, props }) => {
   const navigate = useNavigate()
   const main = useWebApp().MainButton
   onBack = onBack ?? (() => navigate(-1))
   onMenu = onMenu ?? (() => navigate("/"))
 
   return (
-    <div className="Menu">
+    <motion.div className="Menu" {...props}>
       <Header onBack={onBack} onMenu={onMenu} />
 
       {title && (
@@ -30,7 +31,7 @@ const Menu = ({ children, title, subtitle, onBack, onMenu, add, padding }) => {
       )}
 
       <div style={{ margin: padding }}>{children}</div>
-    </div>
+    </motion.div>
   )
 }
 

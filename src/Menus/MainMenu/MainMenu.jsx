@@ -82,7 +82,7 @@ const MainMenu = () => {
         </Grid.Item>
 
         <Grid.Item columnEnd="span 2">
-          <Button onClick={() => navigate("/wtf")}>
+          <Button onClick={() => navigate("/company")}>
             {t("menu.main.company")}
           </Button>
         </Grid.Item>

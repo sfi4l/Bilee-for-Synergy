@@ -1,13 +1,12 @@
 import { useInitData, useThemeParams } from "@vkruglikov/react-telegram-web-app"
 import Themes from "../Themes"
+import { IN_TELEGRAM } from "../App"
 
 export const useTheme = () => {
   const [colorScheme, themeTG] = useThemeParams()
-  const [initData, initDataRaw] = useInitData()
   let theme = Themes[colorScheme]
-  // theme = Themes["dark"]
 
-  if (initDataRaw) {
+  if (IN_TELEGRAM) {
     theme = {
       ...theme,
       ...themeTG

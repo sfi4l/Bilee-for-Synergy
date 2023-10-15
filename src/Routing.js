@@ -1,21 +1,21 @@
-import MainMenu, { mainMenuLoader } from "./Menus/MainMenu/MainMenu"
-import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
-import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
-import ServicesMenu from "./Menus/ServicesMenu/ServicesMenu"
-import {
-  createBrowserRouter,
-  useLocation,
-  useOutlet
-} from "react-router-dom"
-import SettingsMenu from "./Menus/SettingsMenu/SettingsMenu"
-import NotificationSettingsMenu from "./Menus/NotificationSettingsMenu/NotificationSettingsMenu"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
+import { createBrowserRouter, useLocation, useOutlet } from "react-router-dom"
+import BranchAddMenu from "./Menus/BranchesMenu/BranchAddMenu/BranchAddMenu"
+import BranchMenuRoute, { branchMenuLoader } from "./Menus/BranchesMenu/BranchMenu/BranchMenuRoute"
+import BranchesMenuRoute, { branchesLoader } from "./Menus/BranchesMenu/BranchesMenuRoute"
 import CompanyMenu from "./Menus/CompanyMenu/CompanyMenu"
-import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
-import RecordEditMenu, { recordLoader } from "./Menus/RecordEditMenu/RecordEditMenu"
 import ContentMenu from "./Menus/ContentMenu/ContentMenu"
-import BranchesMenu from "./Menus/BranchesMenu/BranchesMenu"
+import EmployeeMenu from "./Menus/EmployeeMenu/EmployeeMenu"
+import MainMenu from "./Menus/MainMenu/MainMenu"
+import NotFoundMenu from "./Menus/NotFoundMenu/NotFoundMenu"
+import NotificationSettingsMenu from "./Menus/NotificationSettingsMenu/NotificationSettingsMenu"
+import RecordEditMenu, {
+  recordLoader
+} from "./Menus/RecordEditMenu/RecordEditMenu"
+import RecordsMenu from "./Menus/RecordsMenu/RecordsMenu"
+import ServicesMenu from "./Menus/ServicesMenu/ServicesMenu"
+import SettingsMenu from "./Menus/SettingsMenu/SettingsMenu"
 
 const AnimatedOutlet = () => {
   const outlet = useOutlet()
@@ -66,23 +66,48 @@ export const router = createBrowserRouter([
       {
         path: "/settings/notifications",
         element: <NotificationSettingsMenu />
-      }, {
+      },
+      {
         path: "/notfoundservice",
-        element: <NotFoundMenu nav="/services" title="services"/>
-      }, {
+        element: <NotFoundMenu nav="/services" title="services" />
+      },
+      {
+        id: "branches",
         path: "/branches",
-        element: <BranchesMenu />
-      }, {
-        path: "/wtf",
+        shouldRevalidate: ({ currentUrl }) =>
+          currentUrl.pathname === "/branches/add",
+        element: <AnimatedOutlet />,
+        loader: branchesLoader,
+        children: [
+          {
+            path: "",
+            element: <BranchesMenuRoute />
+          },
+          {
+            path: ":id",
+            element: <BranchMenuRoute />,
+            loader: branchMenuLoader
+          },
+          {
+            path: "add",
+            element: <BranchAddMenu />
+          }
+        ]
+      },
+      {
+        path: "/company",
         element: <CompanyMenu />
-      }, {
+      },
+      {
         path: "/records",
         element: <RecordsMenu />
-      }, {
+      },
+      {
         path: "/records/:recordId",
         element: <RecordEditMenu />,
         loader: recordLoader
-      }, {
+      },
+      {
         path: "/content",
         element: <ContentMenu />
       }

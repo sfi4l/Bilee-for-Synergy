@@ -3,14 +3,16 @@ import Card from "../../../Primitives/Card/Card"
 import "./BranchCard.css"
 import Text from "../../../Primitives/Text/Text"
 import TextCard from "../../../Primitives/TextCard/TextCard"
+import { useNavigate } from "react-router-dom"
 
-const BranchCard = ({ title, subtitle, type }) => {
+const BranchCard = ({ id, title, subtitle, type }) => {
   const t = useTranslation()
+  const navigate = useNavigate()
 
   let highlightColor = "green",
     availability = t("menu.branches.card.available"),
     color = "text_on_accent_color"
-  
+
   if (type == 2) {
     highlightColor = "red"
     availability = t("menu.branches.card.unavailable")
@@ -23,12 +25,21 @@ const BranchCard = ({ title, subtitle, type }) => {
   // }
 
   return (
-    <Card className="BranchCard" outlineColor="neutral">
+    <Card
+      className="BranchCard"
+      outlineColor="neutral"
+      onClick={() => navigate(`/branches/${id}`)}
+    >
       <div>
         <Text size="16px" weight="600" maxLines={1}>
           {title}
         </Text>
-        <Text size="12px" weight="400" color="hint_color" margin="6px 0px 0px 0px">
+        <Text
+          size="12px"
+          weight="400"
+          color="hint_color"
+          margin="6px 0px 0px 0px"
+        >
           {subtitle}
         </Text>
       </div>

@@ -1,15 +1,15 @@
+import { useTranslation } from "i18nano"
+import { useEffect, useState } from "react"
 import GraphCard from "../../../Elements/GraphCard/GraphCard"
 import InfoCard from "../../../Elements/InfoCard/InfoCard"
+import { useRelativeDateFormat } from "../../../Hooks/useRelativeDateFormat"
+import Button from "../../../Primitives/Button/Button"
 import Color from "../../../Primitives/Color/Color"
 import Table from "../../../Primitives/Table/Table"
 import Text from "../../../Primitives/Text/Text"
-import Button from "../../../Primitives/Button/Button"
 import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
-import "./ClientsInfo.css"
 import BarChartCard from "./BarChartCard/BarChartCard"
-import { useTranslation } from "i18nano"
-import { useRelativeDateFormat } from "../../../Hooks/useRelativeDateFormat"
-import { useEffect, useState } from "react"
+import "./ClientsInfo.css"
 
 const UserName = ({ name, subtitle }) => {
   return (
@@ -120,16 +120,17 @@ const ClientsInfo = () => {
           cellPadding="0px 16px 0px 0px"
           className="ClientsInfoTableContainer"
         >
-          {tableHeader.map((text) => (
-            <Text color="hint_color" weight="600">
+          {tableHeader.map((text, i) => (
+            <Text key={`a${i}`} color="hint_color" weight="600">
               {text}
             </Text>
           ))}
-          {tableData.flat().map((text) => (
-            <Text>{text}</Text>
+          {tableData.flat().map((text, i) => (
+            <Text key={`b${i}`}>{text}</Text>
           ))}
         </Table>
       </InfoCard>
+
       <BarChartCard />
     </AnimatedInfo>
   )

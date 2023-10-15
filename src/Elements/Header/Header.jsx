@@ -6,6 +6,7 @@ import Text from "../../Primitives/Text/Text"
 import FlatButton from "../../Primitives/FlatButton/FlatButton"
 import { useWebApp } from "@vkruglikov/react-telegram-web-app"
 import { useEffect } from "react"
+import { IN_TELEGRAM } from "../../App"
 
 const Header = ({ onBack, onMenu }) => {
   const backButton = useWebApp().BackButton
@@ -18,9 +19,7 @@ const Header = ({ onBack, onMenu }) => {
     backButton.onClick(onBack)
     backButton.show()
 
-    return () => {
-      backButton.offClick(onBack)
-    }
+    return () => backButton.offClick(onBack)
   }, [backButton])
 
   return (

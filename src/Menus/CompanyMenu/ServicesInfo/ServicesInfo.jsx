@@ -1,13 +1,11 @@
+import { useTranslation } from "i18nano"
 import React from "react"
 import InfoCard from "../../../Elements/InfoCard/InfoCard"
-import Text from "../../../Primitives/Text/Text"
-import { motion } from "framer-motion"
-import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
-import Color from "../../../Primitives/Color/Color"
-import Table from "../../../Primitives/Table/Table"
-import "./ServicesInfo.css"
-import { useTranslation } from "i18nano"
 import ColoredTranslation from "../../../Primitives/ColoredTranslation/ColoredTranslation"
+import Table from "../../../Primitives/Table/Table"
+import Text from "../../../Primitives/Text/Text"
+import AnimatedInfo from "../AnimatedInfo/AnimatedInfo"
+import "./ServicesInfo.css"
 
 const ServicesInfo = () => {
   const t = useTranslation()
@@ -17,7 +15,7 @@ const ServicesInfo = () => {
     t("menu.company.services.table.amount"),
     t("menu.company.services.table.rating"),
     t("menu.company.services.table.repeats"),
-    t("menu.company.services.table.cancels"),
+    t("menu.company.services.table.cancels")
   ]
   const tableData = [
     ["Маник", "100 000 RUR", "1", "5.0", "23", "1"],
@@ -29,7 +27,10 @@ const ServicesInfo = () => {
 
   return (
     <AnimatedInfo>
-      <InfoCard label={t("menu.company.services.most_popular.label")} title="Маник">
+      <InfoCard
+        label={t("menu.company.services.most_popular.label")}
+        title="Маник"
+      >
         <Text weight="400" color="hint_color">
           {t("menu.company.services.most_popular.comment", {
             people: "230",
@@ -38,14 +39,20 @@ const ServicesInfo = () => {
           })}
         </Text>
       </InfoCard>
-      <InfoCard label={t("menu.company.services.least_popular.label")} title="Маник">
+      <InfoCard
+        label={t("menu.company.services.least_popular.label")}
+        title="Маник"
+      >
         <Text weight="400" color="hint_color">
           {t("menu.company.services.least_popular.comment", {
             amount: "5"
           })}
         </Text>
       </InfoCard>
-      <InfoCard label={t("menu.company.services.most_profitable.label")} title="Маник">
+      <InfoCard
+        label={t("menu.company.services.most_profitable.label")}
+        title="Маник"
+      >
         <Text weight="400" color="hint_color">
           {t("menu.company.services.most_profitable.comment", {
             profit: "100 000 RUR",
@@ -53,7 +60,10 @@ const ServicesInfo = () => {
           })}
         </Text>
       </InfoCard>
-      <InfoCard label={t("menu.company.services.least_profitable.label")} title="Маник">
+      <InfoCard
+        label={t("menu.company.services.least_profitable.label")}
+        title="Маник"
+      >
         <Text weight="400" color="hint_color">
           {t("menu.company.services.least_profitable.comment", {
             profit: "2 000 RUR"
@@ -61,9 +71,7 @@ const ServicesInfo = () => {
         </Text>
       </InfoCard>
       <InfoCard
-        label={
-          <ColoredTranslation path="menu.company.services.top_revenue"/>
-        }
+        label={<ColoredTranslation path="menu.company.services.top_revenue" />}
         insideMargin="2px 0px 0px 0px"
       >
         <Table
@@ -78,11 +86,13 @@ const ServicesInfo = () => {
           cellPadding="0px 16px 0px 0px"
           className="ServicesInfoTableContainer"
         >
-          {tableHeader.map((text) => (
-            <Text color="hint_color" weight="600">{text}</Text>
+          {tableHeader.map((text, i) => (
+            <Text key={`a${i}`} color="hint_color" weight="600">
+              {text}
+            </Text>
           ))}
-          {tableData.flat().map(text => (
-            <Text>{text}</Text>
+          {tableData.flat().map((text, i) => (
+            <Text key={`b${i}`}>{text}</Text>
           ))}
         </Table>
       </InfoCard>

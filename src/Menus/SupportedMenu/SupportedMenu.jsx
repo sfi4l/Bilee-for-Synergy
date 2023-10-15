@@ -2,8 +2,9 @@ import { useTranslation } from "i18nano"
 import Text from "../../Primitives/Text/Text"
 import Menu from "../Menu/Menu"
 import "./SupportedMenu.css"
+import { motion } from "framer-motion"
 
-const SupportedMenu = ({ children, title, subtitle, onBack, onMenu, add }) => {
+const SupportedMenu = ({ children, title, subtitle, onBack, onMenu, add, props }) => {
   const t = useTranslation()
   
   return (
@@ -13,8 +14,9 @@ const SupportedMenu = ({ children, title, subtitle, onBack, onMenu, add }) => {
       onBack={onBack}
       onMenu={onMenu}
       add={add}
+      props={props}
     >
-      <div className="SupportContainer">
+      <motion.div layout className="SupportContainer">
         <div className="InnerContainer">
           {children}
         </div>
@@ -27,7 +29,7 @@ const SupportedMenu = ({ children, title, subtitle, onBack, onMenu, add }) => {
         >
           {t("support.click_me")}
         </Text>
-      </div>
+      </motion.div>
     </Menu>
   )
 }
