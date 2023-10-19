@@ -25,7 +25,7 @@ const App = () => {
   if (initDataString) IN_TELEGRAM = true
   const language = initData?.user?.language_code ?? "ru"
   // const theme = useTheme()
-  const theme = Themes.light
+  const theme = Themes.light 
   const [_, expand] = useExpand()
 
   useEffect(() => {
