@@ -81,12 +81,6 @@ const MainMenu = () => {
           </Button>
         </Grid.Item>
 
-        <Grid.Item columnEnd="span 2">
-          <Button onClick={() => navigate("/company")}>
-            {t("menu.main.company")}
-          </Button>
-        </Grid.Item>
-
         <Button onClick={() => navigate("/records")}>
           {t("menu.main.records")}
         </Button>
@@ -99,18 +93,15 @@ const MainMenu = () => {
           {t("menu.main.services")}
         </Button>
 
-        <Button>{t("menu.main.employees")}</Button>
+        <Button onClick={() => navigate("/Employees")}>
+          {t("menu.main.employees")}
+        </Button>
 
         <Grid.Item columnEnd="span 2">
           <Button
             highlightColor="accent_color"
-            onClick={() =>
-              displayPopup(
-                <ConfirmPopup action="delete" onCancel={() => exitPopup()} />
-              )
-            }
-          >
-            {t("menu.main.subscription")}
+            onClick={() => navigate("/company")}>
+            {t("menu.main.company")}
           </Button>
         </Grid.Item>
       </Grid>

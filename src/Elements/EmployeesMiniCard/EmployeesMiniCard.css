@@ -1,0 +1,25 @@
+.EmployeesCard {
+  width: 60px;
+  height: 60px;
+  margin: 9px 0px 10px 11px;
+}
+.EmployeesContainer {
+  display: flex;
+}
+.EmployeeMenuFirstLayer {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.EmployeesContainerForInfo {
+  display: grid;
+  grid-template-rows: repeat(3);
+}
+.EmployeeMenuSecondLayer {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 9px 0px 9px 9px;
+}
+.iconify{
+  margin:0px 9px 0px 0px
+}
