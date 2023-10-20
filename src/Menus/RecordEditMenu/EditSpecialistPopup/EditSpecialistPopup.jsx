@@ -8,9 +8,9 @@ import { useLocalStorage } from "../../../Hooks/useLocalStorage"
 
 const EditSpecialistPopup = ({ onSave, onCancel }) => {
   const t = useTranslation();
-  const [selectedValue, setSelectedValue] = useLocalStorage("selectedValue", 0); // Использование вашего хука
-  const [selectedName, setSelectedName] = useLocalStorage("selectedName", "Выберите специалиста"); // Добавляем хранение имени
-  const [tempValue, setTempValue] = useState(selectedValue); // Добавляем временное хранение значения
+  const [selectedValue, setSelectedValue] = useLocalStorage("selectedValue", 0);
+  const [selectedName, setSelectedName] = useLocalStorage("selectedName", "Выберите специалиста"); //хранение имени
+  const [tempValue, setTempValue] = useState(selectedValue);
 
   const specialistNames = [
     selectedName, // Используем сохраненное имя
@@ -23,13 +23,13 @@ const EditSpecialistPopup = ({ onSave, onCancel }) => {
   ];
 
   const handlePick = (value) => {
-    setTempValue(value); // Сохраняем выбранное значение временно
+    setTempValue(value); 
   };
 
   const handleSave = () => {
     setSelectedValue(tempValue); // Сохраняем значение в localStorage при нажатии "Сохранить"
-    setSelectedName(specialistNames[tempValue]); // Сохраняем имя соответствующего специалиста
-    onSave(tempValue); // Вызываем onSave с выбранным значением
+    setSelectedName(specialistNames[tempValue]); 
+    onSave(tempValue); 
   };
 
   return (
