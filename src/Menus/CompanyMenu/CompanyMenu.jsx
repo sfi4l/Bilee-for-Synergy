@@ -30,11 +30,9 @@ const CompanyMenu = () => {
           t("menu.company.services.title")
         ]}
         onPick={(i) => setSelected(i)}
-        margin="35px 0px 0px 0px"
+        margin="35px 0px 9px 0px"
       />
-      <FilterCard margin="6px 0px 13px 0px">
-        {t("menu.company.configure_filters")}
-      </FilterCard>
+      
 
       <div className="Info">
         <LayoutGroup>

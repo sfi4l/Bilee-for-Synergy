@@ -40,9 +40,7 @@ const ServicesMenu = () => {
         found: `${mockedCardData.length}`
       })}
     >
-      <FilterCard margin="16px 0px 13px 0px">
-        {t("menu.services.no_filters")}
-      </FilterCard>
+      
 
       <div className="ServicesContainer">
         {mockedCardData.map(({ name, type }, i) => (
@@ -57,8 +55,7 @@ const ServicesMenu = () => {
         />
       )}
 
-      <Button margin="13px 0px 6px 0px">{t("menu.services.load_more")}</Button>
-      <Button highlightColor="accent_color">{t("menu.services.add")}</Button>
+      
     </SupportedMenu>
   )
 }

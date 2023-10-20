@@ -10,7 +10,7 @@ const LogsMenu = () => {
 
   const logEntries = [
     {
-      title: "Сотрудник КОленька (ID 234) отменил запись №123",
+      title: "Сотрудник Коленька (ID 234) отменил запись №123",
       subtitle: "12.01.2024, 14:00:01"
     }, {
       title: "Сотрудник Николай (ID 234) отменил запись №123",
@@ -23,9 +23,7 @@ const LogsMenu = () => {
 
   return (
     <SupportedMenu title={t("menu.settings.logging")}>
-      <FilterCard margin="15px 0px 0px 0px">
-        {t("menu.records.configure_filters")}
-      </FilterCard>
+      
       <div className="LogsContainer">
         {logEntries.map(({ title, subtitle }, i) => (
           <LogCard key={i} title={title} subtitle={subtitle}/>

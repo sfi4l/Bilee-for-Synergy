@@ -28,7 +28,6 @@ const BranchCard = ({ id, title, subtitle, type }) => {
     <Card
       className="BranchCard"
       outlineColor="neutral"
-      onClick={() => navigate(`/branches/${id}`)}
     >
       <div>
         <Text size="16px" weight="600" maxLines={1}>

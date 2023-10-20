@@ -97,11 +97,7 @@ const ClientsInfo = () => {
       <InfoCard
         label={t("menu.company.clients.users")}
         insideMargin="2px 0px 0px 0px"
-        add={
-          <Button height="39px">
-            <Text margin="0px 10px">{t("menu.company.clients.add")}</Text>
-          </Button>
-        }
+       
       >
         <Text size="12px" weight="400" color="hint_color" margin="6px 16px">
           {t("menu.company.clients.users_total", {

@@ -25,6 +25,15 @@ const App = () => {
   if (initDataString) IN_TELEGRAM = true
   const language = initData?.user?.language_code ?? "ru"
   // const theme = useTheme()
+  if (!localStorage.getItem("savedDate")) {
+    localStorage.setItem("savedDate", "2023-09-30T00:00:00.000Z");
+  }
+  if (!localStorage.getItem("savedTime")) {
+    localStorage.setItem("savedTime", "12:00");
+  }
+  if (!localStorage.getItem("selectedName")) {
+    localStorage.setItem("selectedName", "Николай К. • Мастер");
+  }
   const theme = Themes.light 
   const [_, expand] = useExpand()
 

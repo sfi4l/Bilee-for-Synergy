@@ -49,18 +49,9 @@ const BranchesMenu = ({ branches }) => {
         ))}
       </div>
 
-      {!noBranches && (
-        <Button outlineColor="accent_color" margin="13px 0px 6px 0px">
-          {t("menu.branches.load_more")}
-        </Button>
-      )}
+     
 
-      <Button
-        highlightColor="accent_color"
-        onClick={() => navigate("/branches/add")}
-      >
-        {t("menu.branches.add")}
-      </Button>
+      
     </SupportedMenu>
   )
 }

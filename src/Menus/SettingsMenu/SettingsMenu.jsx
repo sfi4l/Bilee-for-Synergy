@@ -1,12 +1,12 @@
-import { useTranslation } from "i18nano"
-import Button from "../../Primitives/Button/Button"
-import SupportedMenu from "../SupportedMenu/SupportedMenu"
-import "./SettingsMenu.css"
-import { useNavigate } from "react-router-dom"
+import { useTranslation } from "i18nano";
+import Button from "../../Primitives/Button/Button";
+import SupportedMenu from "../SupportedMenu/SupportedMenu";
+import "./SettingsMenu.css";
+import { useNavigate } from "react-router-dom";
 
 const SettingsMenu = () => {
-  const t = useTranslation()
-  const navigate = useNavigate()
+  const t = useTranslation();
+  const navigate = useNavigate();
   return (
     <SupportedMenu title={t("menu.settings.title")}>
       <Button
@@ -16,9 +16,7 @@ const SettingsMenu = () => {
       >
         {t("menu.settings.filials")}
       </Button>
-      <Button outlineColor="accent_color" margin="7px 0px 0px 0px">
-        {t("menu.settings.categories")}
-      </Button>
+
       <Button
         outlineColor="accent_color"
         onClick={() => navigate("/content")}
@@ -33,13 +31,15 @@ const SettingsMenu = () => {
       >
         {t("menu.settings.notifications")}
       </Button>
-      <Button outlineColor="accent_color"
+      <Button
+        outlineColor="accent_color"
         onClick={() => navigate("/settings/logs")}
-        margin="7px 0px 0px 0px">
+        margin="7px 0px 0px 0px"
+      >
         {t("menu.settings.logging")}
       </Button>
     </SupportedMenu>
-  )
-}
+  );
+};
 
-export default SettingsMenu
+export default SettingsMenu;
