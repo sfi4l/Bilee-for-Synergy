@@ -12,6 +12,7 @@ import { usePopup } from "../../Hooks/usePopup"
 import EditVisitDayPopup from "./EditVisitDayPopup/EditVisitDayPopup"
 import EditSpecialistPopup from "./EditSpecialistPopup/EditSpecialistPopup"
 import { useTranslation } from "i18nano"
+import { useEffect, useState } from "react"
 
 export const recordLoader = ({ params }) => {
   return {
@@ -21,12 +22,30 @@ export const recordLoader = ({ params }) => {
 }
 
 const RecordEditMenu = () => {
-  const t = useTranslation()
-  const [displayPopup, exitPopup] = usePopup()
-  const loaderData = useLoaderData()
-  if (!loaderData) return <></>
-  const { recordId, type } = loaderData
+  const t = useTranslation();
+  const [displayPopup, exitPopup] = usePopup();
+  const loaderData = useLoaderData();
 
+  const [selectedName, setSelectedName] = useState(localStorage.getItem("selectedName") || "Выберите специалиста");
+
+  useEffect(() => {
+    if (!loaderData) return;
+
+    const intervalId = setInterval(() => {
+      const name = localStorage.getItem("selectedName");
+      if (name) {
+        setSelectedName(name);
+      }
+    }, 1000); // Проверка
+
+    return () => {
+      // Очищаем при размонтировании 
+      clearInterval(intervalId);
+    };
+  }, [loaderData]);
+
+  if (!loaderData) return <></>;
+  const { recordId, type } = loaderData;
   return (
     <Menu
       title={t("menu.record_edit.title", {
@@ -57,7 +76,7 @@ const RecordEditMenu = () => {
                 duration="2 часа"
                 onCancel={exitPopup}
               />
-            )
+            );
           }}
         >
           <div>
@@ -74,10 +93,18 @@ const RecordEditMenu = () => {
         <div
           className="SidedInfoContainer TopHalfContainer"
           onClick={() => {
-            displayPopup(<EditSpecialistPopup onCancel={exitPopup} />)
+            displayPopup(
+              <EditSpecialistPopup
+                onSave={(value) => {
+                  console.log(value);
+                  exitPopup();
+                }}
+                onCancel={exitPopup}
+              />
+            );
           }}
         >
-          <Text font="Inter">Николай К. • Мастер</Text>
+          <Text font="Inter">{selectedName}</Text> {/* Отображаем имя специалиста из selectedName */}
           <ThemedIcon icon={edit_icon} />
         </div>
         <div className="SidedInfoContainer BottomHalfContainer">
@@ -96,7 +123,7 @@ const RecordEditMenu = () => {
         outlineColor="neutral"
         height="48px"
       >
-        <Text>Николай</Text>
+        <Text>{selectedName}</Text> {/* Отображаем имя специалиста из selectedName */}
         <Text weight="400">+7 977 666 11-22</Text>
       </Card>
 
@@ -107,7 +134,7 @@ const RecordEditMenu = () => {
         {t("menu.record_edit.cancel")}
       </Button>
     </Menu>
-  )
-}
+  );
+};
 
-export default RecordEditMenu
+export default RecordEditMenu;
